@@ -1,25 +1,14 @@
-#include "CjtUsuaris.hh"
+#include "CjtUsuarios.hh"
 #include "Curs.hh"
 using namespace std;
 
 int main() {
     string op;
     int P;
-    for(int i = 0; i < P; ++i) {
-
-    }
-    int Q;
-    for(int i = 0; i < Q; ++i) {
-        
-    }
-    int N;
-    for(int i = 0; i < N; ++i) {
-        
-    }
-    int M;
-    for(int i = 0; i < M; ++i) {
-        
-    }
+    llegir_problemes_inicials();
+    llegir_sessions_inicials();
+    llegir_cursos_inicials();
+    llegir_usuaris_inicials();  
 
     cin >> op;
     while(op != "fin") {
