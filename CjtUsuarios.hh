@@ -35,7 +35,14 @@
 
 bool existeix_usuari(int u);
 
+/** @brief Llistat d'usuaris.
+        \pre <em>cert</em>
+        \post Es llisten tots els usuaris en ordre creixent pel nom, mostrant quants enviamnets ha realitzat
+        en total, quants satisfactoriament, quants ha intentat almenys un cop i l'identificador de quin curs
+        está inscrit o un 0 si no està inscrit a cap, per cada usuari.
+    */
 
+    void llistat_sessions () const;
 
 //Modificadores
 

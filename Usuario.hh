@@ -43,14 +43,13 @@ using namespace std;
   */
   int esta_inscrito() const;
 
-  void problemes_resolts () const;
 
   /** @brief Consultora curs completat
 
       \pre <em>cierto</em>
       \post Comprova si l'usuari ja ha completat el curs c.
   */
-  void curs_completat (int c) const;
+  bool curs_completat (int c) const;
 
   /** @brief Llista tots els problemes resolts per l'usuari
 
@@ -66,8 +65,16 @@ using namespace std;
       \post llista en ordre creixent per identificador de tots els problemes no solucionats.
         També s'imprimeix el nombre d'enviaments a cada problema no resolt.
   */
-  void problemes_resolts () const;
+  void problemes_enviables () const;
 
+
+    /** @brief Retorna les estadístiques d'un usuari.
+        \pre <em>cert</em>
+        \post Mostran quants enviamnets ha realitzat en total, quants satisfactoriament, quants ha intentat
+         almenys un cop i l'identificador de quin curs está inscrit o un 0 si no està inscrit a cap
+    */
+
+    void escriure_curs (const int c) const;
 //Modificadores
 
 /** @brief Inscriu l'usuari al curs amb identificador c.
@@ -83,7 +90,7 @@ using namespace std;
       \pre r es el resultat, 1 resolt i 0 fallo. Es garantitza que l'usuari existeix i que
       està inscrit al curs on es situa el problema, a més el problema forma part del conjunt
       el qual l'usuari pot enviar la solució per els prerequisits.
-      \post S'actualitzen les estadístiques de l'usuari i comprova si ha completat el curs.    
+      \post S'actualitzen les estadístiques de l'usuari i del problema, comprova si ha completat el curs.    
   */
   void envio_problema(int p, int r) const;
 

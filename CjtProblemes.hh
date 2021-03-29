@@ -40,7 +40,24 @@ public:
         \post El resultat indica si el parametre implícit conté el problema
     */
 
-    bool consultar_problema (const string & p  ) const;
+    bool econsultar_problema (const string & p ) const;
+
+    
+    /** @brief Llistat de problemes.
+        \pre <em>cert</em>
+        \post Es llisten tots els problemes de la colecció inicant el nombre d'enviaments per cada problema,
+        també s'indiquen els enviaments amb éxit i el ratio (t+1)/(e+1), es llisten en ordre creixent per ratio.
+    */
+
+    void llistat_problemes () const;
+
+    /** @brief Retorna les estadístiques del problema.
+        \pre <em>cert</em>
+        \post Si p no existeix s'imprimeix un miisatge d'error. S'indica el nombre d'enviaments al problema,
+        també s'indiquen els enviaments amb éxit i el ratio
+    */
+
+    void escriure_problema (const string p) const;
     
     //Modificadores
     

@@ -40,6 +40,22 @@ public:
     */
 
     bool consultar_problema (const string & p  ) const;
+
+    /** @brief Llistat de Sessions.
+        \pre <em>cert</em>
+        \post Es llisten totes les sessions en ordre creixent per l'identificador, mostrant el nombre de problemes
+        que les formen i els seus identificadors, seguit de l'estructura de prequisits en preordre.
+    */
+
+    void llistat_sessions () const;
+
+    /** @brief Retorna les estadístiques d'una sessió.
+        \pre <em>cert</em>
+        \post Si s no existeix s'imprimeix un miisatge d'error. S'imprimeix el nombre de problemes que formen
+        la sessió i els seus identificadors, seguit de l'estructura de prequisits en preordre.
+    */
+
+    void escriure_sessio (const string s) const;
     
     //Modificadores
     

@@ -30,7 +30,7 @@ public:
         \post El resultat és un nou conjunt de cursos.
     */
 
-    CjtPCursos();
+    CjtCursos();
     
     //Consultora
     
@@ -41,6 +41,23 @@ public:
 
     bool existeix_curs (const int c ) const;
     
+    /** @brief Llistat de cursos.
+        \pre <em>cert</em>
+        \post Es llisten tots els cursos en ordre creixent per l'identificador, mostrant el nombre d'usuaris actuals
+        o passats que l'han completat, el nombre d'usuaris inscirts actualment i els seus identificadors,
+        seguit del nombre de sessions que el formen i els seus identificadors.
+    */
+
+    void llistat_cursos () const;
+
+    /** @brief Retorna les estadístiques d'un curs.
+        \pre <em>cert</em>
+        \post Mostra el nombre d'usuaris actuals o passats que l'han completat, el nombre d'usuaris inscirts 
+        actualment i els seus identificadors, seguit del nombre de sessions que el formen i els seus identificadors.
+    */
+
+    void escriure_curs (const int c) const;
+
     //Modificadores
     
     /** @brief Afageix un nou curs
