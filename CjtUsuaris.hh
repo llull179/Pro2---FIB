@@ -1,31 +1,31 @@
-/** @file CjtUsuarios.hh
-    @brief Especificació de la classe CjtUsuarios
+/** @file CjtUsuaris.hh
+    @brief Especificació de la classe CjtUsuaris
 */
 
 #ifndef _CJTUSUARIS_HH_
 #define _CJTUSUARIS_HH_
 
-#include "Usuario.hh"
+#include "Usuari.hh"
 
-/** @class CjtUsuarios
-    @brief Representa el conjunto de todos los usuarios
+/** @class CjtUsuaris
+    @brief Representa el conjunt de tots els usuaris
     . 
 
-    Contiene Usuarios. 
+    Conté Usuaris. 
 */
 
-//Constructoras
+//Constructores
 
-/** @brief Creadora por defecto. 
+/** @brief Creadora per defecto. 
 
-      Se ejecuta automáticamente al declarar el conjunto de usuarios.
+      S'executa automàticament al declarar el conjunto d'usuarios.
       \pre <em>cierto</em>
-      \post El resultado es un conjunto de usuarios.
+      \post El resultat és un conjunt d'usuaris.
   */ 
  CjtUsuarios();
  
 
-//Consultores
+//Consultors
 
 /** @brief Comprova si ja existeix l'usuari u.
 
@@ -42,19 +42,19 @@ bool existeix_usuari(int u);
         está inscrit o un 0 si no està inscrit a cap, per cada usuari.
     */
 
-    void llistat_sessions () const;
+    void llistat_usuaris ();
 
-//Modificadores
+//Modificadors
 
 
 /** @brief Dona d'alta un nou usuari 
 
       \pre <em>cierto</em>
-      \post Si ja existia l'usuari <em>u</em> imrpimeix un error, sinó imprimeix el número
+      \post Si ja existia l'usuari <em>u</em> imprimeix un error, sinó imprimeix el número
       d'usuaris després d'afegir-lo.
   */ 
 
-void alta_usuari(int u);
+void alta_usuari(Usuari u);
 
 /** @brief Dona d'alta un nou usuari 
 
@@ -63,7 +63,7 @@ void alta_usuari(int u);
       d'usuaris després de donar-lo de baixa.
   */ 
 
-void baixa_usuari(int u);
+void baixa_usuari(Usuari u);
 
 //Llegir i escriure
 

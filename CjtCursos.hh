@@ -6,7 +6,7 @@
 #define _CjtCursos_hh_
 
 #ifndef NO_DIAGRAM
-#include "CjtSessions.hh"
+#include "Curs.hh"
 #endif
 
 
@@ -14,7 +14,7 @@
     @brief Representa un conjunt de cursos. 
 
 */
-class Curs
+class CjtCursos
 {
     
 private:    

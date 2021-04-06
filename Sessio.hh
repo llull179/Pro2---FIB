@@ -6,7 +6,8 @@
 #define _Sessio_hh
 
 #ifndef NO_DIAGRAM
-#include "Sessio.hh"
+#include "CjtProblemes.hh"
+#include "BinTree.hh"
 #endif
 
 

@@ -6,8 +6,8 @@
 #define _PROBLEMA_HH_
 
 #ifndef NO_DIAGRAM
-#include <string>
-#include <list>
+#include "Problema.hh"
+#include <set>
 #endif
 
 
@@ -20,7 +20,7 @@ class CjtProblemes
     
 private:    
 
-    list <string> problemes;
+    set <Problema> problemes;
 
 public:
     
@@ -33,16 +33,41 @@ public:
 
     CjtProblemes();
     
-    //Consultora
+    //Consultors
     
     /** @brief Consultora de problemes.
         \pre <em>cert</em>
         \post El resultat indica si el parametre implícit conté el problema
     */
 
-    bool econsultar_problema (const string & p ) const;
+    bool consultar_problema (const string & p ) const;
 
     
+    
+    
+    //Modificadores
+    
+    /** @brief Afageix un problema
+        \pre <em>cert</em>
+        \post S'ha afegit el problema al paràmetre implícit, si ja existia imprimeix un 
+        missatge d'error. Imprimeix el numero de problemes després d'afegir-lo.
+
+    */
+
+    void nou_problema (const string & p);
+
+    //Llegir
+
+    /** @brief Llegeix els problemes inicials
+        \pre cert
+        \post Guarda la colecció inicial de problemes.
+
+    */
+
+    void llegir_problemes_inicials (CjtProblemes& s);
+
+    //Escriure
+
     /** @brief Llistat de problemes.
         \pre <em>cert</em>
         \post Es llisten tots els problemes de la colecció inicant el nombre d'enviaments per cada problema,
@@ -58,27 +83,6 @@ public:
     */
 
     void escriure_problema (const string p) const;
-    
-    //Modificadores
-    
-    /** @brief Afageix un problema
-        \pre <em>cert</em>
-        \post Se ha afegit el problema al paràmetre implícit, si ja existia imprimeix un 
-        missatge d'error. Imprimeix el numero de problemes després d'afegir-lo.
-
-    */
-
-    void nuevo_problema (const string & p);
-
-    //Llegir i escriure
-
-    /** @brief Llegeix els problemes inicials
-        \pre cert
-        \post Guarda la colecció inicial de problemes.
-
-    */
-
-    void llegir_problemes_inicials (Sessio& s);
     
 };
 #endif

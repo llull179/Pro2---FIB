@@ -1,5 +1,5 @@
-/** @file Usuario.hh
-    @brief Especificació de la classe Usuario
+/** @file Usuari.hh
+    @brief Especificació de la classe Usuari
 */
 
 #ifndef _USUARIO_HH_
@@ -8,40 +8,38 @@
 #include <iostream>
 using namespace std;
 
-/** @class Usuario
-    @brief Representa un Usuario
-    . 
+/** @class Usuari
+    @brief Representa un Usuari.
 
-    asdasd. 
 */
 
 //Constructoras
 
 /** @brief Creadora por defecto. 
 
-      Se ejecuta automáticamente al declarar un usuario.
+      S'executa automàticament al declarar un usuari.
       \pre <em>cierto</em>
-      \post El resultado es un usuario
+      \post El resultat és un usuari.
   */ 
- Usuario();
+ Usuari();
 
- /** @brief Creadora con identificador. 
+ /** @brief Creadora amb identificador. 
 
-      \pre <em>cierto</em>
-      \post El resultado es un usuario con identificador <em>u<em>
+      \pre <em>cert</em>
+      \post El resultat és un usuari amb identificador <em>u<em>
   */ 
- Usuario(int u);
+ Usuari(int u);
 
 //Consultores
 
-/** @brief Consulta si el estudiante esta inscrito a algún curso
+/** @brief Consulta si l'estudiante està inscrit a algun curso
 
       \pre <em>cierto</em>
       \post Si el usuario no existe se imprime un error. En caso contrario, devuelve el
        identiificador del curso en el que esta inscrito el usuario o un 0 si no está 
         inscrito en ninguno.    
   */
-  int esta_inscrito() const;
+  int esta_inscrit() const;
 
 
   /** @brief Consultora curs completat
