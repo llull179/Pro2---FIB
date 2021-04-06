@@ -6,6 +6,7 @@
 #define _CJTUSUARIS_HH_
 
 #include "Usuari.hh"
+#include <set>
 
 /** @class CjtUsuaris
     @brief Representa el conjunt de tots els usuaris
@@ -13,7 +14,14 @@
 
     Conté Usuaris. 
 */
+class CjtUsuaris
+{
+    
+private:    
 
+    set <Usuari> llistUsers;
+
+public:
 //Constructores
 
 /** @brief Creadora per defecto. 
@@ -22,7 +30,7 @@
       \pre <em>cierto</em>
       \post El resultat és un conjunt d'usuaris.
   */ 
- CjtUsuarios();
+ CjtUsuaris();
  
 
 //Consultors
@@ -33,7 +41,7 @@
       \post Retorna true si existeix i fals si no existeix.
   */ 
 
-bool existeix_usuari(int u);
+bool existeix_usuari(const string& u);
 
 /** @brief Llistat d'usuaris.
         \pre <em>cert</em>
@@ -43,6 +51,14 @@ bool existeix_usuari(int u);
     */
 
     void llistat_usuaris ();
+
+    /** @brief Accedeix a l'Usuari <em>u</em>
+        \pre L'Usuari u existeix.
+        \post Retorna l'Usuari u.
+
+    */
+
+    Usuari accedir_usuari (const string& s);
 
 //Modificadors
 
@@ -56,14 +72,13 @@ bool existeix_usuari(int u);
 
 void alta_usuari(Usuari u);
 
-/** @brief Dona d'alta un nou usuari 
+/** @brief Dona de baixa un usuari 
 
-      \pre <em>cierto</em>
-      \post Si no existia l'usuari <em>u</em> imrpimeix un error, sinó imprimeix el número
-      d'usuaris després de donar-lo de baixa.
+      \pre L'Usuari existeix.
+      \post Imprimeix el número d'usuaris després de donar-lo de baixa després d'eliminar u.
   */ 
 
-void baixa_usuari(Usuari u);
+void baixa_usuari(const string& u);
 
 //Llegir i escriure
 
@@ -73,6 +88,6 @@ void baixa_usuari(Usuari u);
 
     */
 
-    void llegir_usuaris_inicials (Sessio& s);
-
+    void llegir_usuaris_inicials ();
+};
 #endif

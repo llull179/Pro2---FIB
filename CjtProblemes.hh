@@ -40,17 +40,22 @@ public:
         \post El resultat indica si el parametre implícit conté el problema
     */
 
-    bool consultar_problema (const string & p ) const;
+    bool existeix_problema (const string & p ) const;
 
     
-    
+    /** @brief Accedeix a al Problema <em>p</em>
+        \pre El Problema p existeix.
+        \post Retorna el Problema p.
+
+    */
+
+    Problema accedir_problema (const string& p);
     
     //Modificadores
     
     /** @brief Afageix un problema
-        \pre <em>cert</em>
-        \post S'ha afegit el problema al paràmetre implícit, si ja existia imprimeix un 
-        missatge d'error. Imprimeix el numero de problemes després d'afegir-lo.
+        \pre <em>p</em> p no existeix.
+        \post S'ha afegit el problema al paràmetre implícit. Imprimeix el numero de problemes després d'afegir-lo.
 
     */
 
@@ -64,7 +69,7 @@ public:
 
     */
 
-    void llegir_problemes_inicials (CjtProblemes& s);
+    void llegir_problemes_inicials ();
 
     //Escriure
 
@@ -75,14 +80,6 @@ public:
     */
 
     void llistat_problemes () const;
-
-    /** @brief Retorna les estadístiques del problema.
-        \pre <em>cert</em>
-        \post Si p no existeix s'imprimeix un miisatge d'error. S'indica el nombre d'enviaments al problema,
-        també s'indiquen els enviaments amb éxit i el ratio
-    */
-
-    void escriure_problema (const string p) const;
     
 };
 #endif

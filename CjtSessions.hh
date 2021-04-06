@@ -1,54 +1,61 @@
 /** @file Sessio.hh
-    @brief Especificació de la classe Sessió.
+    @brief Especificació de la classe CjtSessions.
 */
 
-#ifndef _Sessio_hh
-#define _Sessio_hh
+#ifndef _CJTSESSIONS_hh
+#define _CJTSESSIONS_hh
 
 #ifndef NO_DIAGRAM
 #include "Sessio.hh"
+#include <map>
 #endif
 
 
 /** @class Sessio.hh
-    @brief Representa una Sessió. 
+    @brief Representa un Conjunt de Sessions. 
 
 */
-class Sessio
+class CjtSessions
 {
     
 private:    
 
-    //list <string> problemes
+    map <string, Sessio> sessions;
 
 public:
     
     //Constructora
     
     /** @brief Creadora por defecte.
-        \pre <em>cert</em>
-        \post El resultat és un nou Problema.
+        \pre <em>cert</em>.
+        \post El resultat és un nou conjunt de Sessions.
     */
 
-    Sessio();
+    CjtSessions();
     
-    //Consultora
-    
-    /** @brief Consultora de problemes.
-        \pre <em>cert</em>
-        \post El resultat indica si el parametre implícit conté el problema
+    //Consultors
+
+    /** @brief Consulta si la Sessió s existeix  <em>s</em>
+        \pre cert.
+        \post Retorna si existeix.
+
     */
 
-    bool consultar_problema (const string & p  ) const;
+    bool existeix_sessio (const string& s);
 
-    
-    
-    //Modificadores
+    /** @brief Accedeix a la Sessió <em>s</em>
+        \pre La Sessió s existeix.
+        \post Retorna la Sessió s.
+
+    */
+
+    Sessio accedir_sessio (const string& s);
+
+    //Modificadorss
     
     /** @brief Afageix un sessio
         \pre Els problemes existeixen i no estan repetits
-        \post Se ha creat la sessió, si ja existia imprimeix un 
-        missatge d'error. Imprimeix el numero de sessions Q després de crear-la.
+        \post Se ha creat la sessió. Imprimeix el numero de sessions Q després de crear-la.
 
     */
 
@@ -62,7 +69,7 @@ public:
 
     */
 
-    void llegir_sessions_inicials (Sessio& s);
+    void llegir_sessions_inicials ();
     
     //Escriure
 
@@ -74,12 +81,6 @@ public:
 
     void llistat_sessions () const;
 
-    /** @brief Retorna les estadístiques d'una sessió.
-        \pre <em>cert</em>
-        \post Si s no existeix s'imprimeix un miisatge d'error. S'imprimeix el nombre de problemes que formen
-        la sessió i els seus identificadors, seguit de l'estructura de prequisits en preordre.
-    */
 
-    void escriure_sessio (const string s) const;
 };
 #endif

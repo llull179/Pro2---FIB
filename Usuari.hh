@@ -5,14 +5,33 @@
 #ifndef _USUARIO_HH_
 #define _USUARIO_HH_
 
+#ifndef NO_DIAGRAM
 #include <iostream>
+#include <string>
+#include <list>
 using namespace std;
+#endif
 
 /** @class Usuari
     @brief Representa un Usuari.
 
 */
+class Usuari
+{
+    
+private:    
 
+  struct Stats {
+      string name;
+      int env_tot = 0;
+      int prob_resolt = 0;
+      int prob_int = 0;
+      int curs_in = 0;
+  };
+
+  list <pair<string,int>> problemes; //corretgir
+
+public:
 //Constructoras
 
 /** @brief Creadora por defecto. 
@@ -28,26 +47,25 @@ using namespace std;
       \pre <em>cert</em>
       \post El resultat és un usuari amb identificador <em>u<em>
   */ 
- Usuari(int u);
+ Usuari(string u);
 
 //Consultores
 
 /** @brief Consulta si l'estudiante està inscrit a algun curso
 
       \pre <em>cierto</em>
-      \post Si el usuario no existe se imprime un error. En caso contrario, devuelve el
-       identiificador del curso en el que esta inscrito el usuario o un 0 si no está 
+      \post  Retorna l'identificador del curso en el que està inscrit l'Usuari o un 0 si no hi està.
         inscrito en ninguno.    
   */
-  int esta_inscrit() const;
+  int esta_inscrit( ) const;
 
 
   /** @brief Consultora curs completat
 
       \pre <em>cierto</em>
-      \post Comprova si l'usuari ja ha completat el curs c.
+      \post Comprova si l'usuari ja ha completat el curs, en cas afirmatiu l'usuari deixa d'estar inscrit al curs.
   */
-  bool curs_completat (int c) const;
+  bool curs_completat () const;
 
   /** @brief Llista tots els problemes resolts per l'usuari
 
@@ -72,7 +90,7 @@ using namespace std;
          almenys un cop i l'identificador de quin curs está inscrit o un 0 si no està inscrit a cap
     */
 
-    void escriure_curs (const int c) const;
+    void escriure_usuari () const;
 //Modificadores
 
 /** @brief Inscriu l'usuari al curs amb identificador c.
@@ -83,22 +101,14 @@ using namespace std;
   */
   void inscribir_curso(int c) const;
 
-  /** @brief Inscriu l'usuari al curs amb identificador c.
 
-      \pre r es el resultat, 1 resolt i 0 fallo. Es garantitza que l'usuari existeix i que
-      està inscrit al curs on es situa el problema, a més el problema forma part del conjunt
-      el qual l'usuari pot enviar la solució per els prerequisits.
-      \post S'actualitzen les estadístiques de l'usuari i del problema, comprova si ha completat el curs.    
+  /** @brief Actualitza les estadístiques de l'Usuari.
+
+      \pre p es el problema on ha fet l'enviament i r si l'ha completat amb èxit .
+      \post Retorna l'Usuari amb les estadístiques actualitzades.    
   */
-  void envio_problema(int p, int r) const;
+  
+  void actualitzar_stats(int p, int r) const;
 
-// Escritura y lectura
-
-  /** @brief Operación de escritura
-
-      \pre El parámetro implícito existe
-      \post Escribe el identificador <em>u<em> del usuario.
-  */
-  void escribir() const;
-
+};
 #endif

@@ -7,7 +7,8 @@
 
 #ifndef NO_DIAGRAM
 #include <string>
-#include <map>
+#include <iostream>
+using namespace std;
 #endif
 
 
@@ -19,12 +20,13 @@ class Problema
 {
     
 private:    
-    string ident;
-    map <string, int> estadist;
-    estadist['env_total'] = 0;
-    estadist['env_exit'] = 0;
-    estadist['ratio'] = 0;
-    bool operator<(const Problema &d) const;
+
+    struct Stats {
+        string ident;
+        int env_totals = 0;
+        int env_exit = 0;
+        int ratio = 0;
+    }
 
 public:
     
@@ -46,23 +48,17 @@ public:
     Problema(const string & p);
     
     //Consultorss
-    
-    /** @brief Ordena el set dels problemes
-        \pre Cert
-        \post Set ordenat.
 
-    */
-    bool operator<(const Problema &d);
 
     //Modificadors
     
     /** @brief Actualitza les estadístiques del problema
-        \pre El problema p existeix.
-        \post S'actualitzen el nombre d'enviaments total, amb éxit i el ratio.
+        \pre El problema p existeix, r és si s'ha completat amb èxit el problema.
+        \post Es suma 1 al nombre d'enviaments total,  s'actualitza els enviaments amb éxit i el ratio.
 
     */
 
-    void actualitzar_problema ();
+    void actualitzar_stats (bool r);
 
 
     //Escriure

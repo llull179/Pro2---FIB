@@ -1,4 +1,4 @@
-#include "Problema.hh"
+/*#include "Problema.hh"
 
 Problema::Problema() {}
 
@@ -63,3 +63,4 @@ void Problema::escriure(const string & s) const {
 // funcion consulta_tret
 
 
+*/
