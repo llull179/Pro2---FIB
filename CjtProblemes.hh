@@ -19,7 +19,6 @@ class CjtProblemes
 {
     
 private:    
-
     set <Problema> problemes;
 
 public:
@@ -49,7 +48,7 @@ public:
 
     */
 
-    Problema accedir_problema (const string& p);
+    Problema& accedir_problema (const string& p);
     
     //Modificadores
     

@@ -29,7 +29,8 @@ private:
       int curs_in = 0;
   };
 
-  list <pair<string,int>> problemes; //corretgir
+ //string = identificador problema, pair<int, bool> = enviaments al problema i bool si completat amb èxit
+    map <string, pair<int,bool> problemes;
 
 public:
 //Constructoras
@@ -84,13 +85,6 @@ public:
   void problemes_enviables () const;
 
 
-    /** @brief Retorna les estadístiques d'un usuari.
-        \pre <em>cert</em>
-        \post Mostran quants enviamnets ha realitzat en total, quants satisfactoriament, quants ha intentat
-         almenys un cop i l'identificador de quin curs está inscrit o un 0 si no està inscrit a cap
-    */
-
-    void escriure_usuari () const;
 //Modificadores
 
 /** @brief Inscriu l'usuari al curs amb identificador c.
@@ -110,5 +104,14 @@ public:
   
   void actualitzar_stats(int p, int r) const;
 
+    //Escriure
+
+    /** @brief Retorna les estadístiques d'un usuari.
+        \pre <em>cert</em>
+        \post Mostran quants enviamnets ha realitzat en total, quants satisfactoriament, quants ha intentat
+         almenys un cop i l'identificador de quin curs está inscrit o un 0 si no està inscrit a cap
+    */
+
+    void escriure_usuari ();
 };
 #endif

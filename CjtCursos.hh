@@ -7,7 +7,9 @@
 
 
 #include "Curs.hh"
-
+#ifndef NO_DIAGRAM
+#include <vector>
+#endif
 
 
 /** @class CjtCursos
@@ -19,7 +21,7 @@ class CjtCursos
     
 private:    
 
-    list <Curs> cursos;
+    vector <Curs> cursos;
 
 public:
     
@@ -47,7 +49,7 @@ public:
 
     */
 
-    Curs accedir_curs ( int c );
+    Curs& accedir_curs ( int c );
 
     /** @brief Llistat de cursos.
         \pre <em>cert</em>

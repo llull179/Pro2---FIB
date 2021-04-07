@@ -43,7 +43,7 @@ public:
       \post Retorna true si existeix i fals si no existeix.
   */ 
 
-bool existeix_usuari(const string& u);
+bool existeix_usuari(const string& u) const;
 
 /** @brief Llistat d'usuaris.
         \pre <em>cert</em>
@@ -60,7 +60,7 @@ bool existeix_usuari(const string& u);
 
     */
 
-    Usuari accedir_usuari (const string& s);
+    Usuari& accedir_usuari (const string& s);
 
 //Modificadors
 

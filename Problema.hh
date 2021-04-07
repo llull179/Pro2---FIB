@@ -19,7 +19,7 @@ using namespace std;
 class Problema
 {
     
-private:    
+private:     
 
     struct Stats {
         string ident;
@@ -47,7 +47,7 @@ public:
 
     Problema(const string & p);
     
-    //Consultorss
+    //Consultors
 
 
     //Modificadors

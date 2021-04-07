@@ -42,7 +42,7 @@ public:
 
     */
 
-    bool existeix_sessio (const string& s);
+    bool existeix_sessio (const string& s) const;
 
     /** @brief Accedeix a la Sessió <em>s</em>
         \pre La Sessió s existeix.
@@ -50,7 +50,7 @@ public:
 
     */
 
-    Sessio accedir_sessio (const string& s);
+    Sessio& accedir_sessio (const string& s);
 
     //Modificadorss
     

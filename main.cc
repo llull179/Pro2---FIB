@@ -34,7 +34,7 @@ int main() {
 
         else if (op == "ns" or op == " nueva_sesion ") {
             cin >> auxString;
-            ;
+            
             if(not cjtSes.existeix_sessio(auxString)){
                 cjtSes.nova_sessio( auxString );
             }
@@ -97,14 +97,16 @@ int main() {
         else if (op == "pr" or op == " problemas_resueltos ") {
             cin >> auxString; 
             if(cjtUs.existeix_usuari( auxString)) {
-                
+                Usuari user = cjtUs.accedir_usuari( auxString );
+                user.problemes_resolts();
             }
             else cout << "ERROR: no existeix l'Usuari" << auxString << endl;
         }
         else if (op == "pe" or op == " problemas_enviables ") {
             cin >> auxString; 
             if(cjtUs.existeix_usuari( auxString)) {
-                
+                Usuari user = cjtUs.accedir_usuari( auxString );
+                user.problemes_enviables();
             }
             else cout << "ERROR: no existeix l'Usuari" << auxString << endl;
         }
