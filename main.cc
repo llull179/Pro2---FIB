@@ -1,3 +1,6 @@
+/** @file main.cc
+    @brief Programa principal.
+*/
 #include "CjtUsuaris.hh"
 #include "CjtCursos.hh"
 using namespace std;

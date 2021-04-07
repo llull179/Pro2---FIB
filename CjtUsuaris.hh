@@ -6,7 +6,9 @@
 #define _CJTUSUARIS_HH_
 
 #include "Usuari.hh"
+#ifndef NO_DIAGRAM
 #include <set>
+#endif
 
 /** @class CjtUsuaris
     @brief Representa el conjunt de tots els usuaris

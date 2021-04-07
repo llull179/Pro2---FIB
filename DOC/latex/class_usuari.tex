@@ -1,0 +1,190 @@
+\hypertarget{class_usuari}{}\section{Referencia de la Clase Usuari}
+\label{class_usuari}\index{Usuari@{Usuari}}
+
+
+Representa un \mbox{\hyperlink{class_usuari}{Usuari}}.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_usuari_ac6a1fbc3d6967c6de677580c60dfaaf4}{Usuari}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_usuari_a3e6c58812089cf0cf6ccd11d517d7ff3}{Usuari}} (string u)
+\begin{DoxyCompactList}\small\item\em Creadora amb identificador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_usuari_a0d20c2d77d8231d9a7e3e00a42a7e7c8}{esta\+\_\+inscrit}} () const
+\begin{DoxyCompactList}\small\item\em Consulta si l\textquotesingle{}estudiante està inscrit a algun curso. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_usuari_a3cb6bb4ab49c3f858f3588c77af11527}{curs\+\_\+completat}} () const
+\begin{DoxyCompactList}\small\item\em Consultora curs completat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuari_a3ef9f5ec04fe13ecfaf6d2f02bcd30bd}{problemes\+\_\+resolts}} () const
+\begin{DoxyCompactList}\small\item\em Llista tots els problemes resolts per l\textquotesingle{}usuari. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuari_a84e0532f6b7ae4c4022e4739ca7abade}{problemes\+\_\+enviables}} () const
+\begin{DoxyCompactList}\small\item\em Llista tots els problemes enviats i no resolts per l\textquotesingle{}usuari. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuari_ad13c0b52f5430b0b400c7e3ac6611310}{escriure\+\_\+usuari}} () const
+\begin{DoxyCompactList}\small\item\em Retorna les estadístiques d\textquotesingle{}un usuari. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuari_aa67a0b994110236e30d9eac0ebf45fc7}{inscribir\+\_\+curso}} (int c) const
+\begin{DoxyCompactList}\small\item\em Inscriu l\textquotesingle{}usuari al curs amb identificador c. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuari_a5721999c4381ccf24520dfcdda798587}{actualitzar\+\_\+stats}} (int p, int r) const
+\begin{DoxyCompactList}\small\item\em Actualitza les estadístiques de l\textquotesingle{}\mbox{\hyperlink{class_usuari}{Usuari}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un \mbox{\hyperlink{class_usuari}{Usuari}}. 
+
+Definición en la línea 19 del archivo Usuari.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_usuari_ac6a1fbc3d6967c6de677580c60dfaaf4}\label{class_usuari_ac6a1fbc3d6967c6de677580c60dfaaf4}} 
+\index{Usuari@{Usuari}!Usuari@{Usuari}}
+\index{Usuari@{Usuari}!Usuari@{Usuari}}
+\subsubsection{\texorpdfstring{Usuari()}{Usuari()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Usuari\+::\+Usuari (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+S\textquotesingle{}executa automàticament al declarar un usuari. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultat és un usuari. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuari_a3e6c58812089cf0cf6ccd11d517d7ff3}\label{class_usuari_a3e6c58812089cf0cf6ccd11d517d7ff3}} 
+\index{Usuari@{Usuari}!Usuari@{Usuari}}
+\index{Usuari@{Usuari}!Usuari@{Usuari}}
+\subsubsection{\texorpdfstring{Usuari()}{Usuari()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Usuari\+::\+Usuari (\begin{DoxyParamCaption}\item[{string}]{u }\end{DoxyParamCaption})}
+
+
+
+Creadora amb identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultat és un usuari amb identificador {\itshape u{\itshape  }}
+\end{DoxyPostcond}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_usuari_a0d20c2d77d8231d9a7e3e00a42a7e7c8}\label{class_usuari_a0d20c2d77d8231d9a7e3e00a42a7e7c8}} 
+\index{Usuari@{Usuari}!esta\+\_\+inscrit@{esta\+\_\+inscrit}}
+\index{esta\+\_\+inscrit@{esta\+\_\+inscrit}!Usuari@{Usuari}}
+\subsubsection{\texorpdfstring{esta\+\_\+inscrit()}{esta\_inscrit()}}
+{\footnotesize\ttfamily int Usuari\+::esta\+\_\+inscrit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consulta si l\textquotesingle{}estudiante està inscrit a algun curso. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna l\textquotesingle{}identificador del curso en el que està inscrit l\textquotesingle{}\mbox{\hyperlink{class_usuari}{Usuari}} o un 0 si no hi està. inscrito en ninguno. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuari_a3cb6bb4ab49c3f858f3588c77af11527}\label{class_usuari_a3cb6bb4ab49c3f858f3588c77af11527}} 
+\index{Usuari@{Usuari}!curs\+\_\+completat@{curs\+\_\+completat}}
+\index{curs\+\_\+completat@{curs\+\_\+completat}!Usuari@{Usuari}}
+\subsubsection{\texorpdfstring{curs\+\_\+completat()}{curs\_completat()}}
+{\footnotesize\ttfamily bool Usuari\+::curs\+\_\+completat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora curs completat. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Comprova si l\textquotesingle{}usuari ja ha completat el curs, en cas afirmatiu l\textquotesingle{}usuari deixa d\textquotesingle{}estar inscrit al curs. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuari_a3ef9f5ec04fe13ecfaf6d2f02bcd30bd}\label{class_usuari_a3ef9f5ec04fe13ecfaf6d2f02bcd30bd}} 
+\index{Usuari@{Usuari}!problemes\+\_\+resolts@{problemes\+\_\+resolts}}
+\index{problemes\+\_\+resolts@{problemes\+\_\+resolts}!Usuari@{Usuari}}
+\subsubsection{\texorpdfstring{problemes\+\_\+resolts()}{problemes\_resolts()}}
+{\footnotesize\ttfamily void Usuari\+::problemes\+\_\+resolts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Llista tots els problemes resolts per l\textquotesingle{}usuari. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+llista en ordre creixent per identificador de tots els problemes solucionats. També s\textquotesingle{}imprimeix el nombre d\textquotesingle{}enviaments a cada problema. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuari_a84e0532f6b7ae4c4022e4739ca7abade}\label{class_usuari_a84e0532f6b7ae4c4022e4739ca7abade}} 
+\index{Usuari@{Usuari}!problemes\+\_\+enviables@{problemes\+\_\+enviables}}
+\index{problemes\+\_\+enviables@{problemes\+\_\+enviables}!Usuari@{Usuari}}
+\subsubsection{\texorpdfstring{problemes\+\_\+enviables()}{problemes\_enviables()}}
+{\footnotesize\ttfamily void Usuari\+::problemes\+\_\+enviables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Llista tots els problemes enviats i no resolts per l\textquotesingle{}usuari. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+llista en ordre creixent per identificador de tots els problemes no solucionats. També s\textquotesingle{}imprimeix el nombre d\textquotesingle{}enviaments a cada problema no resolt. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuari_ad13c0b52f5430b0b400c7e3ac6611310}\label{class_usuari_ad13c0b52f5430b0b400c7e3ac6611310}} 
+\index{Usuari@{Usuari}!escriure\+\_\+usuari@{escriure\+\_\+usuari}}
+\index{escriure\+\_\+usuari@{escriure\+\_\+usuari}!Usuari@{Usuari}}
+\subsubsection{\texorpdfstring{escriure\+\_\+usuari()}{escriure\_usuari()}}
+{\footnotesize\ttfamily void Usuari\+::escriure\+\_\+usuari (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna les estadístiques d\textquotesingle{}un usuari. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Mostran quants enviamnets ha realitzat en total, quants satisfactoriament, quants ha intentat almenys un cop i l\textquotesingle{}identificador de quin curs está inscrit o un 0 si no està inscrit a cap 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuari_aa67a0b994110236e30d9eac0ebf45fc7}\label{class_usuari_aa67a0b994110236e30d9eac0ebf45fc7}} 
+\index{Usuari@{Usuari}!inscribir\+\_\+curso@{inscribir\+\_\+curso}}
+\index{inscribir\+\_\+curso@{inscribir\+\_\+curso}!Usuari@{Usuari}}
+\subsubsection{\texorpdfstring{inscribir\+\_\+curso()}{inscribir\_curso()}}
+{\footnotesize\ttfamily void Usuari\+::inscribir\+\_\+curso (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption}) const}
+
+
+
+Inscriu l\textquotesingle{}usuari al curs amb identificador c. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si l\textquotesingle{}usuari no existeix,està inscrit a un curs no finalitzat o el curs no existeix, imprimeix un erros. En cas contrari s\textquotesingle{}imprimeix el número d\textquotesingle{}usuaris inscrits al curs c. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuari_a5721999c4381ccf24520dfcdda798587}\label{class_usuari_a5721999c4381ccf24520dfcdda798587}} 
+\index{Usuari@{Usuari}!actualitzar\+\_\+stats@{actualitzar\+\_\+stats}}
+\index{actualitzar\+\_\+stats@{actualitzar\+\_\+stats}!Usuari@{Usuari}}
+\subsubsection{\texorpdfstring{actualitzar\+\_\+stats()}{actualitzar\_stats()}}
+{\footnotesize\ttfamily void Usuari\+::actualitzar\+\_\+stats (\begin{DoxyParamCaption}\item[{int}]{p,  }\item[{int}]{r }\end{DoxyParamCaption}) const}
+
+
+
+Actualitza les estadístiques de l\textquotesingle{}\mbox{\hyperlink{class_usuari}{Usuari}}. 
+
+\begin{DoxyPrecond}{Precondición}
+p es el problema on ha fet l\textquotesingle{}enviament i r si l\textquotesingle{}ha completat amb èxit . 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna l\textquotesingle{}\mbox{\hyperlink{class_usuari}{Usuari}} amb les estadístiques actualitzades. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_usuari_8hh}{Usuari.\+hh}}\end{DoxyCompactItemize}

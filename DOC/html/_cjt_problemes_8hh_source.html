@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PLATAFORMA DE GESTIÓN DE PROBLEMAS Y CURSOS DE PROGRAMACIÓN: Fichero Fuente CjtProblemes.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PLATAFORMA DE GESTIÓN DE PROBLEMAS Y CURSOS DE PROGRAMACIÓN
+   &#160;<span id="projectnumber">12/4/2021</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">CjtProblemes.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cjt_problemes_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _PROBLEMA_HH_</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _PROBLEMA_HH_</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_problema_8hh.html">Problema.hh</a>&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_cjt_problemes.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cjt_problemes.html">CjtProblemes</a></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    set &lt;Problema&gt; problemes;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">//Constructora</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_cjt_problemes.html#ae6f76d8e493e80bba4fc28a124826cb5">CjtProblemes</a>();</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">//Consultors</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_cjt_problemes.html#a27f5be292f79fd47915093fb84013e67">existeix_problema</a> (<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; p ) <span class="keyword">const</span>;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_problema.html">Problema</a> <a class="code" href="class_cjt_problemes.html#a2db39d9fee16e50c9a0ddfa1a5a2e460">accedir_problema</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; p);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//Modificadores</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt_problemes.html#a7a41c837128c629f7a4dcf81b1592581">nou_problema</a> (<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; p);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">//Llegir</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt_problemes.html#ac320f52e566402ed341d2f67176be14a">llegir_problemes_inicials</a> ();</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">//Escriure</span></div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt_problemes.html#a4f47e1d0800f32093efa7569f58d8105">llistat_problemes</a> () <span class="keyword">const</span>;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_cjt_problemes_html"><div class="ttname"><a href="class_cjt_problemes.html">CjtProblemes</a></div><div class="ttdoc">Representa un conjunt de problemes. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt_problemes_8hh_source.html#l00018">CjtProblemes.hh:18</a></div></div>
+<div class="ttc" id="class_problema_html"><div class="ttname"><a href="class_problema.html">Problema</a></div><div class="ttdoc">Representa un Problema. </div><div class="ttdef"><b>Definition:</b> <a href="_problema_8hh_source.html#l00019">Problema.hh:19</a></div></div>
+<div class="ttc" id="class_cjt_problemes_html_ac320f52e566402ed341d2f67176be14a"><div class="ttname"><a href="class_cjt_problemes.html#ac320f52e566402ed341d2f67176be14a">CjtProblemes::llegir_problemes_inicials</a></div><div class="ttdeci">void llegir_problemes_inicials()</div><div class="ttdoc">Llegeix els problemes inicials. </div></div>
+<div class="ttc" id="_problema_8hh_html"><div class="ttname"><a href="_problema_8hh.html">Problema.hh</a></div><div class="ttdoc">Especificació de la clase Problema. </div></div>
+<div class="ttc" id="class_cjt_problemes_html_a2db39d9fee16e50c9a0ddfa1a5a2e460"><div class="ttname"><a href="class_cjt_problemes.html#a2db39d9fee16e50c9a0ddfa1a5a2e460">CjtProblemes::accedir_problema</a></div><div class="ttdeci">Problema accedir_problema(const string &amp;p)</div><div class="ttdoc">Accedeix a al Problema p </div></div>
+<div class="ttc" id="class_cjt_problemes_html_a7a41c837128c629f7a4dcf81b1592581"><div class="ttname"><a href="class_cjt_problemes.html#a7a41c837128c629f7a4dcf81b1592581">CjtProblemes::nou_problema</a></div><div class="ttdeci">void nou_problema(const string &amp;p)</div><div class="ttdoc">Afageix un problema. </div></div>
+<div class="ttc" id="class_cjt_problemes_html_a4f47e1d0800f32093efa7569f58d8105"><div class="ttname"><a href="class_cjt_problemes.html#a4f47e1d0800f32093efa7569f58d8105">CjtProblemes::llistat_problemes</a></div><div class="ttdeci">void llistat_problemes() const</div><div class="ttdoc">Llistat de problemes. </div></div>
+<div class="ttc" id="class_cjt_problemes_html_a27f5be292f79fd47915093fb84013e67"><div class="ttname"><a href="class_cjt_problemes.html#a27f5be292f79fd47915093fb84013e67">CjtProblemes::existeix_problema</a></div><div class="ttdeci">bool existeix_problema(const string &amp;p) const</div><div class="ttdoc">Consultora de problemes. </div></div>
+<div class="ttc" id="class_cjt_problemes_html_ae6f76d8e493e80bba4fc28a124826cb5"><div class="ttname"><a href="class_cjt_problemes.html#ae6f76d8e493e80bba4fc28a124826cb5">CjtProblemes::CjtProblemes</a></div><div class="ttdeci">CjtProblemes()</div><div class="ttdoc">Creadora por defecte. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

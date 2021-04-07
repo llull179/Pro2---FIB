@@ -5,9 +5,9 @@
 #ifndef _CjtCursos_hh_
 #define _CjtCursos_hh_
 
-#ifndef NO_DIAGRAM
+
 #include "Curs.hh"
-#endif
+
 
 
 /** @class CjtCursos

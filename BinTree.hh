@@ -1,3 +1,6 @@
+/** @file BinTree.hh
+    @brief Especificació de la clase BinTree.
+*/
 #ifndef BINTREE_HH
 #define BINTREE_HH
 

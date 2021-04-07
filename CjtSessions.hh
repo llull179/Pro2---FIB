@@ -1,12 +1,13 @@
-/** @file Sessio.hh
+/** @file CjtSessions.hh
     @brief Especificació de la classe CjtSessions.
 */
 
 #ifndef _CJTSESSIONS_hh
 #define _CJTSESSIONS_hh
 
-#ifndef NO_DIAGRAM
+
 #include "Sessio.hh"
+#ifndef NO_DIAGRAM
 #include <map>
 #endif
 

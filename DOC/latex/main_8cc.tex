@@ -1,0 +1,224 @@
+\hypertarget{main_8cc}{}\section{Referencia del Archivo main.\+cc}
+\label{main_8cc}\index{main.\+cc@{main.\+cc}}
+
+
+Programa principal.  
+
+
+Dependencia gráfica adjunta para main.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{main_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Programa principal. 
+
+
+
+\subsection{Documentación de las funciones}
+\mbox{\Hypertarget{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+cc@{main.\+cc}!main@{main}}
+\index{main@{main}!main.\+cc@{main.\+cc}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 10 del archivo main.\+cc.
+
+
+\begin{DoxyCode}
+10            \{
+11     \mbox{\hyperlink{class_cjt_problemes}{CjtProblemes}} cjtProb;
+12     \mbox{\hyperlink{class_cjt_sessions}{CjtSessions}} cjtSes;
+13     \mbox{\hyperlink{class_cjt_cursos}{CjtCursos}} cjtCurs;
+14     \mbox{\hyperlink{class_cjt_usuaris}{CjtUsuaris}} cjtUs;
+15 
+16     \textcolor{keywordtype}{string} op;
+17     \textcolor{keywordtype}{int} P;
+18 
+19     cjtProb.\mbox{\hyperlink{class_cjt_problemes_ac320f52e566402ed341d2f67176be14a}{llegir\_problemes\_inicials}}();
+20     cjtSes.\mbox{\hyperlink{class_cjt_sessions_a4ea0fafab13c9db8fe385f62fb572fc0}{llegir\_sessions\_inicials}}();
+21     cjtCurs.\mbox{\hyperlink{class_cjt_cursos_a970aa3d7caa26ed983ccd71e4bfd0adf}{llegir\_cursos\_inicials}}();
+22     cjtUs.\mbox{\hyperlink{class_cjt_usuaris_acb8d525b500b034d277c48197d16a682}{llegir\_usuaris\_inicials}}();
+23 
+24     cin >> op;
+25     \textcolor{keywordflow}{while}(op != \textcolor{stringliteral}{"fin"}) \{
+26         \textcolor{keywordtype}{string} auxString;
+27         \textcolor{keywordtype}{int} auxInt;
+28         \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"np"} or op == \textcolor{stringliteral}{"nuevo\_problema"}) \{
+29             cin >> auxString;
+30 
+31             \textcolor{keywordflow}{if}(not cjtProb.\mbox{\hyperlink{class_cjt_problemes_a27f5be292f79fd47915093fb84013e67}{existeix\_problema}}(auxString))\{
+32                 cjtProb.\mbox{\hyperlink{class_cjt_problemes_a7a41c837128c629f7a4dcf81b1592581}{nou\_problema}}(auxString);
+33             \}
+34             \textcolor{keywordflow}{else} cout<<\textcolor{stringliteral}{"ERROR, ja existeix el problema"}<<endl;
+35         \}
+36 
+37         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"ns"} or op == \textcolor{stringliteral}{" nueva\_sesion "}) \{
+38             cin >> auxString;
+39             ;
+40             \textcolor{keywordflow}{if}(not cjtSes.\mbox{\hyperlink{class_cjt_sessions_ae9df08981044710d4343da21c44e9f1b}{existeix\_sessio}}(auxString))\{
+41                 cjtSes.\mbox{\hyperlink{class_cjt_sessions_ac6e00a3727d5ece89965a4f38d707273}{nova\_sessio}}( auxString );
+42             \}
+43             \textcolor{keywordflow}{else} cout<<\textcolor{stringliteral}{"ERROR, ja existeix la Sessió"}<<endl;
+44         \}
+45         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"nc"} or op == \textcolor{stringliteral}{" nuevo\_curso "}) \{
+46             cjtCurs.\mbox{\hyperlink{class_cjt_cursos_a3d4778b4572a99e1109d6376f439255e}{nou\_curs}}();
+47         \}
+48         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"a"} or op == \textcolor{stringliteral}{" alta\_usuario "}) \{
+49             cin >> auxString;
+50 
+51             \textcolor{keywordflow}{if} (cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a303a749394c11243fdd3c9b6c11d85bc}{existeix\_usuari}}( auxString )) \{
+52                 \mbox{\hyperlink{class_usuari}{Usuari}} u = \mbox{\hyperlink{class_usuari}{Usuari}}(auxString);
+53                 cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a40b8eb64e9dc22e3cf0ee38d52d48e20}{alta\_usuari}}(u);
+54             \}
+55             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: no existeix el Curs"}<< auxInt << endl;
+56         \}
+57 
+58         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"b"} or op == \textcolor{stringliteral}{" baja\_usuario "}) \{
+59             cin >> auxString;
+60 
+61              \textcolor{keywordflow}{if} (cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a303a749394c11243fdd3c9b6c11d85bc}{existeix\_usuari}}( auxString )) \{
+62                 cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a8aa977e92fd28d1c1dd1604ec3ed21e8}{baixa\_usuari}}( auxString );
+63             \}
+64             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: no existeix el Curs"}<< auxInt << endl;
+65         \}
+66 
+67         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"i"} or op == \textcolor{stringliteral}{" inscribir\_curso "}) \{
+68             cin >> auxString >> auxInt;
+69 
+70             \textcolor{keywordflow}{if} (cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a303a749394c11243fdd3c9b6c11d85bc}{existeix\_usuari}}(auxString) and cjtCurs.
+      \mbox{\hyperlink{class_cjt_cursos_ad12b1174de2a5f09cb0c2558645d74dc}{existeix\_curs}}(auxInt)) \{
+71                 \mbox{\hyperlink{class_usuari}{Usuari}} user = cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a96d96217021a8ededacc5f89cec9b04a}{accedir\_usuari}}( auxString );
+72                 \textcolor{keywordflow}{if} (user.\mbox{\hyperlink{class_usuari_a0d20c2d77d8231d9a7e3e00a42a7e7c8}{esta\_inscrit}}() == 0) user.\mbox{\hyperlink{class_usuari_aa67a0b994110236e30d9eac0ebf45fc7}{inscribir\_curso}}( auxInt );
+73                 \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: l'Usuari ja està inscrit a un curs."} << endl;
+74 
+75             \}
+76             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: L'Usuari o el curs no existeixen."} << endl;
+77         \}
+78 
+79         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"cu"} or op == \textcolor{stringliteral}{" curso\_usuario "}) \{
+80             cin >> auxString;
+81 
+82              \textcolor{keywordflow}{if} (cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a303a749394c11243fdd3c9b6c11d85bc}{existeix\_usuari}}( auxString )) \{
+83                 \mbox{\hyperlink{class_usuari}{Usuari}} user = cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a96d96217021a8ededacc5f89cec9b04a}{accedir\_usuari}} ( auxString );
+84                 cout << user.\mbox{\hyperlink{class_usuari_a0d20c2d77d8231d9a7e3e00a42a7e7c8}{esta\_inscrit}}() <<endl;
+85             \}
+86             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: no existeix el Curs"}<< auxInt << endl;
+87         \}
+88 
+89         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"sp"} or op == \textcolor{stringliteral}{" sesion\_problema "}) \{
+90             cin >> auxInt >> auxString;
+91             \textcolor{keywordflow}{if} (not cjtCurs.\mbox{\hyperlink{class_cjt_cursos_ad12b1174de2a5f09cb0c2558645d74dc}{existeix\_curs}}( auxInt)) cout << \textcolor{stringliteral}{"ERROR: no existeix el Curs"} << 
+      auxInt << endl;
+92             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not cjtProb.\mbox{\hyperlink{class_cjt_problemes_a27f5be292f79fd47915093fb84013e67}{existeix\_problema}}( auxString)) cout << \textcolor{stringliteral}{"ERROR: no
+       existeix el Problema"} << auxString << endl;
+93             \textcolor{keywordflow}{else} \{
+94                 \mbox{\hyperlink{class_curs}{Curs}} curs = cjtCurs.\mbox{\hyperlink{class_cjt_cursos_a8aa7b83511051aee39b4942df8e4b2b0}{accedir\_curs}}( auxInt );
+95                 cout << curs.\mbox{\hyperlink{class_curs_a6895416e7e0455a21d2389d050a0cfe0}{trobar\_sessio}}( auxString ) << endl;
+96             \}
+97         \}
+98 
+99         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"pr"} or op == \textcolor{stringliteral}{" problemas\_resueltos "}) \{
+100             cin >> auxString;
+101             \textcolor{keywordflow}{if}(cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a303a749394c11243fdd3c9b6c11d85bc}{existeix\_usuari}}( auxString)) \{
+102 
+103             \}
+104             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: no existeix l'Usuari"} << auxString << endl;
+105         \}
+106         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"pe"} or op == \textcolor{stringliteral}{" problemas\_enviables "}) \{
+107             cin >> auxString;
+108             \textcolor{keywordflow}{if}(cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a303a749394c11243fdd3c9b6c11d85bc}{existeix\_usuari}}( auxString)) \{
+109 
+110             \}
+111             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: no existeix l'Usuari"} << auxString << endl;
+112         \}
+113 
+114         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"e"} or op == \textcolor{stringliteral}{" envio "}) \{
+115             \textcolor{keywordtype}{bool} r;
+116             \textcolor{keywordtype}{string} p;
+117             cin >> auxString >> p >> r;
+118 
+119             \mbox{\hyperlink{class_usuari}{Usuari}} user = cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a96d96217021a8ededacc5f89cec9b04a}{accedir\_usuari}}( auxString );
+120             \mbox{\hyperlink{class_problema}{Problema}} prob = cjtProb.\mbox{\hyperlink{class_cjt_problemes_a2db39d9fee16e50c9a0ddfa1a5a2e460}{accedir\_problema}}( p )
+121 
+122             prob.actualitzar\_stats( r )
+123             user.\mbox{\hyperlink{class_usuari_a5721999c4381ccf24520dfcdda798587}{actualitzar\_stats}}(auxInt, r);
+124 
+125             \textcolor{keywordflow}{if} ( r ) \{
+126                 user.\mbox{\hyperlink{class_usuari_a3cb6bb4ab49c3f858f3588c77af11527}{curs\_completat}}();
+127             \}
+128         \}
+129 
+130         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"lp"} or op == \textcolor{stringliteral}{" listar\_problemas "}) \{
+131             cjtProb.\mbox{\hyperlink{class_cjt_problemes_a4f47e1d0800f32093efa7569f58d8105}{llistat\_problemes}}();
+132         \}
+133 
+134         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"ep"} or op == \textcolor{stringliteral}{" escribir\_problema "}) \{
+135             cin >> auxString;
+136             \textcolor{keywordflow}{if} (cjtProb.\mbox{\hyperlink{class_cjt_problemes_a27f5be292f79fd47915093fb84013e67}{existeix\_problema}}( auxString )) \{
+137                 \mbox{\hyperlink{class_problema}{Problema}} prob = cjtSes.accedir\_problema ( auxString );
+138                 prob.escriure\_problema();
+139             \}
+140             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: no existeix el Problema"} << auxString << endl;
+141         \}
+142 
+143         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"ls"} or op == \textcolor{stringliteral}{" listar\_sesiones "}) \{
+144             cjtSes.\mbox{\hyperlink{class_cjt_sessions_a1e4f04be3e5da3d8f9091620d56ea355}{llistat\_sessions}}();
+145         \}
+146 
+147         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"es"} or op == \textcolor{stringliteral}{" escribir\_sesion "}) \{
+148             cin >> auxString;
+149 
+150             \textcolor{keywordflow}{if} (cjtSes.\mbox{\hyperlink{class_cjt_sessions_ae9df08981044710d4343da21c44e9f1b}{existeix\_sessio}}( auxString )) \{
+151                 \mbox{\hyperlink{class_sessio}{Sessio}} ses = cjtSes.\mbox{\hyperlink{class_cjt_sessions_a1b537e16d53208300ed8a659440b85cd}{accedir\_sessio}} ( auxString );
+152                 ses.\mbox{\hyperlink{class_sessio_a4a9fcbfd3973be306c7076af557a431c}{escriure\_sessio}}();
+153             \}
+154             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: no existeix la Sessió"} << auxString << endl;
+155 
+156         \}
+157 
+158         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"lc"} or op == \textcolor{stringliteral}{" listar\_cursos "}) \{
+159             cjtCurs.\mbox{\hyperlink{class_cjt_cursos_a9a772bfad772e507fa9b8f5194b13873}{llistat\_cursos}}();
+160         \}
+161 
+162         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"ec"} or op == \textcolor{stringliteral}{" escribir\_curso "}) \{
+163             cin >> auxInt;
+164 
+165              \textcolor{keywordflow}{if} (cjtCurs.\mbox{\hyperlink{class_cjt_cursos_ad12b1174de2a5f09cb0c2558645d74dc}{existeix\_curs}}( auxInt )) \{
+166                 \mbox{\hyperlink{class_curs}{Curs}} curs = cjtCurs.\mbox{\hyperlink{class_cjt_cursos_a8aa7b83511051aee39b4942df8e4b2b0}{accedir\_curs}} ( auxInt );
+167                 curs.\mbox{\hyperlink{class_curs_a54b500f472e5ae51395bca6fe1e0bd09}{escriure\_curs}}();
+168             \}
+169             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: no existeix el Curs"}<< auxInt << endl;
+170 
+171         \}
+172 
+173         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"lu"} or op == \textcolor{stringliteral}{" listar\_usuarios "}) \{
+174             cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a28020e6e834b3c483198285fb35436fc}{llistat\_usuaris}}();
+175         \}
+176 
+177         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"eu"} or op == \textcolor{stringliteral}{" escribir\_usuario "}) \{
+178             cin >> auxString;
+179 
+180              \textcolor{keywordflow}{if} (cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a303a749394c11243fdd3c9b6c11d85bc}{existeix\_usuari}}( auxString )) \{
+181                 \mbox{\hyperlink{class_usuari}{Usuari}} user = cjtUs.\mbox{\hyperlink{class_cjt_usuaris_a96d96217021a8ededacc5f89cec9b04a}{accedir\_usuari}} ( auxString );
+182                 user.\mbox{\hyperlink{class_usuari_ad13c0b52f5430b0b400c7e3ac6611310}{escriure\_usuari}}();
+183             \}
+184             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: no existeix el Curs"}<< auxInt << endl;
+185         \}
+186 
+187         cin >> op;
+188     \}
+189 \}
+\end{DoxyCode}

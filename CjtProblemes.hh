@@ -5,8 +5,8 @@
 #ifndef _PROBLEMA_HH_
 #define _PROBLEMA_HH_
 
-#ifndef NO_DIAGRAM
 #include "Problema.hh"
+#ifndef NO_DIAGRAM
 #include <set>
 #endif
 

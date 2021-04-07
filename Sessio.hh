@@ -1,13 +1,13 @@
 /** @file Sessio.hh
-    @brief Especificació de la classe Sessió.
+    @brief Especificació de la classe Sessio.
 */
 
 #ifndef _Sessio_hh
 #define _Sessio_hh
 
-#ifndef NO_DIAGRAM
 #include "CjtProblemes.hh"
 #include "BinTree.hh"
+#ifndef NO_DIAGRAM
 #include <list>
 #endif
 

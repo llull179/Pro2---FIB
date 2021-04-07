@@ -1,13 +1,11 @@
-/** @file CjtCursos.hh
+/** @file Curs.hh
     @brief Especificació de la clase Curs.
 */
 
 #ifndef _CURS_hh_
 #define _CURS_hh_
 
-#ifndef NO_DIAGRAM
 #include "CjtSessions.hh"
-#endif
 
 
 /** @class CjtCurs
