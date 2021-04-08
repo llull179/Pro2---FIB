@@ -10,30 +10,30 @@
 #include <set>
 #endif
 
-
+ 
 /** @class CjtProblemes
-    @brief Representa un conjunt de problemes. 
+    @brief Representa un conjunt de problemes.
 
 */
 class CjtProblemes
 {
-    
-private:    
+
+private:
     set <Problema> problemes;
 
 public:
-    
+
     //Constructora
-    
+
     /** @brief Creadora por defecte.
         \pre <em>cert</em>
         \post El resultat és un nou Conjunt de Problemes.
     */
 
     CjtProblemes();
-    
+
     //Consultors
-    
+
     /** @brief Consultora de problemes.
         \pre <em>cert</em>
         \post El resultat indica si el parametre implícit conté el problema
@@ -41,7 +41,7 @@ public:
 
     bool existeix_problema (const string & p ) const;
 
-    
+
     /** @brief Accedeix a al Problema <em>p</em>
         \pre El Problema p existeix.
         \post Retorna el Problema p.
@@ -49,9 +49,9 @@ public:
     */
 
     Problema& accedir_problema (const string& p);
-    
+
     //Modificadores
-    
+
     /** @brief Afageix un problema
         \pre <em>p</em> p no existeix.
         \post S'ha afegit el problema al paràmetre implícit. Imprimeix el numero de problemes després d'afegir-lo.
@@ -79,6 +79,6 @@ public:
     */
 
     void llistat_problemes () const;
-    
+
 };
 #endif

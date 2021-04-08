@@ -1,25 +1,18 @@
 #include "CjtProblemes.hh"
- 
 
 CjtProblemes::CjtProblemes(){}
 
-bool CjtProblemes::consultar_problema (const string & p ) const{
-    
-    list <string>::const_iterator it;
-    for(it = problemes.begin(); it != problemes.end(); ++it ){
-        if( (*it) == p) return true;
-    }
+bool CjtProblemes::existeix_problema (const string & p ) const{
+
+  int it =  problemes.find( p );
+    if(it != problemes.end()) return true;
     else return false;
 }
 
 
-void CjtProblemes::nou_problema (const string & p){
-    list <string>::iterator it = problemes.end();
-    problemes.insert(it, p);
-    
-}
 
-void CjtProblemes::llegir_problemes_inicials (){
+
+Problema CjtProblemes::accedir_problema (const string & p)){
     int P;
     cin >> P;
     list <string>::iterator it = problemes.end();
@@ -31,15 +24,21 @@ void CjtProblemes::llegir_problemes_inicials (){
     }
 }
 
-void CjtProblemes::llistat_problemes (){
+void CjtProblemes::nou_problema (const string & p){
+    list <string>::iterator it = problemes.end();
+    problemes.insert(it, p);
 
-    
 }
 
-void CjtProblemes::escriure_problema (const string& p){
+void CjtProblemes::llegir_problemes_inicials (){
     if(not consultar_problema(p) ) {
         //leltgir dades
     }
     else cout<<"ERROR"<<endl;
-    
+
+}
+
+void CjtProblemes::llistat_problemes (){
+
+
 }
