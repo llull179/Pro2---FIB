@@ -1,5 +1,10 @@
 \hypertarget{class_bin_tree}{}\section{Referencia de la plantilla de la Clase Bin\+Tree$<$ T $>$}
 \label{class_bin_tree}\index{Bin\+Tree$<$ T $>$@{Bin\+Tree$<$ T $>$}}
+
+
+Representa un Arbre binari (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}).  
+
+
 \subsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -23,9 +28,9 @@ const T \& \mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{va
 \subsubsection*{template$<$typename T$>$\newline
 class Bin\+Tree$<$ T $>$}
 
+Representa un Arbre binari (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}). 
 
-
-Definición en la línea 19 del archivo Bin\+Tree.\+hh.
+Definición en la línea 21 del archivo Bin\+Tree.\+hh.
 
 
 
@@ -34,51 +39,51 @@ Definición en la línea 19 del archivo Bin\+Tree.\+hh.
 \index{Bin\+Tree@{Bin\+Tree}!Bin\+Tree@{Bin\+Tree}}
 \index{Bin\+Tree@{Bin\+Tree}!Bin\+Tree@{Bin\+Tree}}
 \subsubsection{\texorpdfstring{Bin\+Tree()}{BinTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
+{\footnotesize\ttfamily template$<$typename T$>$ \\
 \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definición en la línea 48 del archivo Bin\+Tree.\+hh.
+Definición en la línea 50 del archivo Bin\+Tree.\+hh.
 
 
 \begin{DoxyCode}
-49     :   p(\textcolor{keyword}{nullptr})
-50     \{   \}
+51     :   p(\textcolor{keyword}{nullptr})
+52     \{   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{class_bin_tree_a1ab686e0bcf990093ff91fe71744c1a4}\label{class_bin_tree_a1ab686e0bcf990093ff91fe71744c1a4}} 
 \index{Bin\+Tree@{Bin\+Tree}!Bin\+Tree@{Bin\+Tree}}
 \index{Bin\+Tree@{Bin\+Tree}!Bin\+Tree@{Bin\+Tree}}
 \subsubsection{\texorpdfstring{Bin\+Tree()}{BinTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
+{\footnotesize\ttfamily template$<$typename T$>$ \\
 \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} (\begin{DoxyParamCaption}\item[{const T \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
 
-Definición en la línea 53 del archivo Bin\+Tree.\+hh.
+Definición en la línea 55 del archivo Bin\+Tree.\+hh.
 
 
 \begin{DoxyCode}
-53                                   \{
-54         p = make\_shared<Node>(x, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr});
-55     \}
+55                                   \{
+56         p = make\_shared<Node>(x, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr});
+57     \}
 \end{DoxyCode}
 \mbox{\Hypertarget{class_bin_tree_adb7eeff76d08130c943b36af215eb521}\label{class_bin_tree_adb7eeff76d08130c943b36af215eb521}} 
 \index{Bin\+Tree@{Bin\+Tree}!Bin\+Tree@{Bin\+Tree}}
 \index{Bin\+Tree@{Bin\+Tree}!Bin\+Tree@{Bin\+Tree}}
 \subsubsection{\texorpdfstring{Bin\+Tree()}{BinTree()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
+{\footnotesize\ttfamily template$<$typename T$>$ \\
 \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} (\begin{DoxyParamCaption}\item[{const T \&}]{x,  }\item[{const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ T $>$ \&}]{left,  }\item[{const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ T $>$ \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
 
-Definición en la línea 58 del archivo Bin\+Tree.\+hh.
+Definición en la línea 60 del archivo Bin\+Tree.\+hh.
 
 
 \begin{DoxyCode}
-58                                                                              \{
-59         p = make\_shared<Node>(x, \mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}.p, \mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}.p);
-60     \}
+60                                                                              \{
+61         p = make\_shared<Node>(x, \mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}.p, \mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}.p);
+62     \}
 \end{DoxyCode}
 
 
@@ -87,72 +92,72 @@ Definición en la línea 58 del archivo Bin\+Tree.\+hh.
 \index{Bin\+Tree@{Bin\+Tree}!empty@{empty}}
 \index{empty@{empty}!Bin\+Tree@{Bin\+Tree}}
 \subsubsection{\texorpdfstring{empty()}{empty()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
+{\footnotesize\ttfamily template$<$typename T$>$ \\
 bool \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Definición en la línea 63 del archivo Bin\+Tree.\+hh.
+Definición en la línea 65 del archivo Bin\+Tree.\+hh.
 
 
 \begin{DoxyCode}
-63                         \{
-64         \textcolor{keywordflow}{return} not p;
-65     \}
+65                         \{
+66         \textcolor{keywordflow}{return} not p;
+67     \}
 \end{DoxyCode}
 \mbox{\Hypertarget{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}\label{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}} 
 \index{Bin\+Tree@{Bin\+Tree}!left@{left}}
 \index{left@{left}!Bin\+Tree@{Bin\+Tree}}
 \subsubsection{\texorpdfstring{left()}{left()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
+{\footnotesize\ttfamily template$<$typename T$>$ \\
 \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ T $>$\+::left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Definición en la línea 68 del archivo Bin\+Tree.\+hh.
+Definición en la línea 70 del archivo Bin\+Tree.\+hh.
 
 
 \begin{DoxyCode}
-68                           \{
-69         assert(not \mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}());
-70         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_bin_tree_a47eef22d29cd023449d97c073c08e5b6}{BinTree}}(p->left);
-71     \}
+70                           \{
+71         assert(not \mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}());
+72         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_bin_tree_a47eef22d29cd023449d97c073c08e5b6}{BinTree}}(p->left);
+73     \}
 \end{DoxyCode}
 \mbox{\Hypertarget{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}\label{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}} 
 \index{Bin\+Tree@{Bin\+Tree}!right@{right}}
 \index{right@{right}!Bin\+Tree@{Bin\+Tree}}
 \subsubsection{\texorpdfstring{right()}{right()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
+{\footnotesize\ttfamily template$<$typename T$>$ \\
 \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ T $>$\+::right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Definición en la línea 74 del archivo Bin\+Tree.\+hh.
+Definición en la línea 76 del archivo Bin\+Tree.\+hh.
 
 
 \begin{DoxyCode}
-74                            \{
-75         assert(not \mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}());
-76         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_bin_tree_a47eef22d29cd023449d97c073c08e5b6}{BinTree}}(p->right);
-77     \}
+76                            \{
+77         assert(not \mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}());
+78         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_bin_tree_a47eef22d29cd023449d97c073c08e5b6}{BinTree}}(p->right);
+79     \}
 \end{DoxyCode}
 \mbox{\Hypertarget{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}\label{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}} 
 \index{Bin\+Tree@{Bin\+Tree}!value@{value}}
 \index{value@{value}!Bin\+Tree@{Bin\+Tree}}
 \subsubsection{\texorpdfstring{value()}{value()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
+{\footnotesize\ttfamily template$<$typename T$>$ \\
 const T\& \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ T $>$\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Definición en la línea 80 del archivo Bin\+Tree.\+hh.
+Definición en la línea 82 del archivo Bin\+Tree.\+hh.
 
 
 \begin{DoxyCode}
-80                             \{
-81         assert(not \mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}());
-82         \textcolor{keywordflow}{return} p->x;
-83     \}
+82                             \{
+83         assert(not \mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}());
+84         \textcolor{keywordflow}{return} p->x;
+85     \}
 \end{DoxyCode}
 
 

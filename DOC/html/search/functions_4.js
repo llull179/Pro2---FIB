@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inscribir_5fcurso',['inscribir_curso',['../class_usuari.html#aa67a0b994110236e30d9eac0ebf45fc7',1,'Usuari']]]
+  ['inscribir_5fcurso',['inscribir_curso',['../class_usuari.html#af7f2d183e02eec8428bf48df89efb763',1,'Usuari']]]
 ];

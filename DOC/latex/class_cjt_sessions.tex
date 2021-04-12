@@ -1,14 +1,19 @@
 \hypertarget{class_cjt_sessions}{}\section{Referencia de la Clase Cjt\+Sessions}
 \label{class_cjt_sessions}\index{Cjt\+Sessions@{Cjt\+Sessions}}
+
+
+Representa un Conjunt de sessions (\mbox{\hyperlink{class_sessio}{Sessio}}).  
+
+
 \subsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_cjt_sessions_acfe3023a40e3dcbfeb558466a013ca87}{Cjt\+Sessions}} ()
 \begin{DoxyCompactList}\small\item\em Creadora por defecte. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_cjt_sessions_ae9df08981044710d4343da21c44e9f1b}{existeix\+\_\+sessio}} (const string \&s)
-\begin{DoxyCompactList}\small\item\em Consulta si la Sessió s existeix {\itshape s} \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_sessio}{Sessio}} \mbox{\hyperlink{class_cjt_sessions_a1b537e16d53208300ed8a659440b85cd}{accedir\+\_\+sessio}} (const string \&s)
-\begin{DoxyCompactList}\small\item\em Accedeix a la Sessió {\itshape s} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cjt_sessions_ae0d6dfe6e1bab2746fa03dc852f2f4a9}{existeix\+\_\+sessio}} (const string \&s) const
+\begin{DoxyCompactList}\small\item\em Consulta si la Sessió s existeix {\itshape s}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sessio}{Sessio}} \& \mbox{\hyperlink{class_cjt_sessions_a373d89dde7bb62322feb50f3a299d5de}{accedir\+\_\+sessio}} (const string \&s)
+\begin{DoxyCompactList}\small\item\em Accedeix a la Sessió {\itshape s}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt_sessions_ac6e00a3727d5ece89965a4f38d707273}{nova\+\_\+sessio}} (const string \&s)
 \begin{DoxyCompactList}\small\item\em Afageix un sessio. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt_sessions_a4ea0fafab13c9db8fe385f62fb572fc0}{llegir\+\_\+sessions\+\_\+inicials}} ()
@@ -18,7 +23,7 @@ void \mbox{\hyperlink{class_cjt_sessions_a1e4f04be3e5da3d8f9091620d56ea355}{llis
 
 
 \subsection{Descripción detallada}
-
+Representa un Conjunt de sessions (\mbox{\hyperlink{class_sessio}{Sessio}}). 
 
 Definición en la línea 19 del archivo Cjt\+Sessions.\+hh.
 
@@ -44,31 +49,31 @@ El resultat és un nou conjunt de Sessions.
 
 
 \subsection{Documentación de las funciones miembro}
-\mbox{\Hypertarget{class_cjt_sessions_ae9df08981044710d4343da21c44e9f1b}\label{class_cjt_sessions_ae9df08981044710d4343da21c44e9f1b}} 
+\mbox{\Hypertarget{class_cjt_sessions_ae0d6dfe6e1bab2746fa03dc852f2f4a9}\label{class_cjt_sessions_ae0d6dfe6e1bab2746fa03dc852f2f4a9}} 
 \index{Cjt\+Sessions@{Cjt\+Sessions}!existeix\+\_\+sessio@{existeix\+\_\+sessio}}
 \index{existeix\+\_\+sessio@{existeix\+\_\+sessio}!Cjt\+Sessions@{Cjt\+Sessions}}
 \subsubsection{\texorpdfstring{existeix\+\_\+sessio()}{existeix\_sessio()}}
-{\footnotesize\ttfamily bool Cjt\+Sessions\+::existeix\+\_\+sessio (\begin{DoxyParamCaption}\item[{const string \&}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Cjt\+Sessions\+::existeix\+\_\+sessio (\begin{DoxyParamCaption}\item[{const string \&}]{s }\end{DoxyParamCaption}) const}
 
 
 
-Consulta si la Sessió s existeix {\itshape s} 
+Consulta si la Sessió s existeix {\itshape s}. 
 
 \begin{DoxyPrecond}{Precondición}
-cert. 
+{\itshape cert}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Retorna si existeix. 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_cjt_sessions_a1b537e16d53208300ed8a659440b85cd}\label{class_cjt_sessions_a1b537e16d53208300ed8a659440b85cd}} 
+\mbox{\Hypertarget{class_cjt_sessions_a373d89dde7bb62322feb50f3a299d5de}\label{class_cjt_sessions_a373d89dde7bb62322feb50f3a299d5de}} 
 \index{Cjt\+Sessions@{Cjt\+Sessions}!accedir\+\_\+sessio@{accedir\+\_\+sessio}}
 \index{accedir\+\_\+sessio@{accedir\+\_\+sessio}!Cjt\+Sessions@{Cjt\+Sessions}}
 \subsubsection{\texorpdfstring{accedir\+\_\+sessio()}{accedir\_sessio()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_sessio}{Sessio}} Cjt\+Sessions\+::accedir\+\_\+sessio (\begin{DoxyParamCaption}\item[{const string \&}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sessio}{Sessio}}\& Cjt\+Sessions\+::accedir\+\_\+sessio (\begin{DoxyParamCaption}\item[{const string \&}]{s }\end{DoxyParamCaption})}
 
 
 
-Accedeix a la Sessió {\itshape s} 
+Accedeix a la Sessió {\itshape s}. 
 
 \begin{DoxyPrecond}{Precondición}
 La Sessió s existeix. 
@@ -87,7 +92,7 @@ Retorna la Sessió s.
 Afageix un sessio. 
 
 \begin{DoxyPrecond}{Precondición}
-Els problemes existeixen i no estan repetits 
+Els problemes existeixen i no estan repetits. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Se ha creat la sessió. Imprimeix el numero de sessions Q després de crear-\/la. 
@@ -103,7 +108,7 @@ Se ha creat la sessió. Imprimeix el numero de sessions Q després de crear-\/la
 Llegeix les sessions inicials. 
 
 \begin{DoxyPrecond}{Precondición}
-cert 
+{\itshape cert}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Guarda el repositrori inicial de sessions. 
@@ -119,7 +124,7 @@ Guarda el repositrori inicial de sessions.
 Llistat de Sessions. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape cert} 
+{\itshape cert}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Es llisten totes les sessions en ordre creixent per l\textquotesingle{}identificador, mostrant el nombre de problemes que les formen i els seus identificadors, seguit de l\textquotesingle{}estructura de prequisits en preordre. 

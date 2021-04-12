@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ratio',['ratio',['../_problema_8hh.html#a79e45999bba256f0615955bc9b13f414',1,'Problema.hh']]]
+  ['name',['name',['../class_usuari.html#a0b513dec3aba1eefd51e55c98d3911b8',1,'Usuari']]]
 ];

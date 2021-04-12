@@ -53,10 +53,10 @@ var menudata={children:[
 {text:"s",url:"functions_func.html#index_s"},
 {text:"t",url:"functions_func.html#index_t"},
 {text:"u",url:"functions_func.html#index_u"},
-{text:"v",url:"functions_func.html#index_v"}]}]}]},
+{text:"v",url:"functions_func.html#index_v"}]},
+{text:"Variables",url:"functions_vars.html"}]}]},
 {text:"Archivos",url:"files.html",children:[
 {text:"Lista de archivos",url:"files.html"},
 {text:"Miembros de los ficheros",url:"globals.html",children:[
 {text:"Todo",url:"globals.html"},
-{text:"Funciones",url:"globals_func.html"},
-{text:"Variables",url:"globals_vars.html"}]}]}]}
+{text:"Funciones",url:"globals_func.html"}]}]}]}

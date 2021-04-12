@@ -2,7 +2,7 @@
 \label{class_cjt_usuaris}\index{Cjt\+Usuaris@{Cjt\+Usuaris}}
 
 
-Representa el conjunt de tots els usuaris 
+Representa el conjunt de tots els usuaris (\mbox{\hyperlink{class_usuari}{Usuari}}). 
 
 
 \subsection*{Métodos públicos}
@@ -10,11 +10,11 @@ Representa el conjunt de tots els usuaris
 \item 
 \mbox{\hyperlink{class_cjt_usuaris_a66bec1ef851247d1729414abcfcba4a6}{Cjt\+Usuaris}} ()
 \begin{DoxyCompactList}\small\item\em Creadora per defecto. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_cjt_usuaris_a303a749394c11243fdd3c9b6c11d85bc}{existeix\+\_\+usuari}} (const string \&u)
+bool \mbox{\hyperlink{class_cjt_usuaris_a0d3f318f95ecfdae0f7420113cc73ab0}{existeix\+\_\+usuari}} (const string \&u) const
 \begin{DoxyCompactList}\small\item\em Comprova si ja existeix l\textquotesingle{}usuari u. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt_usuaris_a28020e6e834b3c483198285fb35436fc}{llistat\+\_\+usuaris}} ()
 \begin{DoxyCompactList}\small\item\em Llistat d\textquotesingle{}usuaris. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_usuari}{Usuari}} \mbox{\hyperlink{class_cjt_usuaris_a96d96217021a8ededacc5f89cec9b04a}{accedir\+\_\+usuari}} (const string \&s)
+\mbox{\hyperlink{class_usuari}{Usuari}} \& \mbox{\hyperlink{class_cjt_usuaris_a01e702bce964b2a96af36fcd9a820b74}{accedir\+\_\+usuari}} (const string \&s)
 \begin{DoxyCompactList}\small\item\em Accedeix a l\textquotesingle{}\mbox{\hyperlink{class_usuari}{Usuari}} {\itshape u} \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt_usuaris_a40b8eb64e9dc22e3cf0ee38d52d48e20}{alta\+\_\+usuari}} (\mbox{\hyperlink{class_usuari}{Usuari}} u)
 \begin{DoxyCompactList}\small\item\em Dona d\textquotesingle{}alta un nou usuari. \end{DoxyCompactList}\item 
@@ -25,7 +25,7 @@ void \mbox{\hyperlink{class_cjt_usuaris_acb8d525b500b034d277c48197d16a682}{llegi
 
 
 \subsection{Descripción detallada}
-Representa el conjunt de tots els usuaris
+Representa el conjunt de tots els usuaris (\mbox{\hyperlink{class_usuari}{Usuari}}).
 
 Conté Usuaris. 
 
@@ -45,29 +45,29 @@ Definición en la línea 19 del archivo Cjt\+Usuaris.\+hh.
 Creadora per defecto. 
 
 S\textquotesingle{}executa automàticament al declarar el conjunto d\textquotesingle{}usuarios. \begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
+{\itshape cert}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-El resultat és un conjunt d\textquotesingle{}usuaris. 
+El resultat és un conjunt d\textquotesingle{}usuaris ( \mbox{\hyperlink{class_cjt_usuaris}{Cjt\+Usuaris}}). 
 \end{DoxyPostcond}
 
 
 \subsection{Documentación de las funciones miembro}
-\mbox{\Hypertarget{class_cjt_usuaris_a303a749394c11243fdd3c9b6c11d85bc}\label{class_cjt_usuaris_a303a749394c11243fdd3c9b6c11d85bc}} 
+\mbox{\Hypertarget{class_cjt_usuaris_a0d3f318f95ecfdae0f7420113cc73ab0}\label{class_cjt_usuaris_a0d3f318f95ecfdae0f7420113cc73ab0}} 
 \index{Cjt\+Usuaris@{Cjt\+Usuaris}!existeix\+\_\+usuari@{existeix\+\_\+usuari}}
 \index{existeix\+\_\+usuari@{existeix\+\_\+usuari}!Cjt\+Usuaris@{Cjt\+Usuaris}}
 \subsubsection{\texorpdfstring{existeix\+\_\+usuari()}{existeix\_usuari()}}
-{\footnotesize\ttfamily bool Cjt\+Usuaris\+::existeix\+\_\+usuari (\begin{DoxyParamCaption}\item[{const string \&}]{u }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Cjt\+Usuaris\+::existeix\+\_\+usuari (\begin{DoxyParamCaption}\item[{const string \&}]{u }\end{DoxyParamCaption}) const}
 
 
 
 Comprova si ja existeix l\textquotesingle{}usuari u. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
+{\itshape cert}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Retorna true si existeix i fals si no existeix. 
+Retorna true si existeix i fals en cas contrari. 
 \end{DoxyPostcond}
 \mbox{\Hypertarget{class_cjt_usuaris_a28020e6e834b3c483198285fb35436fc}\label{class_cjt_usuaris_a28020e6e834b3c483198285fb35436fc}} 
 \index{Cjt\+Usuaris@{Cjt\+Usuaris}!llistat\+\_\+usuaris@{llistat\+\_\+usuaris}}
@@ -85,11 +85,11 @@ Llistat d\textquotesingle{}usuaris.
 \begin{DoxyPostcond}{Postcondición}
 Es llisten tots els usuaris en ordre creixent pel nom, mostrant quants enviamnets ha realitzat en total, quants satisfactoriament, quants ha intentat almenys un cop i l\textquotesingle{}identificador de quin curs está inscrit o un 0 si no està inscrit a cap, per cada usuari. 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_cjt_usuaris_a96d96217021a8ededacc5f89cec9b04a}\label{class_cjt_usuaris_a96d96217021a8ededacc5f89cec9b04a}} 
+\mbox{\Hypertarget{class_cjt_usuaris_a01e702bce964b2a96af36fcd9a820b74}\label{class_cjt_usuaris_a01e702bce964b2a96af36fcd9a820b74}} 
 \index{Cjt\+Usuaris@{Cjt\+Usuaris}!accedir\+\_\+usuari@{accedir\+\_\+usuari}}
 \index{accedir\+\_\+usuari@{accedir\+\_\+usuari}!Cjt\+Usuaris@{Cjt\+Usuaris}}
 \subsubsection{\texorpdfstring{accedir\+\_\+usuari()}{accedir\_usuari()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_usuari}{Usuari}} Cjt\+Usuaris\+::accedir\+\_\+usuari (\begin{DoxyParamCaption}\item[{const string \&}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_usuari}{Usuari}}\& Cjt\+Usuaris\+::accedir\+\_\+usuari (\begin{DoxyParamCaption}\item[{const string \&}]{s }\end{DoxyParamCaption})}
 
 
 
@@ -112,7 +112,7 @@ Retorna l\textquotesingle{}\mbox{\hyperlink{class_usuari}{Usuari}} u.
 Dona d\textquotesingle{}alta un nou usuari. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
+{\itshape cert}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Si ja existia l\textquotesingle{}usuari {\itshape u} imprimeix un error, sinó imprimeix el número d\textquotesingle{}usuaris després d\textquotesingle{}afegir-\/lo. 

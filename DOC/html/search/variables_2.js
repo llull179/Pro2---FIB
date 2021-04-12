@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['problema',['Problema',['../_sessio_8hh.html#a2fec61464f4d0b831e76553fca0c62bf',1,'Sessio.hh']]]
+  ['ident',['ident',['../class_problema.html#a34d6d89ed0074128dcdf16343d2ab5cd',1,'Problema']]]
 ];

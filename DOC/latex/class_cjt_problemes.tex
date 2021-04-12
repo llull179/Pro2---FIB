@@ -2,7 +2,7 @@
 \label{class_cjt_problemes}\index{Cjt\+Problemes@{Cjt\+Problemes}}
 
 
-Representa un conjunt de problemes.  
+Representa un conjunt de problemes (\mbox{\hyperlink{class_problema}{Problema}}).  
 
 
 \subsection*{Métodos públicos}
@@ -12,18 +12,18 @@ Representa un conjunt de problemes.
 \begin{DoxyCompactList}\small\item\em Creadora por defecte. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_cjt_problemes_a27f5be292f79fd47915093fb84013e67}{existeix\+\_\+problema}} (const string \&p) const
 \begin{DoxyCompactList}\small\item\em Consultora de problemes. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_problema}{Problema}} \mbox{\hyperlink{class_cjt_problemes_a2db39d9fee16e50c9a0ddfa1a5a2e460}{accedir\+\_\+problema}} (const string \&p)
+\mbox{\hyperlink{class_problema}{Problema}} \& \mbox{\hyperlink{class_cjt_problemes_ae0db90032709a9d6af8312b93877d514}{accedir\+\_\+problema}} (const string \&p)
 \begin{DoxyCompactList}\small\item\em Accedeix a al \mbox{\hyperlink{class_problema}{Problema}} {\itshape p} \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt_problemes_a7a41c837128c629f7a4dcf81b1592581}{nou\+\_\+problema}} (const string \&p)
 \begin{DoxyCompactList}\small\item\em Afageix un problema. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt_problemes_ac320f52e566402ed341d2f67176be14a}{llegir\+\_\+problemes\+\_\+inicials}} ()
 \begin{DoxyCompactList}\small\item\em Llegeix els problemes inicials. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_cjt_problemes_a4f47e1d0800f32093efa7569f58d8105}{llistat\+\_\+problemes}} () const
+void \mbox{\hyperlink{class_cjt_problemes_a976ab13903046970b2e128a3fa4df8fa}{llistat\+\_\+problemes}} ()
 \begin{DoxyCompactList}\small\item\em Llistat de problemes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Descripción detallada}
-Representa un conjunt de problemes. 
+Representa un conjunt de problemes (\mbox{\hyperlink{class_problema}{Problema}}). 
 
 Definición en la línea 18 del archivo Cjt\+Problemes.\+hh.
 
@@ -41,7 +41,7 @@ Definición en la línea 18 del archivo Cjt\+Problemes.\+hh.
 Creadora por defecte. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape cert} 
+{\itshape cert}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 El resultat és un nou Conjunt de Problemes. 
@@ -60,16 +60,16 @@ El resultat és un nou Conjunt de Problemes.
 Consultora de problemes. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape cert} 
+{\itshape cert}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 El resultat indica si el parametre implícit conté el problema 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_cjt_problemes_a2db39d9fee16e50c9a0ddfa1a5a2e460}\label{class_cjt_problemes_a2db39d9fee16e50c9a0ddfa1a5a2e460}} 
+\mbox{\Hypertarget{class_cjt_problemes_ae0db90032709a9d6af8312b93877d514}\label{class_cjt_problemes_ae0db90032709a9d6af8312b93877d514}} 
 \index{Cjt\+Problemes@{Cjt\+Problemes}!accedir\+\_\+problema@{accedir\+\_\+problema}}
 \index{accedir\+\_\+problema@{accedir\+\_\+problema}!Cjt\+Problemes@{Cjt\+Problemes}}
 \subsubsection{\texorpdfstring{accedir\+\_\+problema()}{accedir\_problema()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_problema}{Problema}} Cjt\+Problemes\+::accedir\+\_\+problema (\begin{DoxyParamCaption}\item[{const string \&}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_problema}{Problema}}\& Cjt\+Problemes\+::accedir\+\_\+problema (\begin{DoxyParamCaption}\item[{const string \&}]{p }\end{DoxyParamCaption})}
 
 
 
@@ -92,7 +92,7 @@ Retorna el \mbox{\hyperlink{class_problema}{Problema}} p.
 Afageix un problema. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape p} p no existeix. 
+El problema {\itshape p} p existeix. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 S\textquotesingle{}ha afegit el problema al paràmetre implícit. Imprimeix el numero de problemes després d\textquotesingle{}afegir-\/lo. 
@@ -108,23 +108,23 @@ S\textquotesingle{}ha afegit el problema al paràmetre implícit. Imprimeix el n
 Llegeix els problemes inicials. 
 
 \begin{DoxyPrecond}{Precondición}
-cert 
+{\itshape cert}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Guarda la colecció inicial de problemes. 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_cjt_problemes_a4f47e1d0800f32093efa7569f58d8105}\label{class_cjt_problemes_a4f47e1d0800f32093efa7569f58d8105}} 
+\mbox{\Hypertarget{class_cjt_problemes_a976ab13903046970b2e128a3fa4df8fa}\label{class_cjt_problemes_a976ab13903046970b2e128a3fa4df8fa}} 
 \index{Cjt\+Problemes@{Cjt\+Problemes}!llistat\+\_\+problemes@{llistat\+\_\+problemes}}
 \index{llistat\+\_\+problemes@{llistat\+\_\+problemes}!Cjt\+Problemes@{Cjt\+Problemes}}
 \subsubsection{\texorpdfstring{llistat\+\_\+problemes()}{llistat\_problemes()}}
-{\footnotesize\ttfamily void Cjt\+Problemes\+::llistat\+\_\+problemes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily void Cjt\+Problemes\+::llistat\+\_\+problemes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Llistat de problemes. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape cert} 
+{\itshape cert}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Es llisten tots els problemes de la colecció inicant el nombre d\textquotesingle{}enviaments per cada problema, també s\textquotesingle{}indiquen els enviaments amb éxit i el ratio (t+1)/(e+1), es llisten en ordre creixent per ratio. 
