@@ -6,6 +6,9 @@
 #define _CURS_hh_
 
 #include "CjtSessions.hh"
+#ifndef NO_DIAGRAM
+
+#endif
 
 
 /** @class CjtCurs
@@ -17,7 +20,7 @@ class Curs
     
 private:    
 
-    list <Sessio> sessions;
+    map <string,Sessio> sessions;
     pair <int, int> users;
 
 public:
@@ -38,7 +41,7 @@ public:
         \post Retorna l'identificador de la Sessió a la qual pertany el problema
     */
 
-    string trobar_sessio (const string& p) const;
+    string trobar_sessio (const string& p);
 
     //Modificadors
     

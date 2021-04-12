@@ -7,9 +7,6 @@
 
 
 #include "Curs.hh"
-#ifndef NO_DIAGRAM
-#include <vector>
-#endif
 
 
 /** @class CjtCursos

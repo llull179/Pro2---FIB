@@ -116,13 +116,14 @@ int main() {
             cin >> auxString >> p >> r;
 
             Usuari user = cjtUs.accedir_usuari( auxString );
-            Problema prob = cjtProb.accedir_problema( p )
+            Problema prob = cjtProb.accedir_problema( p );
 
-            prob.actualitzar_stats( r )
+            prob.actualitzar_stats( r );
             user.actualitzar_stats(auxInt, r);
 
             if ( r ) {
-                user.curs_completat();
+                Curs cur = cjtCurs.accedir_curs(user.esta_inscrit());
+                user.curs_completat(cur);
             }
         }
 
@@ -133,7 +134,7 @@ int main() {
         else if (op == "ep" or op == " escribir_problema ") {
             cin >> auxString;
             if (cjtProb.existeix_problema( auxString )) {
-                Problema prob = cjtSes.accedir_problema ( auxString );
+                Problema prob = cjtProb.accedir_problema ( auxString );
                 prob.escriure_problema();
             }
             else cout << "ERROR: no existeix el Problema" << auxString << endl;

@@ -2,12 +2,12 @@
     @brief Especificació de la clase CjtProblema.
 */
 
-#ifndef _PROBLEMA_HH_
-#define _PROBLEMA_HH_
+#ifndef _CJTPROBLEMES_HH_
+#define _CJTPROBLEMA_HH_
 
 #include "Problema.hh"
 #ifndef NO_DIAGRAM
-#include <set>
+#include <vector>
 #endif
 
  
@@ -19,8 +19,7 @@ class CjtProblemes
 {
 
 private:
-    set <Problema> problemes;
-
+    vector<Problema> problemes;
 public:
 
     //Constructora
@@ -39,7 +38,7 @@ public:
         \post El resultat indica si el parametre implícit conté el problema
     */
 
-    bool existeix_problema (const string & p ) const;
+    bool existeix_problema (const string& p ) const;
 
 
     /** @brief Accedeix a al Problema <em>p</em>
@@ -51,7 +50,7 @@ public:
     Problema& accedir_problema (const string& p);
 
     //Modificadores
-
+ 
     /** @brief Afageix un problema
         \pre <em>p</em> p no existeix.
         \post S'ha afegit el problema al paràmetre implícit. Imprimeix el numero de problemes després d'afegir-lo.

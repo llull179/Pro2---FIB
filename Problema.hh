@@ -1,10 +1,10 @@
 /** @file Problema.hh
-    @brief Especificació de la clase Problema.
+    @brief Especificació de la classe Problema.
 */
-
 #ifndef _PROBLEMA_HH_
 #define _PROBLEMA_HH_
 
+#include "Problema.hh"
 #ifndef NO_DIAGRAM
 #include <string>
 #include <iostream>
@@ -12,21 +12,21 @@ using namespace std;
 #endif
 
 
-/** @class Problema
+/** @class Problema.hh
     @brief Representa un Problema. 
 
 */
 class Problema
 {
     
-private:     
+private:    
 
-    struct Stats {
+    struct {
         string ident;
         int env_totals = 0;
         int env_exit = 0;
         int ratio = 0;
-    }
+    } stats;
 
 public:
     
@@ -45,11 +45,11 @@ public:
         \post El resultat és un nou Problema amb un idetificador <em>p</em>.
     */
 
-    Problema(const string & p);
+    Problema(const string& p);
     
     //Consultors
 
-
+    
     //Modificadors
     
     /** @brief Actualitza les estadístiques del problema
@@ -59,10 +59,8 @@ public:
     */
 
     void actualitzar_stats (bool r);
-
-
+    
     //Escriure
-
 
     /** @brief Retorna les estadístiques del problema.
         \pre <em>cert</em>
@@ -71,6 +69,5 @@ public:
     */
 
     void escriure_problema () const;
-    
 };
 #endif

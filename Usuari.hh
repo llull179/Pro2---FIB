@@ -8,7 +8,7 @@
 #ifndef NO_DIAGRAM
 #include <iostream>
 #include <string>
-#include <list>
+#include <map>
 using namespace std;
 #endif
 
@@ -21,16 +21,17 @@ class Usuari
     
 private:    
 
-  struct Stats {
+  struct {
       string name;
       int env_tot = 0;
       int prob_resolt = 0;
       int prob_int = 0;
       int curs_in = 0;
-  };
+  } stats;
 
- //string = identificador problema, pair<int, bool> = enviaments al problema i bool si completat amb èxit
-    map <string, pair<int,bool> problemes;
+ //string = identificador problema,int = enviaments al problema
+    map <string, int> problemes_env;
+    map <string, int> problemes_exit;
 
 public:
 //Constructoras
@@ -48,7 +49,7 @@ public:
       \pre <em>cert</em>
       \post El resultat és un usuari amb identificador <em>u<em>
   */ 
- Usuari(string u);
+ Usuari(const string& u);
 
 //Consultores
 
@@ -63,10 +64,10 @@ public:
 
   /** @brief Consultora curs completat
 
-      \pre <em>cierto</em>
+      \pre El curs c existeix;
       \post Comprova si l'usuari ja ha completat el curs, en cas afirmatiu l'usuari deixa d'estar inscrit al curs.
   */
-  bool curs_completat () const;
+  bool curs_completat (const Curs& c) const;
 
   /** @brief Llista tots els problemes resolts per l'usuari
 
@@ -90,10 +91,9 @@ public:
 /** @brief Inscriu l'usuari al curs amb identificador c.
 
       \pre <em>cierto</em>
-      \post Si l'usuari no existeix,està inscrit a un curs no finalitzat o el curs no existeix, 
-      imprimeix un erros. En cas contrari s'imprimeix el número d'usuaris inscrits al curs c.    
+      \post Inscriu l'usuari al curs c.    
   */
-  void inscribir_curso(int c) const;
+  void inscribir_curso(int c);
 
 
   /** @brief Actualitza les estadístiques de l'Usuari.
@@ -102,7 +102,7 @@ public:
       \post Retorna l'Usuari amb les estadístiques actualitzades.    
   */
   
-  void actualitzar_stats(int p, int r) const;
+  void actualitzar_stats(int p, int r);
 
     //Escriure
 
