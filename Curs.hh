@@ -2,8 +2,8 @@
     @brief Especificació de la clase Curs.
 */
 
-#ifndef _CURS_hh_
-#define _CURS_hh_
+#ifndef _CURS_HH_
+#define _CURS_HH_
 
 #include "CjtSessions.hh"
 #ifndef NO_DIAGRAM
@@ -11,8 +11,8 @@
 #endif
 
 
-/** @class CjtCurs
-    @brief Representa un  cursos. 
+/** @class Curs
+    @brief Representa un  Curs. 
 
 */
 class Curs
@@ -28,8 +28,8 @@ public:
     //Constructor
     
     /** @brief Creadora per defecte.
-        \pre <em>cert</em>
-        \post El resultat és un nou cursos.
+        \pre <em>cert</em>.
+        \post El resultat és un nou curs.
     */
 
     Curs();
@@ -38,7 +38,7 @@ public:
 
     /** @brief Troba la sessió a la qual pertany el problema <em>p</em> al curs.
         \pre El problema p existeix.
-        \post Retorna l'identificador de la Sessió a la qual pertany el problema
+        \post Retorna l'identificador de la Sessió a la qual pertany el problema.
     */
 
     string trobar_sessio (const string& p);

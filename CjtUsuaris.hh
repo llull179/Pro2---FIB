@@ -29,8 +29,8 @@ public:
 /** @brief Creadora per defecto. 
 
       S'executa automàticament al declarar el conjunto d'usuarios.
-      \pre <em>cierto</em>
-      \post El resultat és un conjunt d'usuaris.
+      \pre <em>cert</em>.
+      \post El resultat és un conjunt d'usuaris ( CjtUsuaris).
   */ 
  CjtUsuaris();
  
@@ -39,8 +39,8 @@ public:
 
 /** @brief Comprova si ja existeix l'usuari u.
 
-      \pre <em>cierto</em>
-      \post Retorna true si existeix i fals si no existeix.
+      \pre <em>cert</em>.
+      \post Retorna true si existeix i fals en cas contrari.
   */ 
 
 bool existeix_usuari(const string& u) const;
@@ -67,7 +67,7 @@ bool existeix_usuari(const string& u) const;
 
 /** @brief Dona d'alta un nou usuari 
 
-      \pre <em>cierto</em>
+      \pre <em>cert</em>.
       \post Si ja existia l'usuari <em>u</em> imprimeix un error, sinó imprimeix el número
       d'usuaris després d'afegir-lo.
   */ 

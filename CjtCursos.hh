@@ -2,8 +2,8 @@
     @brief Especificació de la clase CjtCursos.
 */
 
-#ifndef _CjtCursos_hh_
-#define _CjtCursos_hh_
+#ifndef _CJTCURSOS_HH_
+#define _CJTCURSOS_HH_
 
 
 #include "Curs.hh"
@@ -25,7 +25,7 @@ public:
     //Constructor
     
     /** @brief Creadora per defecte.
-        \pre <em>cert</em>
+        \pre <em>cert</em>.
         \post El resultat és un nou conjunt de cursos.
     */
 
@@ -34,7 +34,7 @@ public:
     //Consultors
     
     /** @brief Consultora de cursos.
-        \pre <em>cert</em>
+        \pre <em>cert</em>.
         \post El resultat indica si el curs c existeix.
     */
 
@@ -49,9 +49,9 @@ public:
     Curs& accedir_curs ( int c );
 
     /** @brief Llistat de cursos.
-        \pre <em>cert</em>
+        \pre <em>cert</em>.
         \post Es llisten tots els cursos en ordre creixent per l'identificador, mostrant el nombre d'usuaris actuals
-        o passats que l'han completat, el nombre d'usuaris inscirts actualment i els seus identificadors,
+        o passats que l'han completat, el nombre d'usuaris inscrits actualment i els seus identificadors,
         seguit del nombre de sessions que el formen i els seus identificadors.
     */
 
@@ -62,9 +62,9 @@ public:
     
     /** @brief Afageix un nou curs
         \pre Es llegeix el numero de sessions S, i despres una seqüència de S sessions.
-        \post Se ha afegit el curs amb identificadpr N+1 al paràmetre implícit, si no hi ha
+        \post Se ha afegit el curs amb identificador N+1 al paràmetre implícit, si no hi ha
         intersecció de problemes en les sessions, s'afageix el curs i s'imprimeix el seu identificador.
-        En cas contrari s'imprimeix un missatge d'error
+        En cas contrari s'imprimeix un missatge d'error.
 
     */
 

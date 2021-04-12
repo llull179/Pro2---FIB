@@ -11,7 +11,10 @@
 
 using namespace std;
 
+/** @class BinTree
+    @brief Representa un Arbre binari (BinTree). 
 
+*/
 
 // A BinTree<T> implements binary trees with values of type T.
 template <typename T>

@@ -2,8 +2,8 @@
     @brief Especificació de la classe Usuari
 */
 
-#ifndef _USUARIO_HH_
-#define _USUARIO_HH_
+#ifndef _USUARI_HH_
+#define _USUARI_HH_
 
 #ifndef NO_DIAGRAM
 #include <iostream>
@@ -39,15 +39,15 @@ public:
 /** @brief Creadora por defecto. 
 
       S'executa automàticament al declarar un usuari.
-      \pre <em>cierto</em>
-      \post El resultat és un usuari.
+      \pre <em>cert</em>.
+      \post El resultat és un Usuari.
   */ 
  Usuari();
 
  /** @brief Creadora amb identificador. 
 
-      \pre <em>cert</em>
-      \post El resultat és un usuari amb identificador <em>u<em>
+      \pre <em>cert</em>.
+      \post El resultat és un Usuari amb identificador <em>u<em>
   */ 
  Usuari(const string& u);
 
@@ -57,14 +57,14 @@ public:
 
       \pre <em>cierto</em>
       \post  Retorna l'identificador del curso en el que està inscrit l'Usuari o un 0 si no hi està.
-        inscrito en ninguno.    
+        
   */
   int esta_inscrit( ) const;
 
 
   /** @brief Consultora curs completat
 
-      \pre El curs c existeix, el;
+      \pre El curs <em>c</em> existeix.
       \post Comprova si l'usuari ja ha completat el curs, revisant si els problemes enviables = 0.
        En cas afirmatiu l'usuari deixa d'estar inscrit al curs.
   */
@@ -72,16 +72,16 @@ public:
 
   /** @brief Llista tots els problemes resolts per l'usuari
 
-      \pre <em>cierto</em>
-      \post llista en ordre creixent per identificador de tots els problemes solucionats.
+      \pre <em>cierto</em>.
+      \post Llista en ordre creixent per identificador de tots els problemes solucionats.
         També s'imprimeix el nombre d'enviaments a cada problema.
   */
   void problemes_resolts () const;
 
   /** @brief Llista tots els problemes enviats i no resolts per l'usuari
 
-      \pre <em>cierto</em>
-      \post llista en ordre creixent per identificador de tots els problemes no solucionats.
+      \pre <em>cierto</em>.
+      \post Llista en ordre creixent per identificador de tots els problemes no solucionats.
         També s'imprimeix el nombre d'enviaments a cada problema no resolt.
   */
   void problemes_enviables () const;
@@ -108,7 +108,7 @@ public:
     //Escriure
 
     /** @brief Retorna les estadístiques d'un usuari.
-        \pre <em>cert</em>
+        \pre <em>cert</em>.
         \post Mostran quants enviamnets ha realitzat en total, quants satisfactoriament, quants ha intentat
          almenys un cop i l'identificador de quin curs está inscrit o un 0 si no està inscrit a cap
     */

@@ -1,9 +1,9 @@
 /** @file CjtProblemes.hh
-    @brief Especificació de la clase CjtProblema.
+    @brief Especificació de la clase CjtProblemes.
 */
 
 #ifndef _CJTPROBLEMES_HH_
-#define _CJTPROBLEMA_HH_
+#define _CJTPROBLEMES_HH_
 
 #include "Problema.hh"
 #ifndef NO_DIAGRAM
@@ -25,7 +25,7 @@ public:
     //Constructora
 
     /** @brief Creadora por defecte.
-        \pre <em>cert</em>
+        \pre <em>cert</em>.
         \post El resultat és un nou Conjunt de Problemes.
     */
 
@@ -34,7 +34,7 @@ public:
     //Consultors
 
     /** @brief Consultora de problemes.
-        \pre <em>cert</em>
+        \pre <em>cert</em>.
         \post El resultat indica si el parametre implícit conté el problema
     */
 
@@ -52,7 +52,7 @@ public:
     //Modificadores
  
     /** @brief Afageix un problema
-        \pre <em>p</em> p no existeix.
+        \pre El problema <em>p</em> p existeix.
         \post S'ha afegit el problema al paràmetre implícit. Imprimeix el numero de problemes després d'afegir-lo.
 
     */
@@ -62,7 +62,7 @@ public:
     //Llegir
 
     /** @brief Llegeix els problemes inicials
-        \pre cert
+        \pre <em>cert</em>.
         \post Guarda la colecció inicial de problemes.
 
     */
@@ -72,7 +72,7 @@ public:
     //Escriure
 
     /** @brief Llistat de problemes.
-        \pre <em>cert</em>
+        \pre <em>cert</em>.
         \post Es llisten tots els problemes de la colecció inicant el nombre d'enviaments per cada problema,
         també s'indiquen els enviaments amb éxit i el ratio (t+1)/(e+1), es llisten en ordre creixent per ratio.
     */
