@@ -10,7 +10,7 @@
 
 
 /** @class CjtCursos
-    @brief Representa un conjunt de cursos. 
+    @brief Representa un conjunt de cursos (Curs). 
 
 */
 class CjtCursos

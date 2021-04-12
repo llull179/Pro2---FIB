@@ -4,7 +4,8 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = utf-8
-PROJECT_NAME           = "Plataforma de gestión de problemas y cursos de programación"
+PROJECT_NAME           = "Plataforma de gestión de problemas y cursos de programación.
+"
 PROJECT_NUMBER         = "12/4/2021"
 OUTPUT_DIRECTORY       = "./DOC"
 CREATE_SUBDIRS         = NO

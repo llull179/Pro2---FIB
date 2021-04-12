@@ -13,7 +13,7 @@
 
 
 /** @class CjtSessions
-    @brief Representa un Conjunt de Sessions. 
+    @brief Representa un Conjunt de sessions (Sessio). 
 
 */
 class CjtSessions

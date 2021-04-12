@@ -11,7 +11,7 @@
 #endif
 
 /** @class CjtUsuaris
-    @brief Representa el conjunt de tots els usuaris
+    @brief Representa el conjunt de tots els usuaris (Usuari).
     . 
 
     Conté Usuaris. 

@@ -12,7 +12,7 @@
 
  
 /** @class CjtProblemes
-    @brief Representa un conjunt de problemes.
+    @brief Representa un conjunt de problemes (Problema).
 
 */
 class CjtProblemes

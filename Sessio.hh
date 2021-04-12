@@ -12,7 +12,7 @@
 
 
 /** @class Sessio
-    @brief Representa una Sessió. 
+    @brief Representa una Sessio. 
 
 */
 class Sessio
