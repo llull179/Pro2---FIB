@@ -24,7 +24,7 @@ int main() {
         int auxInt;
         if (op == "np" or op == "nuevo_problema") {
             cin >> auxString;
-
+            
             if(not cjtProb.existeix_problema(auxString)){
                 cjtProb.nou_problema(auxString);
             }
@@ -122,8 +122,7 @@ int main() {
             user.actualitzar_stats(auxInt, r);
 
             if ( r ) {
-                Curs cur = cjtCurs.accedir_curs(user.esta_inscrit());
-                user.curs_completat(cur);
+                user.curs_completat();
             }
         }
 

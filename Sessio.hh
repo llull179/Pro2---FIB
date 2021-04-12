@@ -51,16 +51,16 @@ public:
     /** @brief Comprova si el problema pertany al p.i.
         \pre <em>cert</em>
         \post Retorna true si pertany i false en cas contrari.
-    */
+    */ 
 
-    bool trobar_problema(BinTree<string> a, const string& p) const;
+    bool trobar_problema(const string& p) ;
 
     /** @brief Comprova si el valor <em>p</em> pertany al p.i.
         \pre <em>cert</em>
         \post Retorna true si pertany i false en cas contrari.
     */
 
-    bool trobar_valor_BinTree(BinTree<string> a, const string& p) const;
+    bool trobar_valor_BinTree(const BinTree<string>& a, const string& p);
     //Modificadors
     
     /** @brief Lletgeix els problemes de la sessió en preordre dels prerequisits.

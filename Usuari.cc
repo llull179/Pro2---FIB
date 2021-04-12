@@ -11,7 +11,7 @@ int Usuari::esta_inscrit() const {
     return stats.curs_in;
 }
 
-bool Usuari::curs_completat(const Curs& c) const {
+bool Usuari::curs_completat() const {
     if (problemes_env.size() == 0) return true;
     else return false;
 }

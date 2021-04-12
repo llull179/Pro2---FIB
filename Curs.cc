@@ -5,7 +5,7 @@ Curs::Curs() {}
 string Curs::trobar_sessio(const string& p) {
     bool trobat = false;
     string problema;
-    map<string,Sessio>::const_iterator it = sessions.begin();
+    map<string,Sessio>::iterator it = sessions.begin();
     while (not trobat or it != sessions.end()) {
         trobat = (*it).second.trobar_problema(p);
         if(trobat) problema = (*it).first;

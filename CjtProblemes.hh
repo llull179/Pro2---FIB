@@ -77,7 +77,7 @@ public:
         també s'indiquen els enviaments amb éxit i el ratio (t+1)/(e+1), es llisten en ordre creixent per ratio.
     */
 
-    void llistat_problemes () const;
+    void llistat_problemes ();
 
 };
 #endif

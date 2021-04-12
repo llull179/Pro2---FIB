@@ -64,10 +64,11 @@ public:
 
   /** @brief Consultora curs completat
 
-      \pre El curs c existeix;
-      \post Comprova si l'usuari ja ha completat el curs, en cas afirmatiu l'usuari deixa d'estar inscrit al curs.
+      \pre El curs c existeix, el;
+      \post Comprova si l'usuari ja ha completat el curs, revisant si els problemes enviables = 0.
+       En cas afirmatiu l'usuari deixa d'estar inscrit al curs.
   */
-  bool curs_completat (const Curs& c) const;
+  bool curs_completat () const;
 
   /** @brief Llista tots els problemes resolts per l'usuari
 

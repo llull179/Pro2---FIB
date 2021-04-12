@@ -41,13 +41,14 @@ void Sessio::escriure_BinTree(const BinTree<string>& a) const{
         escriure_BinTree(r);
         cout << a.value() << endl;
     }
+} 
+
+bool Sessio::trobar_problema(const string& p) {
+    BinTree<string> a = prerequisits;
+    return trobar_valor_BinTree(a,p);
 }
 
-bool Sessio::trobar_problema( const string& p) const {
-    return trobar_valor_BinTree(prerequisits,p);
-}
-
-bool Sessio::trobar_valor_BinTree( BinTree<string> & a, const string&p) const {
+bool Sessio::trobar_valor_BinTree(const BinTree<string> & a, const string&p) {
     bool b;
     if( a.empty()) b = false;
     else if(a.value() == p) b = true;
@@ -55,4 +56,5 @@ bool Sessio::trobar_valor_BinTree( BinTree<string> & a, const string&p) const {
         b = trobar_valor_BinTree(a.left(),p);
         if(not b) b = trobar_valor_BinTree(a.right(),p);
     }
+    return b;
 }

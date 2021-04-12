@@ -21,7 +21,7 @@ class Problema
     
 private:    
 
-    struct {
+    struct{
         string ident;
         int env_totals = 0;
         int env_exit = 0;
@@ -49,7 +49,13 @@ public:
     
     //Consultors
 
-    
+    /** @brief Comprova l'identificador del problema..
+        \pre <em>cert</em>
+        \post retorna l'identificador (stats.ident) del <em>p.i</em>.
+    */
+
+    string consultar_ident() const;
+
     //Modificadors
     
     /** @brief Actualitza les estadístiques del problema
@@ -69,5 +75,7 @@ public:
     */
 
     void escriure_problema () const;
+
+
 };
 #endif

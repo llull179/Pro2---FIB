@@ -3,42 +3,39 @@
 CjtProblemes::CjtProblemes(){}
 
 bool CjtProblemes::existeix_problema (const string & p ) const{
-
-  int it =  problemes.find( p );
-    if(it != problemes.end()) return true;
-    else return false;
+    for (int i = 0; i < problemes.size(); ++i) {
+        if(p == problemes[i].consultar_ident()) return true;
+    }
+    return false;
 }
 
-
-
-
-Problema CjtProblemes::accedir_problema (const string & p)){
-    int P;
-    cin >> P;
-    list <string>::iterator it = problemes.end();
-    for(int i=0; i < P; ++i) {
-        int p;
-        cin >> p;
-        Problema(p) p;
-        problemes.insert(it,prob);
-    }
+Problema& CjtProblemes::accedir_problema (const string & p) {
+    int k = problemes.size();
+   for (int i = 0; i < k; ++i ){
+       if (p == problemes[i].consultar_ident()) return problemes[i];
+   }
+   return problemes[k-1];
 }
 
 void CjtProblemes::nou_problema (const string & p){
-    list <string>::iterator it = problemes.end();
-    problemes.insert(it, p);
-
+    Problema prob = Problema(p);
+    problemes.push_back( prob);
 }
 
 void CjtProblemes::llegir_problemes_inicials (){
-    if(not consultar_problema(p) ) {
-        //leltgir dades
-    }
-    else cout<<"ERROR"<<endl;
-
+   int P;
+   string p;
+   cout << "Nombre inicial de problemes:";
+   cin >> P;
+   for(int i = 0; i < P; ++i) {
+       cin >> p;
+       Problema prob = Problema(p);
+       problemes[i] = prob;
+   }
 }
 
-void CjtProblemes::llistat_problemes (){
-
-
+void CjtProblemes::llistat_problemes(){
+    for (int i = 0; i < problemes.size(); ++i) {
+        problemes[i].escriure_problema();
+    }
 }
