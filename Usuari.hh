@@ -24,8 +24,7 @@ private:
   struct {
       string name;
       int env_tot = 0;
-      int prob_resolt = 0;
-      int prob_int = 0;
+      int intents = 0;
       int curs_in = 0;
   } stats;
 
@@ -76,15 +75,22 @@ public:
       \post Llista en ordre creixent per identificador de tots els problemes solucionats.
         També s'imprimeix el nombre d'enviaments a cada problema.
   */
-  void problemes_resolts () const;
+  void problemes_resolts ();
 
-  /** @brief Llista tots els problemes enviats i no resolts per l'usuari
+  /** @brief Llista tots els problemes enviats i resolts per l'usuari
 
       \pre <em>cierto</em>.
-      \post Llista en ordre creixent per identificador de tots els problemes no solucionats.
-        També s'imprimeix el nombre d'enviaments a cada problema no resolt.
+      \post Llista en ordre creixent per identificador de tots els problemes solucionats.
+        També s'imprimeix el nombre d'enviaments a cada problema  resolt.
   */
   void problemes_enviables () const;
+
+    /** @brief Retorna el nom de l'usuari.
+
+      \pre <em>cierto</em>.
+      \post Retorna el nom de l'usuari.
+  */
+  string consultar_nom () const;
 
 
 //Modificadores
@@ -103,7 +109,7 @@ public:
       \post Retorna l'Usuari amb les estadístiques actualitzades.    
   */
   
-  void actualitzar_stats(int p, int r);
+  void actualitzar_stats(string p, int r);
 
     //Escriure
 

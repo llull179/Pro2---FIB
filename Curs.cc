@@ -22,3 +22,14 @@ void Curs::escriure_curs( ) const{
     }
     cout<<endl;
 }
+
+void Curs::lletgir_sessions () {
+    int num;
+    for( int i = 0; i < num; ++i) {
+        string aux;
+        cin >> aux;
+        Sessio ses;
+        sessions.insert(make_pair(aux, ses));
+    }
+
+}

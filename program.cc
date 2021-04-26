@@ -1,4 +1,4 @@
-/** @file main.cc
+/** @file program.cc
     @brief Programa principal.
 */
 #include "CjtUsuaris.hh"
@@ -17,7 +17,7 @@ int main() {
     cjtSes.llegir_sessions_inicials();
     cjtCurs.llegir_cursos_inicials();
     cjtUs.llegir_usuaris_inicials();
-
+    cout<<"fin de lectura"<<endl;
     cin >> op;
     while(op != "fin") {
         string auxString;
@@ -119,7 +119,7 @@ int main() {
             Problema prob = cjtProb.accedir_problema( p );
 
             prob.actualitzar_stats( r );
-            user.actualitzar_stats(auxInt, r);
+            user.actualitzar_stats(auxString, r);
 
             if ( r ) {
                 user.curs_completat();
@@ -182,7 +182,7 @@ int main() {
             }
             else cout << "ERROR: no existeix el Curs"<< auxInt << endl;
         }
-
+        cout <<"Nova operacio:"<<endl;
         cin >> op;
     }
 }

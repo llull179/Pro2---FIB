@@ -7,7 +7,7 @@
 
 #include "Usuari.hh"
 #ifndef NO_DIAGRAM
-#include <set>
+#include <list>
 #endif
 
 /** @class CjtUsuaris
@@ -21,7 +21,7 @@ class CjtUsuaris
     
 private:    
 
-    set <Usuari> llistUsers;
+    list <Usuari> llistUsers;
 
 public:
 //Constructores
@@ -52,7 +52,7 @@ bool existeix_usuari(const string& u) const;
         está inscrit o un 0 si no està inscrit a cap, per cada usuari.
     */
 
-    void llistat_usuaris ();
+    void llistat_usuaris () ;
 
     /** @brief Accedeix a l'Usuari <em>u</em>
         \pre L'Usuari u existeix.
@@ -60,7 +60,7 @@ bool existeix_usuari(const string& u) const;
 
     */
 
-    Usuari& accedir_usuari (const string& s);
+    Usuari accedir_usuari (const string& s);
 
 //Modificadors
 
@@ -72,7 +72,7 @@ bool existeix_usuari(const string& u) const;
       d'usuaris després d'afegir-lo.
   */ 
 
-void alta_usuari(Usuari u);
+void alta_usuari(const Usuari& u);
 
 /** @brief Dona de baixa un usuari 
 

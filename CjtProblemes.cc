@@ -27,11 +27,13 @@ void CjtProblemes::llegir_problemes_inicials (){
    string p;
    cout << "Nombre inicial de problemes:";
    cin >> P;
+   vector<Problema> aux(P);
    for(int i = 0; i < P; ++i) {
        cin >> p;
        Problema prob = Problema(p);
-       problemes[i] = prob;
+       aux[i] = prob;
    }
+   problemes = aux;
 }
 
 void CjtProblemes::llistat_problemes(){

@@ -50,7 +50,7 @@ public:
 
     */
 
-    Sessio& accedir_sessio (const string& s);
+    Sessio accedir_sessio (const string& s);
 
     //Modificadorss
     
@@ -80,7 +80,7 @@ public:
         que les formen i els seus identificadors, seguit de l'estructura de prequisits en preordre.
     */
 
-    void llistat_sessions () const;
+    void llistat_sessions ();
 
 
 };

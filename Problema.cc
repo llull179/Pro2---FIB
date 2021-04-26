@@ -15,7 +15,7 @@ void Problema::actualitzar_stats(bool r) {
 void Problema::escriure_problema() const {
     cout<< "Problema: "<< stats.ident << endl;
     cout<< "Enviamnets totals: "<< stats.env_totals <<endl;
-    cout<< "Enviaments amn éxit: " << stats.env_exit <<endl;
+    cout<< "Enviaments amb éxit: " << stats.env_exit <<endl;
     cout<< "Ratio: "<< stats.ratio << endl;
 }
 

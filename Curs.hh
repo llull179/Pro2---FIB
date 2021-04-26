@@ -45,6 +45,13 @@ public:
 
     //Modificadors
     
+    /** @brief Afegir la Sessio <em> s </em> al curs del p.i
+        \pre La Sessio s existeix.
+        \post Retonra el curs amb la Sessió afegida
+    */
+
+
+    void lletgir_sessions ();
 
     //Llegir i escriure
 

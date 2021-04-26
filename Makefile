@@ -1,8 +1,8 @@
 OPCIONS = -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-uninitialized -Wno-sign-compare -std=c++11
 # OPCIONS = -D_GLIBCXX_DEBUG -O2 -Wall -std=c++11
 
-program.exe: Cjt_individus.o Parcrom.o Cjt_trets.o program.o Individu.o
-	g++ $(OPCIONS) -o program.exe Cjt_individus.o Parcrom.o Cjt_trets.o program.o Individu.o
+program.exe: CjtSessions.o Sessio.o CjtCursos.o program.o Curs.o CjtUsuaris.o Usuari.o CjtProblemes.o Problema.o
+	g++ $(OPCIONS) -o program.exe CjtSessions.o Sessio.o CjtCursos.o program.o Curs.o CjtUsuaris.o Usuari.o CjtProblemes.o Problema.o
 
 program.o: program.cc
 	g++ $(OPCIONS) -c program.cc
@@ -10,18 +10,34 @@ program.o: program.cc
 Cjt_individus.o: Cjt_individus.cc Cjt_individus.hh
 	g++ $(OPCIONS) -c Cjt_individus.cc
 
-Parcrom.o: Parcrom.cc Parcrom.hh
-	g++ $(OPCIONS) -c Parcrom.cc
+Usuari.o: Usuari.cc Usuari.hh
+	g++ $(OPCIONS) -c Usuari.cc
 
-CjtUsuariois.o: CjtUsuariois.hh CjtUsuariois.cc
-	g++ $(OPCIONS) -c CjtUsuariois.cc
+CjtUsuaris.o: CjtUsuaris.hh CjtUsuaris.cc
+	g++ $(OPCIONS) -c CjtUsuaris.cc
 
-Usuario.o: Usuario.hh Usuario.cc
-	g++ $(OPCIONS) -c Usuario.cc
+CjtProblemes.o: CjtProblemes.hh CjtProblemes.cc
+	g++ $(OPCIONS) -c CjtProblemes.cc
+
+Problema.o: Problema.hh Problema.cc
+	g++ $(OPCIONS) -c Problema.cc
+
+CjtCursos.o: CjtCursos.hh CjtCursos.cc
+	g++ $(OPCIONS) -c CjtCursos.cc
+
+Curs.o: Curs.hh Curs.cc
+	g++ $(OPCIONS) -c Curs.cc
+
+CjtSessions.o: CjtSessions.hh CjtSessions.cc
+	g++ $(OPCIONS) -c CjtSessions.cc
+
+Sessio.o: Sessio.hh Sessio.cc
+	g++ $(OPCIONS) -c Sessio.cc
 
 
 
-practica.tar: Makefile Cjt_individus.hh Cjt_individus.cc CjtUsuarios.hh CjtUsuarios.cc Usuario.cc Usuario.hh Parcrom.hh Parcrom.cc BinTree.hh program.cc html.zip
+
+practica.tar: Makefile CjtUsuaris.cc CjtUsuaris.hh Usuari.hh Usuari.cc CjtSessions.hh CjtSessions.hh Sessio.hh Sessio.cc CjtCursos.cc  CjtCursos.hh Curs.hh Curs.hh BinTree.hh program.ccm html.zip
 	tar -cvf practica.tar *.cc *.hh Makefile html.zip
 	
 clean: 

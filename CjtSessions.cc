@@ -7,7 +7,7 @@ bool CjtSessions::existeix_sessio(const string& s) const {
     else return false;
 }
 
-Sessio& CjtSessions::accedir_sessio(const string& s) {
+Sessio CjtSessions::accedir_sessio(const string& s) {
   map<string,Sessio>::iterator it = sessions.find(s);
   Sessio prob = (*it).second;
   return prob;
@@ -24,6 +24,7 @@ void CjtSessions::nova_sessio(const string& s){
 
 void CjtSessions::llegir_sessions_inicials(){
    int Q;
+   cout << "Nombre inicial de sessions:";
    cin >> Q;
    for (int i = 0; i < Q; ++i) {
        Sessio ses;
@@ -36,8 +37,8 @@ void CjtSessions::llegir_sessions_inicials(){
    }
 }
 
-void CjtSessions::llistat_sessions() const{
-    for(map<string,Sessio>::const_iterator it = sessions.begin(); it != sessions.end(); ++it) {
+void CjtSessions::llistat_sessions(){
+    for(map<string,Sessio>::iterator it = sessions.begin(); it != sessions.end(); ++it) {
         (*it).second.escriure_sessio();
     }
 }
