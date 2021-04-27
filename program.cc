@@ -45,11 +45,11 @@ int main() {
         else if (op == "a" or op == " alta_usuario ") {
             cin >> auxString;
 
-            if (cjtUs.existeix_usuari( auxString )) {
+            if (not cjtUs.existeix_usuari( auxString )) {
                 Usuari u = Usuari(auxString);
                 cjtUs.alta_usuari(u);
             }
-            else cout << "ERROR: no existeix el Curs"<< auxInt << endl;
+            else cout << "ERROR: ja existeix l'usuari "<< auxString << endl;
         }
 
         else if (op == "b" or op == " baja_usuario ") {
@@ -88,8 +88,14 @@ int main() {
             if (not cjtCurs.existeix_curs( auxInt)) cout << "ERROR: no existeix el Curs" << auxInt << endl;
             else if (not cjtProb.existeix_problema( auxString)) cout << "ERROR: no existeix el Problema" << auxString << endl;
             else {
+                int cont = 0;
+                bool trobat = false;
                 Curs curs = cjtCurs.accedir_curs( auxInt );
-                cout << curs.trobar_sessio( auxString ) << endl;
+                while (not trobat) {
+                    string sessio = curs.trobar_sessio(cont);
+                    trobat = cjtSes.accedir_sessio(sessio).trobar_problema(auxString);
+                    if(trobat) cout << sessio << endl;
+                }
             }
         }
 

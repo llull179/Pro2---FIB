@@ -26,11 +26,18 @@ Usuari CjtUsuaris::accedir_usuari(const string& s) {
 
 void CjtUsuaris::alta_usuari(const Usuari& u) {
     llistUsers.insert(llistUsers.end(), u);
+    cout << llistUsers.size() <<endl;
 }
 
 void CjtUsuaris::baixa_usuari(const string& u) {
-   for(list<Usuari>::const_iterator it = llistUsers.begin(); it != llistUsers.end(); ++it) {
-        if(u == (*it).consultar_nom()) llistUsers.erase(it);
+     bool trobat = false;
+    list<Usuari>::iterator it = llistUsers.begin();
+    while(it != llistUsers.end() or trobat) {
+        if(u == (*it).consultar_nom()){
+            trobat = true;
+            llistUsers.erase(it);
+        } 
+        ++it;
     }
 }
 

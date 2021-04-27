@@ -53,6 +53,7 @@ void Usuari::actualitzar_stats(string p, int r) {
 }
 
 void Usuari::escriure_usuari( ) {
+    cout << "Nom: " << stats.name <<endl;
     cout <<"Enviaments totals: "<< stats.env_tot<<endl;
     cout <<"Problemes resolts: "<< problemes_exit.size()<<endl;
     cout <<"Problemes intentats: "<< problemes_env.size()<<endl;

@@ -13,13 +13,14 @@ bool CjtCursos::existeix_curs(int c) const{
 
 void CjtCursos::llistat_cursos () const {
     for (int i = 0; i < cursos.size(); ++i) {
-        cout << "Curs" << i+1 <<endl;
+        cout << "Curs " << i+1 <<endl;
         cursos[i].escriure_curs();
     }
 }
 
 void CjtCursos::nou_curs ()  {
     Curs c;
+    c.lletgir_sessions();
     cursos.push_back(c);
 }
 

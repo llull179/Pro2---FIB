@@ -20,7 +20,7 @@ class Curs
     
 private:    
 
-    map <string,Sessio> sessions;
+    vector <string> sessions;
     pair <int, int> users;
 
 public:
@@ -36,12 +36,12 @@ public:
     
     //Consultors
 
-    /** @brief Troba la sessió a la qual pertany el problema <em>p</em> al curs.
+    /** @brief Ret
         \pre El problema p existeix.
         \post Retorna l'identificador de la Sessió a la qual pertany el problema.
     */
 
-    string trobar_sessio (const string& p);
+    string trobar_sessio (int x);
 
     //Modificadors
     
