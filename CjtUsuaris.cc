@@ -3,25 +3,20 @@
 
 CjtUsuaris::CjtUsuaris() {}
 
-bool CjtUsuaris::existeix_usuari(const string & u) const{
-    
-    for(list<Usuari>::const_iterator it = llistUsers.begin(); it != llistUsers.end(); ++it) {
-        if(u == (*it).consultar_nom()) return true;
-    }
-    return false;
-}
-
 void CjtUsuaris::llistat_usuaris() {
     for(list<Usuari>::iterator it = llistUsers.begin(); it != llistUsers.end(); ++it) {
         (*it).escriure_usuari();
     }
 }
 
-Usuari CjtUsuaris::accedir_usuari(const string& s) {
+bool CjtUsuaris::accedir_usuari( Usuari& u) {
    for(list<Usuari>::const_iterator it = llistUsers.begin(); it != llistUsers.end(); ++it) {
-        if(s == (*it).consultar_nom())  return (*it);
+        if(u.consultar_nom() == (*it).consultar_nom()){
+            u = *it;
+            return true;
+        }  
     }
-    return *llistUsers.end();
+    return false;
 }
 
 void CjtUsuaris::alta_usuari(const Usuari& u) {
@@ -32,12 +27,14 @@ void CjtUsuaris::alta_usuari(const Usuari& u) {
 void CjtUsuaris::baixa_usuari(const string& u) {
      bool trobat = false;
     list<Usuari>::iterator it = llistUsers.begin();
-    while(it != llistUsers.end() or trobat) {
+    //fallo aqui fiinal del while
+    
+    while(it != llistUsers.end() and (not trobat)) {
         if(u == (*it).consultar_nom()){
             trobat = true;
             llistUsers.erase(it);
         } 
-        ++it;
+        else ++it;
     }
 }
 

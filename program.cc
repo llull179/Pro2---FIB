@@ -31,7 +31,7 @@ int main() {
             else cout<<"ERROR, ja existeix el problema"<<endl;
         }
 
-        else if (op == "ns" or op == " nueva_sesion ") {
+        else if (op == "ns" or op == "nueva_sesion") {
             cin >> auxString;
 
             if(not cjtSes.existeix_sessio(auxString)){
@@ -39,33 +39,31 @@ int main() {
             }
             else cout<<"ERROR, ja existeix la Sessió"<<endl;
         }
-        else if (op == "nc" or op == " nuevo_curso ") {
+        else if (op == "nc" or op == "nuevo_curso") {
             cjtCurs.nou_curs();
         }
-        else if (op == "a" or op == " alta_usuario ") {
+        else if (op == "a" or op == "alta_usuario") {
             cin >> auxString;
-
-            if (not cjtUs.existeix_usuari( auxString )) {
-                Usuari u = Usuari(auxString);
+            Usuari u = Usuari(auxString);
+            if (not cjtUs.accedir_usuari( u )) {
                 cjtUs.alta_usuari(u);
             }
             else cout << "ERROR: ja existeix l'usuari "<< auxString << endl;
         }
 
-        else if (op == "b" or op == " baja_usuario ") {
+        else if (op == "b" or op == "baja_usuario") {
             cin >> auxString;
-
-             if (cjtUs.existeix_usuari( auxString )) {
+            Usuari user = Usuari(auxString);
+             if (cjtUs.accedir_usuari( user )) {
                 cjtUs.baixa_usuari( auxString );
             }
             else cout << "ERROR: no existeix el Curs"<< auxInt << endl;
         }
 
-        else if (op == "i" or op == " inscribir_curso ") {
+        else if (op == "i" or op == "inscribir_curso") {
             cin >> auxString >> auxInt;
-
-            if (cjtUs.existeix_usuari(auxString) and cjtCurs.existeix_curs(auxInt)) {
-                Usuari user = cjtUs.accedir_usuari( auxString );
+            Usuari user = Usuari(auxString);
+            if (cjtUs.accedir_usuari(user) and cjtCurs.existeix_curs(auxInt)) {
                 if (user.esta_inscrit() == 0) user.inscribir_curso( auxInt );
                 else cout << "ERROR: l'Usuari ja està inscrit a un curs." << endl;
 
@@ -73,17 +71,16 @@ int main() {
             else cout << "ERROR: L'Usuari o el curs no existeixen." << endl;
         }
 
-        else if (op == "cu" or op == " curso_usuario ") {
+        else if (op == "cu" or op == "curso_usuario") {
             cin >> auxString;
-
-             if (cjtUs.existeix_usuari( auxString )) {
-                Usuari user = cjtUs.accedir_usuari ( auxString );
+            Usuari user = Usuari(auxString);
+             if (cjtUs.accedir_usuari( user )) {
                 cout << user.esta_inscrit() <<endl;
             }
             else cout << "ERROR: no existeix el Curs"<< auxInt << endl;
         }
 
-        else if (op == "sp" or op == " sesion_problema ") {
+        else if (op == "sp" or op == "sesion_problema") {
             cin >> auxInt >> auxString;
             if (not cjtCurs.existeix_curs( auxInt)) cout << "ERROR: no existeix el Curs" << auxInt << endl;
             else if (not cjtProb.existeix_problema( auxString)) cout << "ERROR: no existeix el Problema" << auxString << endl;
@@ -99,32 +96,33 @@ int main() {
             }
         }
 
-        else if (op == "pr" or op == " problemas_resueltos ") {
+        else if (op == "pr" or op == "problemas_resueltos") {
             cin >> auxString;
-            if(cjtUs.existeix_usuari( auxString)) {
-                Usuari user = cjtUs.accedir_usuari( auxString );
+            Usuari user = Usuari(auxString);
+            if(cjtUs.accedir_usuari( user)) {
+                
                 user.problemes_resolts();
             }
             else cout << "ERROR: no existeix l'Usuari" << auxString << endl;
         }
-        else if (op == "pe" or op == " problemas_enviables ") {
+        else if (op == "pe" or op == "problemas_enviables") {
             cin >> auxString;
-            if(cjtUs.existeix_usuari( auxString)) {
-                Usuari user = cjtUs.accedir_usuari( auxString );
+            Usuari user = Usuari(auxString);
+            if(cjtUs.accedir_usuari( user )) {
                 user.problemes_enviables();
             }
             else cout << "ERROR: no existeix l'Usuari" << auxString << endl;
         }
 
-        else if (op == "e" or op == " envio ") {
+        else if (op == "e" or op == "envio") {
             bool r;
             string p;
             cin >> auxString >> p >> r;
-
-            Usuari user = cjtUs.accedir_usuari( auxString );
+            Usuari user = Usuari(auxString);
+            bool aux = cjtUs.accedir_usuari( user );
             Problema prob = cjtProb.accedir_problema( p );
 
-            prob.actualitzar_stats( r );
+           if(aux) prob.actualitzar_stats( r );
             user.actualitzar_stats(auxString, r);
 
             if ( r ) {
@@ -132,11 +130,11 @@ int main() {
             }
         }
 
-        else if (op == "lp" or op == " listar_problemas ") {
+        else if (op == "lp" or op == "listar_problemas") {
             cjtProb.llistat_problemes();
         }
 
-        else if (op == "ep" or op == " escribir_problema ") {
+        else if (op == "ep" or op == "escribir_problema") {
             cin >> auxString;
             if (cjtProb.existeix_problema( auxString )) {
                 Problema prob = cjtProb.accedir_problema ( auxString );
@@ -145,11 +143,11 @@ int main() {
             else cout << "ERROR: no existeix el Problema" << auxString << endl;
         }
 
-        else if (op == "ls" or op == " listar_sesiones ") {
+        else if (op == "ls" or op == "listar_sesiones") {
             cjtSes.llistat_sessions();
         }
 
-        else if (op == "es" or op == " escribir_sesion ") {
+        else if (op == "es" or op == "escribir_sesion") {
             cin >> auxString;
 
             if (cjtSes.existeix_sessio( auxString )) {
@@ -160,11 +158,11 @@ int main() {
 
         }
 
-        else if (op == "lc" or op == " listar_cursos ") {
+        else if (op == "lc" or op == "listar_cursos") {
             cjtCurs.llistat_cursos();
         }
 
-        else if (op == "ec" or op == " escribir_curso ") {
+        else if (op == "ec" or op == "escribir_curso") {
             cin >> auxInt;
 
              if (cjtCurs.existeix_curs( auxInt )) {
@@ -175,15 +173,14 @@ int main() {
 
         }
 
-        else if (op == "lu" or op == " listar_usuarios ") {
+        else if (op == "lu" or op == "listar_usuarios") {
             cjtUs.llistat_usuaris();
         }
 
-        else if (op == "eu" or op == " escribir_usuario ") {
+        else if (op == "eu" or op == "escribir_usuario") {
             cin >> auxString;
-
-             if (cjtUs.existeix_usuari( auxString )) {
-                Usuari user = cjtUs.accedir_usuari ( auxString );
+            Usuari user = Usuari(auxString);
+             if (cjtUs.accedir_usuari( user )) {
                 user.escriure_usuari();
             }
             else cout << "ERROR: no existeix el Curs"<< auxInt << endl;

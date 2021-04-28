@@ -39,8 +39,9 @@ void Sessio::escriure_BinTree(const BinTree<string>& a) const{
         BinTree<string> r = a.right();
         escriure_BinTree(l);
         escriure_BinTree(r);
-        cout << a.value() << endl;
+        cout << a.value();
     }
+    cout << endl;
 } 
 
 bool Sessio::trobar_problema(const string& p) {

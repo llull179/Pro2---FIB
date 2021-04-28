@@ -37,14 +37,6 @@ public:
 
 //Consultors
 
-/** @brief Comprova si ja existeix l'usuari u.
-
-      \pre <em>cert</em>.
-      \post Retorna true si existeix i fals en cas contrari.
-  */ 
-
-bool existeix_usuari(const string& u) const;
-
 /** @brief Llistat d'usuaris.
         \pre <em>cert</em>
         \post Es llisten tots els usuaris en ordre creixent pel nom, mostrant quants enviamnets ha realitzat
@@ -55,12 +47,13 @@ bool existeix_usuari(const string& u) const;
     void llistat_usuaris () ;
 
     /** @brief Accedeix a l'Usuari <em>u</em>
-        \pre L'Usuari u existeix.
-        \post Retorna l'Usuari u.
+        \pre cert
+        \post Comprova si l'usuari u existeix, si és així copia l'usuari al p.i i retorna true
+        en cas contrari retorna false
 
     */
 
-    Usuari accedir_usuari (const string& s);
+    bool accedir_usuari ( Usuari& u);
 
 //Modificadors
 

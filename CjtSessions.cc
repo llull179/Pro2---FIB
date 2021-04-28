@@ -39,6 +39,7 @@ void CjtSessions::llegir_sessions_inicials(){
 
 void CjtSessions::llistat_sessions(){
     for(map<string,Sessio>::iterator it = sessions.begin(); it != sessions.end(); ++it) {
+        cout << (*it).first << endl;
         (*it).second.escriure_sessio();
     }
 }
