@@ -3,11 +3,7 @@
 
 Usuari::Usuari() {}
 
-Usuari::Usuari(const string & u) {
-    stats.name = u;
-}
-
-int Usuari::esta_inscrit() const {
+int Usuari::curs_inscrit() const {
     return stats.curs_in;
 }
 
@@ -16,24 +12,23 @@ bool Usuari::curs_completat() const {
     else return false;
 }
 
-void Usuari::problemes_enviables() const {
-    for(map<string,int>::const_iterator it = problemes_env.begin(); it != problemes_exit.end(); ++it) {
-        cout << "Problema: " << (*it).first <<" "<< (*it).second <<"intents" << endl;
+void Usuari::problemes_enviables()  {
+    for(map<string,int>::const_iterator it = problemes_env.begin(); it != problemes_env.end(); ++it) {
+        cout << (*it).first << '('<< (*it).second <<')' << endl;
     }
 }
 
 void Usuari::problemes_resolts() {
     for(map<string,int>::iterator it = problemes_exit.begin(); it != problemes_exit.end(); ++it) {
-        cout << "Problema: " << (*it).first <<" "<< (*it).second <<"intents" << endl;
+        cout << (*it).first << '('<< (*it).second <<')' << endl;
     }
 }
 
-string Usuari::consultar_nom () const {
-    return stats.name;
-}
-
-void Usuari::inscribir_curso(int c) {
+void Usuari::inscribir_curso(int c, const list<string>& l) {
     stats.curs_in = c;
+    for(list<string>::const_iterator it = l.begin(); it != l.end(); ++it) {
+        problemes_env.insert(make_pair((*it),0));
+    }
 }
 
 void Usuari::actualitzar_stats(string p, int r) {
@@ -53,9 +48,6 @@ void Usuari::actualitzar_stats(string p, int r) {
 }
 
 void Usuari::escriure_usuari( ) {
-    cout << "Nom: " << stats.name <<endl;
-    cout <<"Enviaments totals: "<< stats.env_tot<<endl;
-    cout <<"Problemes resolts: "<< problemes_exit.size()<<endl;
-    cout <<"Problemes intentats: "<< problemes_env.size()<<endl;
-    cout <<"Curs inscrit: "<< stats.curs_in<<endl;
+    cout << '(' << stats.env_tot << ',' << problemes_exit.size();
+    cout << ',' << stats.intents << ',' << stats.curs_in << ')' << endl;
 }

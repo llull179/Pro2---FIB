@@ -7,7 +7,7 @@
 
 #include "Problema.hh"
 #ifndef NO_DIAGRAM
-#include <vector>
+#include <map>
 #endif
 
  
@@ -19,7 +19,8 @@ class CjtProblemes
 {
 
 private:
-    vector<Problema> problemes;
+    map<string,Problema> problemes;
+    Problema nulo;
 public:
 
     //Constructora
@@ -47,7 +48,7 @@ public:
 
     */
 
-    Problema& accedir_problema (const string& p);
+    Problema& accedir_problema (const string& p, bool& found);
 
     //Modificadores
  

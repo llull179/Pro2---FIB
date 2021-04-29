@@ -37,8 +37,8 @@ Sessio.o: Sessio.hh Sessio.cc
 
 
 
-practica.tar: Makefile CjtUsuaris.cc CjtUsuaris.hh Usuari.hh Usuari.cc CjtSessions.hh CjtSessions.hh Sessio.hh Sessio.cc CjtCursos.cc  CjtCursos.hh Curs.hh Curs.hh BinTree.hh program.ccm html.zip
-	tar -cvf practica.tar *.cc *.hh Makefile html.zip
+practica.tar: Makefile CjtUsuaris.cc CjtUsuaris.hh Usuari.hh Usuari.cc CjtSessions.cc CjtSessions.hh Sessio.hh Sessio.cc CjtCursos.cc  CjtCursos.hh Curs.hh Curs.hh BinTree.hh program.cc 
+	tar -cvf practica.tar *.cc *.hh Makefile
 	
 clean: 
 	rm -f *.o *.gch *.exe *.tar

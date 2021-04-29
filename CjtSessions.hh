@@ -8,9 +8,8 @@
 
 #include "Sessio.hh"
 #ifndef NO_DIAGRAM
-#include <map>
+#include <vector>
 #endif
-
 
 /** @class CjtSessions
     @brief Representa un Conjunt de sessions (Sessio). 
@@ -22,6 +21,7 @@ class CjtSessions
 private:    
 
     map <string, Sessio> sessions;
+    Sessio nulo;
 
 public:
     
@@ -35,6 +35,13 @@ public:
     CjtSessions();
     
     //Consultors
+
+    /** @brief Consulta si existeix el problema p en un vector  de sesions determinat.
+        \pre <em>cert</em>.
+        \post Retorna la Sessio a la qual pertany si el problema , i en cas contrari retorna un 0.
+
+    */
+    string existeix_prob(const vector<string>& v, string p);
 
     /** @brief Consulta si la Sessió s existeix  <em>s</em>.
         \pre <em>cert</em>.
@@ -50,7 +57,7 @@ public:
 
     */
 
-    Sessio accedir_sessio (const string& s);
+    Sessio& accedir_sessio (const string& s, bool& found);
 
     //Modificadorss
     

@@ -2,17 +2,22 @@
 
 Curs::Curs() {}
 
-string Curs::trobar_sessio(int x) {
-    return sessions[x];   
-}
 
 void Curs::escriure_curs( ) const{
-    cout <<"Usuaris completat: "<<users.first<<"; Usuaris inscrits"<<users.second<<endl;
-    cout << "Identificadors de Sessions:";
+    cout <<' ' << users.first << ' ' << users.second << ' ' << sessions.size() <<' ';
+    cout << '(';
     for(int i = 0; i < sessions.size(); ++i) {
-        cout <<' '<< sessions[i];
+        if(i != 0) cout << ' ';
+        cout << sessions[i];
     }
-    cout<<endl;
+    cout<< ')' <<endl;
+}
+int Curs::usuaris_inscrits( ){
+    return users.second;
+}
+
+void Curs::act_inscrits(int x){
+    users.second += x;
 }
 
 void Curs::lletgir_sessions () {
@@ -25,4 +30,8 @@ void Curs::lletgir_sessions () {
         auxSes[i] = aux;
     }
     sessions = auxSes;
+}
+
+vector<string> Curs::llista_sesions() {
+   return sessions;
 }

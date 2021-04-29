@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <list>
 using namespace std;
 #endif
 
@@ -22,7 +23,6 @@ class Usuari
 private:    
 
   struct {
-      string name;
       int env_tot = 0;
       int intents = 0;
       int curs_in = 0;
@@ -43,12 +43,6 @@ public:
   */ 
  Usuari();
 
- /** @brief Creadora amb identificador. 
-
-      \pre <em>cert</em>.
-      \post El resultat és un Usuari amb identificador <em>u<em>
-  */ 
- Usuari(const string& u);
 
 //Consultores
 
@@ -58,7 +52,7 @@ public:
       \post  Retorna l'identificador del curso en el que està inscrit l'Usuari o un 0 si no hi està.
         
   */
-  int esta_inscrit( ) const;
+  int curs_inscrit( ) const;
 
 
   /** @brief Consultora curs completat
@@ -83,14 +77,7 @@ public:
       \post Llista en ordre creixent per identificador de tots els problemes solucionats.
         També s'imprimeix el nombre d'enviaments a cada problema  resolt.
   */
-  void problemes_enviables () const;
-
-    /** @brief Retorna el nom de l'usuari.
-
-      \pre <em>cierto</em>.
-      \post Retorna el nom de l'usuari.
-  */
-  string consultar_nom () const;
+  void problemes_enviables () ;
 
 
 //Modificadores
@@ -100,7 +87,7 @@ public:
       \pre <em>cierto</em>
       \post Inscriu l'usuari al curs c.    
   */
-  void inscribir_curso(int c);
+  void inscribir_curso(int c, const list<string>& l);
 
 
   /** @brief Actualitza les estadístiques de l'Usuari.

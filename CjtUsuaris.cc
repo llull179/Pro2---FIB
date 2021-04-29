@@ -4,48 +4,46 @@
 CjtUsuaris::CjtUsuaris() {}
 
 void CjtUsuaris::llistat_usuaris() {
-    for(list<Usuari>::iterator it = llistUsers.begin(); it != llistUsers.end(); ++it) {
-        (*it).escriure_usuari();
+    for(map<string,Usuari>::iterator it = llistUsers.begin(); it != llistUsers.end(); ++it) {
+        cout << (*it).first;
+        (*it).second.escriure_usuari();
     }
 }
 
-bool CjtUsuaris::accedir_usuari( Usuari& u) {
-   for(list<Usuari>::const_iterator it = llistUsers.begin(); it != llistUsers.end(); ++it) {
-        if(u.consultar_nom() == (*it).consultar_nom()){
-            u = *it;
-            return true;
-        }  
+Usuari& CjtUsuaris::accedir_usuari(const string& s, bool& found) {
+    map<string,Usuari>::iterator it = llistUsers.find(s);
+   if(it != llistUsers.end()) {
+       found = true; 
+       return (*it).second;
+   }
+   found = false; 
+   return nulo;
+} 
+
+
+bool CjtUsuaris::alta_usuari(const string& u) {
+    pair<map<string,Usuari>::iterator, bool> r= llistUsers.insert(make_pair(u, Usuari()));
+    if (r.second) cout << llistUsers.size() <<endl;
+    return r.second; 
+}
+
+bool CjtUsuaris::baixa_usuari(const string& u, int& curs) {
+    map <string,Usuari>::iterator it = llistUsers.find(u);
+    if(it != llistUsers.end()) {  
+        curs = (*it).second.curs_inscrit();
+        llistUsers.erase(it);
+        cout << llistUsers.size() <<endl;
+        return true;
     }
     return false;
 }
 
-void CjtUsuaris::alta_usuari(const Usuari& u) {
-    llistUsers.insert(llistUsers.end(), u);
-    cout << llistUsers.size() <<endl;
-}
-
-void CjtUsuaris::baixa_usuari(const string& u) {
-     bool trobat = false;
-    list<Usuari>::iterator it = llistUsers.begin();
-    //fallo aqui fiinal del while
-    
-    while(it != llistUsers.end() and (not trobat)) {
-        if(u == (*it).consultar_nom()){
-            trobat = true;
-            llistUsers.erase(it);
-        } 
-        else ++it;
-    }
-}
-
 void CjtUsuaris::llegir_usuaris_inicials() {
     int M;
-    cout << "Nombre inicial de usuaris:";
     cin >> M;
     for (int i=0; i < M; ++i) {
         string s;
         cin >> s;
-        Usuari u = Usuari(s);
-        llistUsers.insert(llistUsers.end(), u);
+        llistUsers.insert(make_pair(s,Usuari()));
     }
 }

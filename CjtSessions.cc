@@ -7,10 +7,14 @@ bool CjtSessions::existeix_sessio(const string& s) const {
     else return false;
 }
 
-Sessio CjtSessions::accedir_sessio(const string& s) {
+Sessio& CjtSessions::accedir_sessio(const string& s, bool& found) {
   map<string,Sessio>::iterator it = sessions.find(s);
-  Sessio prob = (*it).second;
-  return prob;
+  if(it != sessions.end()) {
+      found = true;
+      return (*it).second;
+  }
+  found = false;
+  return nulo;
 }
 
 void CjtSessions::nova_sessio(const string& s){
@@ -20,11 +24,11 @@ void CjtSessions::nova_sessio(const string& s){
     ses.lletgir_BinTree(prereq);
     ses = Sessio(prereq);
     sessions.insert(pair<string,Sessio>(s,ses));
+    cout << sessions.size() <<endl;
 }
 
 void CjtSessions::llegir_sessions_inicials(){
    int Q;
-   cout << "Nombre inicial de sessions:";
    cin >> Q;
    for (int i = 0; i < Q; ++i) {
        Sessio ses;
@@ -39,7 +43,15 @@ void CjtSessions::llegir_sessions_inicials(){
 
 void CjtSessions::llistat_sessions(){
     for(map<string,Sessio>::iterator it = sessions.begin(); it != sessions.end(); ++it) {
-        cout << (*it).first << endl;
-        (*it).second.escriure_sessio();
+        cout << (*it).first;
+        (*it).second.escriure_sessio();  
     }
 }
+
+string CjtSessions::existeix_prob(const vector<string>& v, string p){
+        for(int i = 0; i < v.size(); ++i) {
+            map<string, Sessio>::iterator it = sessions.find(v[i]);
+            if((*it).second.trobar_problema(p)) return (*it).first;
+        }
+        return "0";
+    }

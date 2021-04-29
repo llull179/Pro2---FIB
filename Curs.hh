@@ -6,9 +6,7 @@
 #define _CURS_HH_
 
 #include "CjtSessions.hh"
-#ifndef NO_DIAGRAM
 
-#endif
 
 
 /** @class Curs
@@ -21,6 +19,7 @@ class Curs
 private:    
 
     vector <string> sessions;
+    //first: usuaris copletat el curs; second: usuaris inscrits actualment
     pair <int, int> users;
 
 public:
@@ -36,18 +35,17 @@ public:
     
     //Consultors
 
-    /** @brief Ret
-        \pre El problema p existeix.
-        \post Retorna l'identificador de la Sessió a la qual pertany el problema.
+    /** @brief Crea un vector amb les sesions que conté el curs c
+        \pre <em>cert</em>
+        \post Retorna un vector amb les Sesions del p.i.
     */
-
-    string trobar_sessio (int x);
+    vector<string> llista_sesions();
 
     //Modificadors
     
     /** @brief Afegir la Sessio <em> s </em> al curs del p.i
         \pre La Sessio s existeix.
-        \post Retonra el curs amb la Sessió afegida
+        \post Retorna el curs amb la Sessió afegida
     */
 
 
@@ -63,5 +61,17 @@ public:
 
     void escriure_curs () const;
     
+    /** @brief Actualitza el nombre d'usuaris inscrits a un curs.
+        \pre <em>cert</em>
+        \post Suma als usuaris iscrits al p.i el nombre x.
+    */
+
+    void act_inscrits (int x);
+    /** @brief Retorna el nombre d'usuaris inscrits.
+        \pre <em>cert</em>
+        \post Retorna el nombre d'usuaris inscrits.
+    */
+
+    int usuaris_inscrits ();
 };
 #endif

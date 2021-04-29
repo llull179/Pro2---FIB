@@ -61,6 +61,13 @@ public:
     */
 
     bool trobar_valor_BinTree(const BinTree<string>& a, const string& p);
+
+
+    /** @brief  Retorna l'arrel de l'arbre del p.i.
+        \pre <em>cert</em>.
+        \post Retorna l'arrel de l'arbre del p.i.
+    */
+    string obtenir_arrel();
     //Modificadors
     
     /** @brief Lletgeix els problemes de la sessió en preordre dels prerequisits.

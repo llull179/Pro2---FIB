@@ -21,8 +21,8 @@ class CjtUsuaris
     
 private:    
 
-    list <Usuari> llistUsers;
-
+    map <string, Usuari> llistUsers;
+    Usuari nulo; 
 public:
 //Constructores
 
@@ -53,7 +53,7 @@ public:
 
     */
 
-    bool accedir_usuari ( Usuari& u);
+     Usuari& accedir_usuari ( const string& s, bool & found);
 
 //Modificadors
 
@@ -65,7 +65,7 @@ public:
       d'usuaris després d'afegir-lo.
   */ 
 
-void alta_usuari(const Usuari& u);
+bool alta_usuari(const string& u);
 
 /** @brief Dona de baixa un usuari 
 
@@ -73,7 +73,7 @@ void alta_usuari(const Usuari& u);
       \post Imprimeix el número d'usuaris després de donar-lo de baixa després d'eliminar u.
   */ 
 
-void baixa_usuari(const string& u);
+bool baixa_usuari(const string& u, int& inscrit);
 
 //Llegir i escriure
 

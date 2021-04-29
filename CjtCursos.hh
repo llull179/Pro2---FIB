@@ -5,7 +5,9 @@
 #ifndef _CJTCURSOS_HH_
 #define _CJTCURSOS_HH_
 
-
+#ifndef NO_DIAGRAM
+#include <vector>
+#endif
 #include "Curs.hh"
 
 

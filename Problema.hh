@@ -21,10 +21,9 @@ class Problema
 private:    
 
     struct{
-        string ident;
         int env_totals = 0;
         int env_exit = 0;
-        int ratio = 0;
+        int ratio = 1;
     } stats;
 
 public:
@@ -39,21 +38,8 @@ public:
     Problema();
 
     
-    /** @brief Creadora amb identificador.
-        \pre <em>cert</em>.
-        \post El resultat és un nou Problema amb un idetificador <em>p</em>.
-    */
-
-    Problema(const string& p);
-    
     //Consultors
 
-    /** @brief Comprova l'identificador del problema..
-        \pre <em>cert</em>.
-        \post retorna l'identificador (stats.ident) del <em>p.i</em>.
-    */
-
-    string consultar_ident() const;
 
     //Modificadors
     
