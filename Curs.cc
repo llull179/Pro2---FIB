@@ -32,6 +32,14 @@ void Curs::lletgir_sessions () {
     sessions = auxSes;
 }
 
+
+string Curs::retorna_sessio( CjtSessions cs,const string& s) {
+    bool found;
+    for(int i = 0; i< sessions.size(); ++i) {
+        if( cs.accedir_sessio(sessions[i], found).trobar_problema(s)) return sessions[i];
+    }
+   return "0";
+}
 vector<string> Curs::llista_sesions() {
    return sessions;
 }

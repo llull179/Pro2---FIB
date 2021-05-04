@@ -41,6 +41,12 @@ public:
     */
     vector<string> llista_sesions();
 
+    /** @brief Retorna una string amb la sessio a la qual pertany el problema <em>p</em>
+        \pre <em>cert</em>
+        \post Retorna una string amb la sessio a la qual pertany el problema <em>p</em>
+    */
+    string retorna_sessio(CjtSessions cs,const string& s);
+
     //Modificadors
     
     /** @brief Afegir la Sessio <em> s </em> al curs del p.i

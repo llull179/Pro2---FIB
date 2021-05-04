@@ -118,9 +118,7 @@ int main() {
             
             if(cjtCurs.existeix_curs(auxInt)){
                 if(cjtProb.existeix_problema(auxString)){
-                    Curs c =cjtCurs.accedir_curs( auxInt );
-                    vector<string> vect_ses = c.llista_sesions();
-                    string ses = cjtSes.existeix_prob(vect_ses,auxString);
+                    string ses = cjtCurs.accedir_curs( auxInt ).retorna_sessio(cjtSes, auxString);
                     if(ses!="0"){
                         cout << ses << endl;
                     }
