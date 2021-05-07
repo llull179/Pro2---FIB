@@ -9,8 +9,7 @@
 
 
 
-/** @class Curs
-    @brief Representa un  Curs. 
+/** @    @brief     @brief Representa un  Curs. 
 
 */
 class Curs
@@ -34,6 +33,25 @@ public:
     Curs();
     
     //Consultors
+
+    /** @brief Retorna el nombre de sesions que te el curs
+        \pre <em>cert</em>
+        \post Retorna la mida del vector sessions del p.i.
+    */
+    int num_sessions();
+
+    /** @brief Retorna la sessio numero i del curs
+        \pre <em>cert</em>
+        \post Retorna la sessio numero i del curs
+    */
+    string get_sessio(int i);
+
+    /** @brief CComprova si el curs compleix les condicions per ser creat
+        \pre <em>cert</em>
+        \post Retorna true si el curs no te cap interessció de problesmes.
+    */
+
+    bool curs_pot_crear() const;
 
     /** @brief Crea un vector amb les sesions que conté el curs c
         \pre <em>cert</em>
@@ -66,6 +84,7 @@ public:
     */
 
     void escriure_curs () const;
+    
     
     /** @brief Actualitza el nombre d'usuaris inscrits a un curs.
         \pre <em>cert</em>

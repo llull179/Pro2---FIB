@@ -12,36 +12,36 @@
 
 
 /** @class CjtCursos
-    @brief Representa un conjunt de cursos (Curs). 
+    @brief Representa un conjunt de cursos (Curs).
 
 */
 class CjtCursos
 {
-    
-private:    
+
+private:
 
     vector <Curs> cursos;
 
 public:
-    
+
     //Constructor
-    
+
     /** @brief Creadora per defecte.
         \pre <em>cert</em>.
         \post El resultat és un nou conjunt de cursos.
     */
 
     CjtCursos();
-    
+
     //Consultors
-    
+
     /** @brief Consultora de cursos.
         \pre <em>cert</em>.
         \post El resultat indica si el curs c existeix.
     */
 
     bool existeix_curs ( int c ) const;
-    
+
     /** @brief Accedeix al Curs <em>c</em>
         \pre El Curs c existeix.
         \post Retorna el Curs c.
@@ -60,17 +60,18 @@ public:
     void llistat_cursos () const;
 
 
+
     //Modificadors
-    
+
     /** @brief Afageix un nou curs
-        \pre Es llegeix el numero de sessions S, i despres una seqüència de S sessions.
-        \post Se ha afegit el curs amb identificador N+1 al paràmetre implícit, si no hi ha
-        intersecció de problemes en les sessions, s'afageix el curs i s'imprimeix el seu identificador.
+        \pre El curs compleix les condicions per ser creat
+        \post Se ha afegit el curs amb identificador N+1 al paràmetre implícit,
+        i s'imprimeix el seu identificador.
         En cas contrari s'imprimeix un missatge d'error.
 
     */
 
-    void nou_curs ();
+    void nou_curs (const Curs& c);
 
     //Llegir i escriure
 
@@ -81,6 +82,6 @@ public:
     */
 
     void llegir_cursos_inicials ();
-    
+
 };
 #endif

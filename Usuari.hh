@@ -5,6 +5,8 @@
 #ifndef _USUARI_HH_
 #define _USUARI_HH_
 
+#include "Curs.hh"
+
 #ifndef NO_DIAGRAM
 #include <iostream>
 #include <string>
@@ -19,13 +21,13 @@ using namespace std;
 */
 class Usuari
 {
-    
-private:    
+
+private:
 
   struct {
-      int env_tot = 0;
-      int intents = 0;
-      int curs_in = 0;
+      int env_tot = 0; //enviaments totals
+      int probs_intents = 0; // problemes intentats
+      int curs_in = 0; //curs on l'usuari està inscrit
   } stats;
 
  //string = identificador problema,int = enviaments al problema
@@ -35,12 +37,12 @@ private:
 public:
 //Constructoras
 
-/** @brief Creadora por defecto. 
+/** @brief Creadora por defecto.
 
       S'executa automàticament al declarar un usuari.
       \pre <em>cert</em>.
       \post El resultat és un Usuari.
-  */ 
+  */
  Usuari();
 
 
@@ -50,7 +52,7 @@ public:
 
       \pre <em>cierto</em>
       \post  Retorna l'identificador del curso en el que està inscrit l'Usuari o un 0 si no hi està.
-        
+
   */
   int curs_inscrit( ) const;
 
@@ -85,17 +87,17 @@ public:
 /** @brief Inscriu l'usuari al curs amb identificador c.
 
       \pre <em>cierto</em>
-      \post Inscriu l'usuari al curs c.    
+      \post Inscriu l'usuari al curs c.
   */
-  void inscribir_curso(int c, const list<string>& l);
+  void inscribir_curso(int c, CjtSessions ses,  Curs curs);
 
 
   /** @brief Actualitza les estadístiques de l'Usuari.
 
       \pre p es el problema on ha fet l'enviament i r si l'ha completat amb èxit .
-      \post Retorna l'Usuari amb les estadístiques actualitzades.    
+      \post Retorna l'Usuari amb les estadístiques actualitzades.
   */
-  
+
   void actualitzar_stats(string p, int r);
 
     //Escriure

@@ -19,10 +19,9 @@ void CjtCursos::llistat_cursos () const {
     }
 }
 
-void CjtCursos::nou_curs ()  {
-    Curs c;
-    c.lletgir_sessions();
+void CjtCursos::nou_curs (const Curs& c)  {
     cursos.push_back(c);
+    cout << cursos.size() << endl;
 }
 
 void CjtCursos::llegir_cursos_inicials ()  {
@@ -36,4 +35,3 @@ void CjtCursos::llegir_cursos_inicials ()  {
     }
     cursos = aux;
 }
-

@@ -10,10 +10,10 @@ bool CjtProblemes::existeix_problema (const string & p ) const{
 Problema& CjtProblemes::accedir_problema (const string & p, bool& found) {
     map<string,Problema>::iterator it = problemes.find(p);
    if(it != problemes.end()) {
-       found = true; 
+       found = true;
        return (*it).second;
    }
-   found = false; 
+   found = false;
    return nulo;
 }
 
@@ -35,8 +35,23 @@ void CjtProblemes::llegir_problemes_inicials (){
 }
 
 void CjtProblemes::llistat_problemes(){
-    for (map<string,Problema>::const_iterator it = problemes.begin(); it != problemes.end(); ++it) {
-        cout << (*it).first;
-        (*it).second.escriure_problema();
+    for (int i = 0; i < prob_ord.size(); i++) {
+        cout << prob_ord[i].first;
+        prob_ord[i].second.escriure_problema();
     }
+}
+
+void CjtProblemes::ordenar_problemes() {
+  vector<pair<string,Problema>> aux(problemes.size());
+  int i = 0;
+  for(map<string,Problema>::const_iterator it = problemes.begin(); it != problemes.end(); ++it) {
+    aux[i] = *it;
+  }
+  sort(aux.begin(), aux.end(), cmp);
+  prob_ord = aux;
+}
+
+bool CjtProblemes::cmp(const pair<string,Problema>& a, const pair<string,Problema>& b) {
+  if(a.second.get_ratio()!= b.second.get_ratio()) return a.second.get_ratio() > b.second.get_ratio();
+  return a.first > b.first;
 }

@@ -1,0 +1,62 @@
+//Introducció de problemes
+6
+p1
+p2
+p3
+v1
+v2
+v3
+
+//Introducció de sessions
+3
+vectors
+v1
+v2
+0
+0
+v3
+0
+0
+piles
+p1
+p2
+0
+0
+p3
+0
+0
+examens1
+//provam el cas on l'arbre de prerequisits només té problemes als fills de la dreta
+p1
+0
+p2
+0
+p3
+0
+v2
+0
+//provam el cas d'un arbre que tan sols té l'arrel
+examens2
+p2
+0
+0
+//Introducció de cursos
+3
+//Cas amb només una sessió
+1
+examens1
+//Cas amb totes les sessions possibles
+3
+examens1
+examens2
+vectors
+2
+examens1
+examens2
+//Introducció Usuaris
+4
+Javi
+Joan
+Cesc
+Pere
+//Fin de introducció inicial; Introducció d'operacions:

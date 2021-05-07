@@ -33,6 +33,7 @@ void Curs::lletgir_sessions () {
 }
 
 
+
 string Curs::retorna_sessio( CjtSessions cs,const string& s) {
     bool found;
     for(int i = 0; i< sessions.size(); ++i) {
@@ -40,6 +41,25 @@ string Curs::retorna_sessio( CjtSessions cs,const string& s) {
     }
    return "0";
 }
+
 vector<string> Curs::llista_sesions() {
    return sessions;
 }
+bool Curs::curs_pot_crear() const{
+
+  return true;
+}
+
+int Curs::num_sessions() {
+    return sessions.size();
+}
+
+string Curs::get_sessio(int i) {
+    return sessions[i];
+}
+/*void Curs::afegir_sessio (const string& s, const Sessio& ses) {
+  sessions.push_back(s);
+
+
+}
+*/

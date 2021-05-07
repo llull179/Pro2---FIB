@@ -24,30 +24,32 @@ void Usuari::problemes_resolts() {
     }
 }
 
-void Usuari::inscribir_curso(int c, const list<string>& l) {
+void Usuari::inscribir_curso(int c, CjtSessions ses,  Curs curs) {
     stats.curs_in = c;
-    for(list<string>::const_iterator it = l.begin(); it != l.end(); ++it) {
-        problemes_env.insert(make_pair((*it),0));
+    for(int i = 0; i < curs.num_sessions(); ++i ) {       
+        bool found;
+        problemes_env.insert(make_pair(ses.accedir_sessio(curs.get_sessio(i),found).obtenir_arrel(),0));
     }
+   
 }
 
 void Usuari::actualitzar_stats(string p, int r) {
     ++stats.env_tot;
-    
+
     map <string, int>::iterator it = problemes_exit.find(p);
-    if(it == problemes_env.end()){
-        ++stats.intents;
+    if(it == problemes_exit.end()){
+        ++stats.probs_intents;
         if( r == 1 ) problemes_exit.insert(make_pair(p,1));
-    } 
+    }
     else {
         if(r == 1) {
             (*it).second++;
         }
     }
-    
+
 }
 
 void Usuari::escriure_usuari( ) {
     cout << '(' << stats.env_tot << ',' << problemes_exit.size();
-    cout << ',' << stats.intents << ',' << stats.curs_in << ')' << endl;
+    cout << ',' << stats.probs_intents << ',' << stats.curs_in << ')' << endl;
 }
