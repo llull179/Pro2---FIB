@@ -21,6 +21,7 @@ class Sessio
 private:    
     string ident;
     BinTree <string> prerequisits;
+    map<string, pair<string,string>> copia_pre;
 public:
     
     //Constructora
@@ -41,12 +42,12 @@ public:
 
     //Consultors
 
-     /** @brief Comprova la grandaria del BinTree.
+     /** @brief Retorna la cantidad de problemes de la Sessió.
         \pre <em>cert</em>.
-        \post Retorna el nombre de problemes que conté el BinTree.
+        \post Retorna la cantidad de problemes de la Sessió.
     */
 
-    int BinTree_size(const BinTree<string>& a);
+    int get_size();
     
     /** @brief Comprova si el problema pertany al p.i.
         \pre <em>cert</em>.
@@ -63,11 +64,11 @@ public:
     bool trobar_valor_BinTree(const BinTree<string>& a, const string& p);
 
 
-    /** @brief  Retorna l'arrel de l'arbre del p.i.
+    /** @brief  Retorna l'string de la posició x del map de tots els problemes del p.i.
         \pre <em>cert</em>.
-        \post Retorna l'arrel de l'arbre del p.i.
+        \post Retorna l'string de la posició x del map de tots els problemes del p.i.
     */
-    string obtenir_arrel();
+    string agafa_iessim(int x);
     //Modificadors
     
     /** @brief Lletgeix els problemes de la sessió en preordre dels prerequisits.
@@ -95,5 +96,9 @@ public:
     */
 
     void escriure_BinTree (const BinTree<string> & a) const;
+
+
+    pair<string,string> retorna_fills(const string& p);
+    
 };
 #endif

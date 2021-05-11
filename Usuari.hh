@@ -57,14 +57,6 @@ public:
   int curs_inscrit( ) const;
 
 
-  /** @brief Consultora curs completat
-
-      \pre El curs <em>c</em> existeix.
-      \post Comprova si l'usuari ja ha completat el curs, revisant si els problemes enviables = 0.
-       En cas afirmatiu l'usuari deixa d'estar inscrit al curs.
-  */
-  bool curs_completat () const;
-
   /** @brief Llista tots els problemes resolts per l'usuari
 
       \pre <em>cierto</em>.
@@ -98,7 +90,7 @@ public:
       \post Retorna l'Usuari amb les estadístiques actualitzades.
   */
 
-  void actualitzar_stats(string p, int r);
+  void actualitzar_stats(const string& p, const pair<string,string>& fills, int r, bool& cur_completat);
 
     //Escriure
 

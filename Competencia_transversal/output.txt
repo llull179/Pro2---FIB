@@ -1,0 +1,8 @@
+#np
+k1
+#np
+k2
+#nuevo_problema
+error: el problema ya existe
+#ns
+pi

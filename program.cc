@@ -14,7 +14,7 @@ int main() {
     string op;
     cjtProb.llegir_problemes_inicials();
     cjtSes.llegir_sessions_inicials();
-    cjtCurs.llegir_cursos_inicials();
+    cjtCurs.llegir_cursos_inicials(cjtSes);
     cjtUs.llegir_usuaris_inicials();
 
     cin >> op;
@@ -44,22 +44,9 @@ int main() {
             else cout<<"error: la sesion ya existe"<<endl;
         }
         else if (op == "nc" or op == "nuevo_curso") {
-            cout << '#' <<op<<' ';
-            cout << endl;
-            cin >> auxInt;
-
-
+            cout << '#' <<op<< endl;
             Curs c;
-            /*for (int i = 0; i < auxInt; ++i) {
-              cin >> auxString;
-              bool found;
-              const Sessio& s= cjtSes.accedir_sessio(auxString, found);
-              if(found) c.afegir_sessio(auxString,s);
-
-            }*/
-
-            c.lletgir_sessions();
-            if(c.curs_pot_crear()) cjtCurs.nou_curs(c);
+            if(c.curs_pot_crear(cjtSes)) cjtCurs.nou_curs(c);
             else cout << "error: curso mal formado" <<endl;
 
         }
@@ -89,13 +76,13 @@ int main() {
             cin >> auxString >> auxInt;
             cout << auxString <<' ' << auxInt <<endl;
             bool found;
-            Usuari& r=cjtUs.accedir_usuari(auxString, found);
+            Usuari& u=cjtUs.accedir_usuari(auxString, found);
             
             if (found) {
                 if(cjtCurs.existeix_curs(auxInt)) {
-                    if (r.curs_inscrit() == 0){
+                    if (u.curs_inscrit() == 0){
                         Curs& c =cjtCurs.accedir_curs( auxInt );
-                        r.inscribir_curso( auxInt, cjtSes, c);
+                        u.inscribir_curso( auxInt, cjtSes, c);
                         c.act_inscrits(1);
                         cout << c.usuaris_inscrits() <<endl;
                     }
@@ -111,9 +98,9 @@ int main() {
             cin >> auxString;
             cout << auxString <<endl;
             bool found;
-            Usuari& r=cjtUs.accedir_usuari(auxString, found);
+            Usuari& u=cjtUs.accedir_usuari(auxString, found);
              if (found) {
-                cout << r.curs_inscrit() <<endl;
+                cout << u.curs_inscrit() <<endl;
             }
             else cout << "error: el usuario no existe" << endl;
         }
@@ -125,7 +112,7 @@ int main() {
 
             if(cjtCurs.existeix_curs(auxInt)){
                 if(cjtProb.existeix_problema(auxString)){
-                    string ses = cjtCurs.accedir_curs( auxInt ).retorna_sessio(cjtSes, auxString);
+                    string ses = cjtCurs.accedir_curs( auxInt ).retorna_sessio(auxString);
                     if(ses!="0"){
                         cout << ses << endl;
                     }
@@ -142,10 +129,10 @@ int main() {
             cin >> auxString;
             cout << auxString <<endl;
             bool found;
-            Usuari& r=cjtUs.accedir_usuari(auxString, found);
+            Usuari& u=cjtUs.accedir_usuari(auxString, found);
             if(found) {
 
-                r.problemes_resolts();
+                u.problemes_resolts();
             }
             else cout << "error: el usuario no existe" << endl;
         }
@@ -154,10 +141,10 @@ int main() {
             cin >> auxString;
             cout << auxString <<endl;
             bool found;
-            Usuari& r=cjtUs.accedir_usuari(auxString, found);
+            Usuari& u=cjtUs.accedir_usuari(auxString, found);
             if(found) {
-                if(r.curs_inscrit()){
-                    r.problemes_enviables();
+                if(u.curs_inscrit()){
+                    u.problemes_enviables();
                 }
                 else cout << "error: usuario no inscrito en ningun curso" <<endl;
             }
@@ -170,15 +157,20 @@ int main() {
             bool r;
             string p;
             cin >> auxString >> p >> r;
-            bool foundUser, foundProb;
+            cout << auxString <<' ' << p << ' ' << r << endl;
+            bool foundUser, foundProb, foundSes, curs_completat = false;
 
-            Usuari& res=cjtUs.accedir_usuari(auxString, foundUser);
+            Usuari& us=cjtUs.accedir_usuari(auxString, foundUser);
             Problema& prob = cjtProb.accedir_problema( p, foundProb );
             prob.actualitzar_stats( r );
-            res.actualitzar_stats(auxString, r);
-            if ( r ) {
-                res.curs_completat();
-            }
+            Curs& c = cjtCurs.accedir_curs(us.curs_inscrit());
+            string s = c.retorna_sessio(p);
+       
+            Sessio& ses = cjtSes.accedir_sessio(s,foundSes);
+            pair<string, string> fills = ses.retorna_fills(p);
+            us.actualitzar_stats(p, fills, r,curs_completat);
+            if (curs_completat) c.actualitzar_completat();
+            
         }
 
         else if (op == "lp" or op == "listar_problemas") {
@@ -202,8 +194,7 @@ int main() {
         }
 
         else if (op == "ls" or op == "listar_sesiones") {
-            cout << '#' <<op<<' ';
-            cout << endl;
+            cout << '#' <<op<<endl;
             cjtSes.llistat_sessions();
 
         }
@@ -223,8 +214,7 @@ int main() {
         }
 
         else if (op == "lc" or op == "listar_cursos") {
-            cout << '#' <<op<<' ';
-            cout << endl;
+            cout << '#' <<op<<endl;
             cjtCurs.llistat_cursos();
 
         }
@@ -243,8 +233,7 @@ int main() {
         }
 
         else if (op == "lu" or op == "listar_usuarios") {
-            cout << '#' <<op<<' ';
-            cout <<endl;
+            cout << '#' << op << endl;
             cjtUs.llistat_usuaris();
         }
 
@@ -253,10 +242,10 @@ int main() {
             cin >> auxString;
             cout << auxString <<endl;
             bool found;
-            Usuari& r=cjtUs.accedir_usuari(auxString,found);
+            Usuari& u=cjtUs.accedir_usuari(auxString,found);
              if (found) {
                 cout << auxString;
-                r.escriure_usuari();
+                u.escriure_usuari();
             }
             else cout << "error: el usuario no existe" << endl;
         }

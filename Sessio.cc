@@ -6,16 +6,13 @@ Sessio::Sessio(BinTree<string> a) {
     prerequisits = a;
 }
 
-int Sessio::BinTree_size(const BinTree<string>& a) {
-    int x;
-    if( a.empty()) x = 0;
-    else x = BinTree_size(a.left()) + BinTree_size(a.right()) + 1;
-    return x;
+int Sessio::get_size() {
+    return copia_pre.size();
 }
 
 void Sessio::escriure_sessio( ) {
-    int p = BinTree_size(prerequisits);
-    cout << ' '<< p << ' ';
+    //int p = get_size();
+    cout << ' '<< get_size() << ' ';
     escriure_BinTree(prerequisits);
     cout << endl;
 }
@@ -23,14 +20,19 @@ void Sessio::escriure_sessio( ) {
 void Sessio::lletgir_BinTree(BinTree<string>& a) {
     string x;
     cin >> x;
+    
     if (x != "0") {
         BinTree<string> l;
         BinTree<string> r;
-        
         lletgir_BinTree(l);
         lletgir_BinTree(r);
         a = BinTree<string>(x,l,r);
         prerequisits = a;
+         string esq, dre;
+        esq = dre = "0";
+        if (not a.left().empty()) esq = a.left().value();
+        if (not a.right().empty()) dre = a.right().value();
+        copia_pre.insert(make_pair(x,make_pair(esq,dre)));
     }
 }
 
@@ -62,6 +64,18 @@ bool Sessio::trobar_valor_BinTree(const BinTree<string> & a, const string&p) {
     return b;
 }
 
-string Sessio::obtenir_arrel() {
-    return prerequisits.value();
+string Sessio::agafa_iessim(int x) {
+    map<string,pair<string,string>>::const_iterator it = copia_pre.begin();
+    for(int i = 0; i < x; ++i) ++it;
+    if(it != copia_pre.end()) return (*it).first;
+    return "0";
+}
+
+pair<string,string> Sessio::retorna_fills(const string& p) {
+    
+    map<string,pair<string,string>>::const_iterator it = copia_pre.find(p);
+    //cout<<(*it).second.first<<" "<<(*it).second.second<<endl;
+    if(it != copia_pre.end()) return (*it).second;
+    return make_pair("0","0");
+    
 }

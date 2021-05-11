@@ -22,7 +22,6 @@ void CjtSessions::nova_sessio(const string& s){
     
     Sessio ses;
     ses.lletgir_BinTree(prereq);
-    ses = Sessio(prereq);
     sessions.insert(pair<string,Sessio>(s,ses));
     cout << sessions.size() <<endl;
 }
@@ -36,7 +35,6 @@ void CjtSessions::llegir_sessions_inicials(){
        cin >> ident;
        BinTree<string> a;
        ses.lletgir_BinTree(a);
-
        sessions.insert(pair<string,Sessio>(ident,ses));
    }
 }

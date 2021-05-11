@@ -6,7 +6,7 @@
 #define _CURS_HH_
 
 #include "CjtSessions.hh"
-
+#include "Ident.hh"
 
 
 /** @    @brief     @brief Representa un  Curs. 
@@ -16,7 +16,8 @@ class Curs
 {
     
 private:    
-
+    //firs:problema, second:sessio a la que pertany
+    map<string, string> problemes;
     vector <string> sessions;
     //first: usuaris copletat el curs; second: usuaris inscrits actualment
     pair <int, int> users;
@@ -46,24 +47,21 @@ public:
     */
     string get_sessio(int i);
 
-    /** @brief CComprova si el curs compleix les condicions per ser creat
+    /** @brief Comprova si el curs es pot crear.
         \pre <em>cert</em>
-        \post Retorna true si el curs no te cap interessció de problesmes.
+        \post Recorr les sesions del curs per comprovar que no hi hagui interessecció entre problemes,
+        a més crea un map amb tots els problemes del curs i un vectir amb totes les sessions
     */
 
-    bool curs_pot_crear() const;
+    bool curs_pot_crear(CjtSessions cjtses);
 
-    /** @brief Crea un vector amb les sesions que conté el curs c
-        \pre <em>cert</em>
-        \post Retorna un vector amb les Sesions del p.i.
-    */
-    vector<string> llista_sesions();
+
 
     /** @brief Retorna una string amb la sessio a la qual pertany el problema <em>p</em>
         \pre <em>cert</em>
         \post Retorna una string amb la sessio a la qual pertany el problema <em>p</em>
     */
-    string retorna_sessio(CjtSessions cs,const string& s);
+    string retorna_sessio(const string& p);
 
     //Modificadors
     
@@ -72,8 +70,14 @@ public:
         \post Retorna el curs amb la Sessió afegida
     */
 
+   /** @brief Actualitza el curs després de ser completat per un usuari
+        \pre cert.
+        \post Suma 1 als usuaris completats i resta 1 als usuaris inscrits.
+    */
+   void actualitzar_completat();
 
-    void lletgir_sessions ();
+
+    /*void lletgir_sessions ();*/
 
     //Llegir i escriure
 

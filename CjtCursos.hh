@@ -81,7 +81,7 @@ public:
 
     */
 
-    void llegir_cursos_inicials ();
+    void llegir_cursos_inicials (CjtSessions cjtses);
 
 };
 #endif

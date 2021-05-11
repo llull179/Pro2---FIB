@@ -24,14 +24,14 @@ void CjtCursos::nou_curs (const Curs& c)  {
     cout << cursos.size() << endl;
 }
 
-void CjtCursos::llegir_cursos_inicials ()  {
+void CjtCursos::llegir_cursos_inicials (CjtSessions cjtses)  {
     int C;
     cin >> C;
     vector<Curs> aux(C);
     for (int i = 0; i < C; ++i) {
         Curs c;
-        c.lletgir_sessions();
-        aux[i] = c;
+        bool creat = c.curs_pot_crear(cjtses);
+        if(creat)aux[i] = c;
     }
     cursos = aux;
 }

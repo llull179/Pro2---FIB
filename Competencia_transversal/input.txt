@@ -1,0 +1,91 @@
+12
+p01 p02 p03
+v01 v02 v03
+r01 r02 r03 r04 r05
+aa01
+5
+vectors v01 v02 0 0 v03 0 0
+piles p01 p02 0 0 p03 0 0
+examens1 p01 0 p02 0 p03 0 v02 0
+examens2 aa01 0 0
+cues r01 r02 r03 0 0 r04 0 0 r05 0 0
+3
+1 examens1
+4 piles examens2 vectors cues
+2 examens1 examens2
+4
+Javi
+Alejandro
+Cesc
+Pere
+np k01
+np k02
+nuevo_problema p01
+nueva_sesion piles
+k01 k02 0 0 0
+ns examens2 
+nc
+2 examens1 vectors
+nuevo_curso
+2 piles cues
+a Javi
+a Sergio
+alta_usuario Joan
+b Joan
+baja_usuario Fernando
+pe Javi
+pe Sergio
+i Alejandro 1
+i Pere 2
+i Cesc 3
+inscribir_curso Fernando 2
+i Javi 0
+i Alejandro 2
+cu Alejandro
+cu Cesc
+cu Javi
+cu Mateu
+listar_problemas
+ls
+lc
+lu
+pe Alejandro
+pr Alejandro
+pe Cesc
+pr Cesc
+e Alejandro p01 1
+e Alejandro p02 1
+e Alejandro p03 0
+e Cesc aa01 0
+e Cesc aa01 0
+e Alejandro p03 1
+e Cesc aa01 1
+e Alejandro v02 1
+cu Alejandro
+pe Alejandro
+pr Alejandro
+pe Cesc
+pr Cesc
+eu Javi
+escrivir_curso 2
+es piles
+es maps
+ec 7
+escrivir_problema p01
+ep P06
+eu Pere
+e Javi p02 0
+e Javi v02 1
+envio Pere v01 1
+e Pere v02 0
+eu Pere
+pe Pere
+problemas_resueltos Pere
+sp 4 p01
+sp 2 r06
+sp 1 aa01
+sp 2 v02
+ls
+lu
+listar_cursos
+listar_problemas

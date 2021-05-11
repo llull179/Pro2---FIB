@@ -20,35 +20,13 @@ void Curs::act_inscrits(int x){
     users.second += x;
 }
 
-void Curs::lletgir_sessions () {
-    int num;
-    cin >> num;
-    vector<string> auxSes(num);
-    for( int i = 0; i < num; ++i) {
-        string aux;
-        cin >> aux;
-        auxSes[i] = aux;
-    }
-    sessions = auxSes;
+string Curs::retorna_sessio(const string& p) {
+    map<string,string>::const_iterator it = problemes.find(p);
+    map<string,string>::const_iterator ita = problemes.begin();
+    if(it!=problemes.end()) return (*it).second;
+    return "0";
 }
 
-
-
-string Curs::retorna_sessio( CjtSessions cs,const string& s) {
-    bool found;
-    for(int i = 0; i< sessions.size(); ++i) {
-        if( cs.accedir_sessio(sessions[i], found).trobar_problema(s)) return sessions[i];
-    }
-   return "0";
-}
-
-vector<string> Curs::llista_sesions() {
-   return sessions;
-}
-bool Curs::curs_pot_crear() const{
-
-  return true;
-}
 
 int Curs::num_sessions() {
     return sessions.size();
@@ -57,9 +35,31 @@ int Curs::num_sessions() {
 string Curs::get_sessio(int i) {
     return sessions[i];
 }
-/*void Curs::afegir_sessio (const string& s, const Sessio& ses) {
-  sessions.push_back(s);
 
-
+bool Curs::curs_pot_crear( CjtSessions cjtses) {
+    int num;
+    cin >> num;
+    vector<string> auxSes(num);
+    for(int i = 0; i < num; ++i) {
+        string aux;
+        cin >> aux;
+        auxSes[i] = aux;
+        bool found;
+        Sessio& s = cjtses.accedir_sessio(aux, found);
+        if (found) {
+            int numSes = s.get_size();
+            for(int j = 0; j < numSes; ++j) {
+                string p = s.agafa_iessim(j);
+                pair<map<string,string>::iterator,bool> r = problemes.insert(make_pair(p,aux));
+                if(not r.second) return false;
+            }
+        }
+    }
+    sessions = auxSes;
+   return true;
 }
-*/
+
+void Curs::actualitzar_completat() {
+    ++users.first;
+    --users.second;
+}
