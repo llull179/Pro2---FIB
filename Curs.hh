@@ -6,7 +6,6 @@
 #define _CURS_HH_
 
 #include "CjtSessions.hh"
-#include "Ident.hh"
 
 
 /** @    @brief     @brief Representa un  Curs. 
@@ -64,11 +63,6 @@ public:
     string retorna_sessio(const string& p);
 
     //Modificadors
-    
-    /** @brief Afegir la Sessio <em> s </em> al curs del p.i
-        \pre La Sessio s existeix.
-        \post Retorna el curs amb la Sessió afegida
-    */
 
    /** @brief Actualitza el curs després de ser completat per un usuari
         \pre cert.

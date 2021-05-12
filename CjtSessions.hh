@@ -36,12 +36,6 @@ public:
     
     //Consultors
 
-    /** @brief Consulta si existeix el problema p en un vector  de sesions determinat.
-        \pre <em>cert</em>.
-        \post Retorna la Sessio a la qual pertany si el problema , i en cas contrari retorna un 0.
-
-    */
-    string existeix_prob(const vector<string>& v, string p);
 
     /** @brief Consulta si la Sessió s existeix  <em>s</em>.
         \pre <em>cert</em>.

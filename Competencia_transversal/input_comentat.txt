@@ -104,9 +104,6 @@ ec 7
 escrivir_problema p01
 ep P06
 eu Pere
-//enviament d'un Usuari que no té problemes enviables
-e Javi p02 0
-e Javi v02 1
 //enviaments
 envio Pere v01 1
 e Pere v02 0

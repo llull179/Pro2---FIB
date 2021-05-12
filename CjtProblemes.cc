@@ -44,14 +44,16 @@ void CjtProblemes::llistat_problemes(){
 void CjtProblemes::ordenar_problemes() {
   vector<pair<string,Problema>> aux(problemes.size());
   int i = 0;
-  for(map<string,Problema>::const_iterator it = problemes.begin(); it != problemes.end(); ++it) {
+  for(map<string,Problema>::iterator it = problemes.begin(); it != problemes.end(); ++it) {
+    (*it).second.actualitzar_ratio();
     aux[i] = *it;
+    i++;
   }
   sort(aux.begin(), aux.end(), cmp);
   prob_ord = aux;
 }
 
 bool CjtProblemes::cmp(const pair<string,Problema>& a, const pair<string,Problema>& b) {
-  if(a.second.get_ratio()!= b.second.get_ratio()) return a.second.get_ratio() > b.second.get_ratio();
-  return a.first > b.first;
+  if(a.second.get_ratio() != b.second.get_ratio()) return a.second.get_ratio() < b.second.get_ratio();
+  return a.first < b.first;
 }

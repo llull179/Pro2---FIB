@@ -52,7 +52,7 @@ public:
         \post Retorna el ratio del problema.
     */
 
-    int get_ratio () const;
+    double get_ratio () const;
 
     //Modificadors
 
@@ -63,6 +63,13 @@ public:
     */
 
     void actualitzar_stats (bool r);
+
+    /** @brief Actualitza el ratio del problema
+        \pre cert
+        \post El ratio canvia a (enviaments totals + 1)/(enviaments exit + 1)
+    */
+
+    void actualitzar_ratio ();
 
     //Escriure
 

@@ -2,10 +2,6 @@
 
 Sessio::Sessio() {}
 
-Sessio::Sessio(BinTree<string> a) {
-    prerequisits = a;
-}
-
 int Sessio::get_size() {
     return copia_pre.size();
 }
@@ -70,11 +66,13 @@ string Sessio::agafa_iessim(int x) {
     if(it != copia_pre.end()) return (*it).first;
     return "0";
 }
+string Sessio::obtenir_arrel() {
+    return prerequisits.value();
+}
 
 pair<string,string> Sessio::retorna_fills(const string& p) {
     
     map<string,pair<string,string>>::const_iterator it = copia_pre.find(p);
-    //cout<<(*it).second.first<<" "<<(*it).second.second<<endl;
     if(it != copia_pre.end()) return (*it).second;
     return make_pair("0","0");
     

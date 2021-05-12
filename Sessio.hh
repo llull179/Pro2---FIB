@@ -33,12 +33,6 @@ public:
 
     Sessio();
     
-    /** @brief Creadora amb BinTree.
-        \pre <em>cert</em>.
-        \post El resultat és una nova Sessió amb els prerequisits dels problemes.
-    */
-
-    Sessio(BinTree<string> a);
 
     //Consultors
 
@@ -69,6 +63,11 @@ public:
         \post Retorna l'string de la posició x del map de tots els problemes del p.i.
     */
     string agafa_iessim(int x);
+    /** @brief  Retorna l'string de la posició x del map de tots els problemes del p.i.
+        \pre <em>cert</em>.
+        \post Retorna l'string de la posició x del map de tots els problemes del p.i.
+    */
+    string obtenir_arrel();
     //Modificadors
     
     /** @brief Lletgeix els problemes de la sessió en preordre dels prerequisits.

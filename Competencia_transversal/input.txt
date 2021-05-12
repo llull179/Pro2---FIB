@@ -6,7 +6,7 @@ aa01
 5
 vectors v01 v02 0 0 v03 0 0
 piles p01 p02 0 0 p03 0 0
-examens1 p01 0 p02 0 p03 0 v02 0
+examens1 p01 0 p02 0 p03 0 v02 0 0
 examens2 aa01 0 0
 cues r01 r02 r03 0 0 r04 0 0 r05 0 0
 3
@@ -74,8 +74,6 @@ ec 7
 escrivir_problema p01
 ep P06
 eu Pere
-e Javi p02 0
-e Javi v02 1
 envio Pere v01 1
 e Pere v02 0
 eu Pere
@@ -89,3 +87,4 @@ ls
 lu
 listar_cursos
 listar_problemas
+fin

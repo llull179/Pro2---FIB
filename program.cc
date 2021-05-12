@@ -223,8 +223,8 @@ int main() {
             cout << '#' <<op<<' ';
             cin >> auxInt;
             cout << auxInt <<endl;
-             if (cjtCurs.existeix_curs( auxInt )) {
-                Curs curs = cjtCurs.accedir_curs ( auxInt );
+             if (cjtCurs.existeix_curs( auxInt )) { 
+                Curs& curs = cjtCurs.accedir_curs ( auxInt );
                 cout << auxInt;
                 curs.escriure_curs();
             }

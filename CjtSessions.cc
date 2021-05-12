@@ -45,11 +45,3 @@ void CjtSessions::llistat_sessions(){
         (*it).second.escriure_sessio();  
     }
 }
-
-string CjtSessions::existeix_prob(const vector<string>& v, string p){
-        for(int i = 0; i < v.size(); ++i) {
-            map<string, Sessio>::iterator it = sessions.find(v[i]);
-            if((*it).second.trobar_problema(p)) return (*it).first;
-        }
-        return "0";
-    }
