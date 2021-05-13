@@ -7,7 +7,6 @@ int Sessio::get_size() {
 }
 
 void Sessio::escriure_sessio( ) {
-    //int p = get_size();
     cout << ' '<< get_size() << ' ';
     escriure_BinTree(prerequisits);
     cout << endl;
@@ -43,22 +42,6 @@ void Sessio::escriure_BinTree(const BinTree<string>& a) const{
         cout << ')';
     }
 } 
-
-bool Sessio::trobar_problema(const string& p) {
-    BinTree<string> a = prerequisits;
-    return trobar_valor_BinTree(a,p);
-}
-
-bool Sessio::trobar_valor_BinTree(const BinTree<string> & a, const string&p) {
-    bool b;
-    if( a.empty()) b = false;
-    else if(a.value() == p) b = true;
-    else {
-        b = trobar_valor_BinTree(a.left(),p);
-        if(not b) b = trobar_valor_BinTree(a.right(),p);
-    }
-    return b;
-}
 
 string Sessio::agafa_iessim(int x) {
     map<string,pair<string,string>>::const_iterator it = copia_pre.begin();

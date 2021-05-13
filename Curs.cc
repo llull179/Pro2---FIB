@@ -22,8 +22,8 @@ void Curs::act_inscrits(int x){
 
 string Curs::retorna_sessio(const string& p) {
     map<string,string>::const_iterator it = problemes.find(p);
-    map<string,string>::const_iterator ita = problemes.begin();
-    if(it!=problemes.end()) return (*it).second;
+
+    if(it != problemes.end()) return (*it).second;
     return "0";
 }
 
@@ -38,18 +38,19 @@ string Curs::get_sessio(int i) {
 
 bool Curs::curs_pot_crear( CjtSessions cjtses) {
     int num;
+    string aux, p;
+    bool found;
     cin >> num;
     vector<string> auxSes(num);
-    for(int i = 0; i < num; ++i) {
-        string aux;
+    for(int i = 0; i < num; ++i) { 
         cin >> aux;
         auxSes[i] = aux;
-        bool found;
+        
         Sessio& s = cjtses.accedir_sessio(aux, found);
         if (found) {
             int numSes = s.get_size();
             for(int j = 0; j < numSes; ++j) {
-                string p = s.agafa_iessim(j);
+                p = s.agafa_iessim(j);
                 pair<map<string,string>::iterator,bool> r = problemes.insert(make_pair(p,aux));
                 if(not r.second) return false;
             }

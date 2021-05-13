@@ -42,21 +42,6 @@ public:
     */
 
     int get_size();
-    
-    /** @brief Comprova si el problema pertany al p.i.
-        \pre <em>cert</em>.
-        \post Retorna true si pertany i false en cas contrari.
-    */ 
-
-    bool trobar_problema(const string& p) ;
-
-    /** @brief Comprova si el valor <em>p</em> pertany al p.i.
-        \pre <em>cert</em>.
-        \post Retorna true si pertany i false en cas contrari.
-    */
-
-    bool trobar_valor_BinTree(const BinTree<string>& a, const string& p);
-
 
     /** @brief  Retorna l'string de la posició x del map de tots els problemes del p.i.
         \pre <em>cert</em>.
