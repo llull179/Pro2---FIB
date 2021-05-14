@@ -1,5 +1,5 @@
 #include "Sessio.hh"
-
+ 
 Sessio::Sessio() {}
 
 int Sessio::get_size() {
@@ -31,7 +31,7 @@ void Sessio::lletgir_BinTree(BinTree<string>& a) {
     }
 }
 
-void Sessio::escriure_BinTree(const BinTree<string>& a) const{
+void Sessio::escriure_BinTree(const BinTree<string>& a) {
     if(not a.empty()){
         BinTree<string> l = a.left();
         BinTree<string> r = a.right();
@@ -49,14 +49,34 @@ string Sessio::agafa_iessim(int x) {
     if(it != copia_pre.end()) return (*it).first;
     return "0";
 }
-string Sessio::obtenir_arrel() {
-    return prerequisits.value();
+
+BinTree<string> Sessio::cerca_subarbre(const BinTree<string>& a, const string& problema) {
+    BinTree<string> r;
+    if(a.empty()) return r;
+    else if(a.value() == problema) return a;
+    else {
+        r = cerca_subarbre(a.left(),problema);
+        if(r.empty()) r = cerca_subarbre(a.right(),problema);
+        return r;
+    }
 }
 
-pair<string,string> Sessio::retorna_fills(const string& p) {
-    
-    map<string,pair<string,string>>::const_iterator it = copia_pre.find(p);
-    if(it != copia_pre.end()) return (*it).second;
-    return make_pair("0","0");
-    
+void Sessio::iniciar_enviables( const GrupProb& resolts, GrupProb& env) {
+    iniciar_enviables_recursiu(prerequisits, resolts, env);
+}
+
+void Sessio::iniciar_enviables_recursiu(const BinTree<string>& a, const GrupProb& resolts, GrupProb& env) {
+    if(not a.empty()) {
+        if(not resolts.pertany(a.value())) env.afegeix(a.value(),0);
+
+        else {
+            iniciar_enviables_recursiu(a.left(), resolts, env);
+            iniciar_enviables_recursiu(a.right(), resolts, env);
+        }
+    }
+}
+
+void Sessio::actualitza_env(const GrupProb& resolts, GrupProb& env, const string& p) {
+    BinTree<string> a = cerca_subarbre(prerequisits, p);
+    iniciar_enviables_recursiu(a, resolts,env );
 }

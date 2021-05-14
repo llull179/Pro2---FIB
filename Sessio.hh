@@ -6,6 +6,7 @@
 #define _Sessio_HH_
 
 #include "CjtProblemes.hh"
+#include "GrupProb.hh"
 #include "BinTree.hh"
 #ifndef NO_DIAGRAM
 #endif
@@ -22,6 +23,8 @@ private:
     string ident;
     BinTree <string> prerequisits;
     map<string, pair<string,string>> copia_pre;
+    static void escriure_BinTree (const BinTree<string> & a);
+    static void iniciar_enviables_recursiu(const BinTree<string>& a, const GrupProb& resolts, GrupProb& env);
 public:
     
     //Constructora
@@ -48,13 +51,21 @@ public:
         \post Retorna l'string de la posició x del map de tots els problemes del p.i.
     */
     string agafa_iessim(int x);
-    /** @brief  Retorna l'string de la posició x del map de tots els problemes del p.i.
+
+    /** @brief  Retorna l'arbre a partir del qual s'ha de recorrer perque els problemes anteriors ja s'han completat.
         \pre <em>cert</em>.
-        \post Retorna l'string de la posició x del map de tots els problemes del p.i.
+        \post Retorna l'arbre a partir del qual s'ha de recorrer perque els problemes anteriors ja s'han completat.
     */
-    string obtenir_arrel();
+
+     BinTree<string> cerca_subarbre(const BinTree<string>& a, const string& problema);
     //Modificadors
     
+    /** @brief Actualitza tots els problemes enviables.
+        \pre <em>cert</em>.
+        \post Actualitza tots els problemes enviables
+    */
+    void actualitza_env(const GrupProb& resolts, GrupProb& env, const string& p );
+
     /** @brief Lletgeix els problemes de la sessió en preordre dels prerequisits.
         \pre <em>cert</em>.
         \post <em> a</em> es un BinTree amb tots els prerequisits dels problemes. L'arbre a tambées guarda als 
@@ -63,6 +74,13 @@ public:
 
     void lletgir_BinTree(BinTree<string>& a);
 
+    /** @brief Inicialitza els problemes enviables quan un usuari s'inscriu a un curs
+        \pre <em>cert</em>.
+        \post Inicialitza els problemes enviables quan un usuari s'inscriu a un curs.
+    */
+    void iniciar_enviables(const GrupProb& resolts, GrupProb& env);
+
+    
 
     //Escriure
 
@@ -73,16 +91,10 @@ public:
     */
 
     void escriure_sessio () ;
+    
+    
+   
 
-    /** @brief Escriu els problemes de la sessió en preordre dels prerequisits.
-        \pre <em>cert</em>.
-        \post Escriu una llista de problemes seguint l'ordre dels prerequisits 
-    */
-
-    void escriure_BinTree (const BinTree<string> & a) const;
-
-
-    pair<string,string> retorna_fills(const string& p);
     
 };
 #endif

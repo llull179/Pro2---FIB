@@ -5,7 +5,8 @@
 #ifndef _USUARI_HH_
 #define _USUARI_HH_
 
-#include "Curs.hh"
+#include "CjtCursos.hh"
+#include "GrupProb.hh"
 
 #ifndef NO_DIAGRAM
 #include <iostream>
@@ -29,11 +30,11 @@ private:
       int curs_in = 0; //curs on l'usuari està inscrit
   } stats;
 
- //string = identificador problema,int = enviaments al problema
-    map <string, int> problemes_env;
-    map <string, int> problemes_exit;
+    GrupProb problemes_env;
+    GrupProb problemes_exit;
 
 public:
+
 //Constructoras
 
 /** @brief Creadora por defecto.
@@ -82,6 +83,12 @@ public:
   */
   void inscribir_curso(int c, CjtSessions ses,  Curs curs);
 
+    /** @brief Comprova quins problemes ja han estat resolts i actualitza la llista de problemes enviables.
+
+      \pre <em>cierto</em>
+      \post Comprova quins problemes ja han estat resolts i actualitza la llista de problemes enviables.
+  */
+    void propaga(const string& p,  CjtSessions cjtses,  CjtCursos cjtcurs);
 
   /** @brief Actualitza les estadístiques de l'Usuari.
 
@@ -89,7 +96,7 @@ public:
       \post Retorna l'Usuari amb les estadístiques actualitzades.
   */
 
-  void actualitzar_stats(const string& p, const pair<string,string>& fills, int r, bool& cur_completat);
+  void actualitzar_stats(const string& p, int r, bool& cur_completat,  CjtSessions cjtses,  CjtCursos cjtcurs);
 
     //Escriure
 
@@ -100,5 +107,7 @@ public:
     */
 
     void escriure_usuari ();
+
+    
 };
 #endif

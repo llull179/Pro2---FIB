@@ -158,23 +158,20 @@ int main() {
             string p;
             cin >> auxString >> p >> r;
             cout << auxString <<' ' << p << ' ' << r << endl;
-            bool foundUser, foundProb, foundSes, curs_completat = false;
+            bool foundUser, foundProb, curs_completat = false;
 
             Usuari& us=cjtUs.accedir_usuari(auxString, foundUser);
             Problema& prob = cjtProb.accedir_problema( p, foundProb );
             prob.actualitzar_stats( r );
             Curs& c = cjtCurs.accedir_curs(us.curs_inscrit());
-            string s = c.retorna_sessio(p);
-       
-            Sessio& ses = cjtSes.accedir_sessio(s,foundSes);
-            pair<string, string> fills = ses.retorna_fills(p);
-            us.actualitzar_stats(p, fills, r,curs_completat);
+            
+            us.actualitzar_stats(p, r,curs_completat, cjtSes, cjtCurs);
             if (curs_completat) c.actualitzar_completat();
             
         }
 
         else if (op == "lp" or op == "listar_problemas") {
-            cout << '#' <<op<<' ';
+            cout << '#' <<op;
             cout <<endl;
             cjtProb.ordenar_problemes();
             cjtProb.llistat_problemes();
