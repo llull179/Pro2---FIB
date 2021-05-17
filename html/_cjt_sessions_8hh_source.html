@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EVALUATOR. Plataforma de gestión de problemas y cursos de programación.: Fichero Fuente CjtSessions.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EVALUATOR. Plataforma de gestión de problemas y cursos de programación.
+   &#160;<span id="projectnumber">Pràctica PRO2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">CjtSessions.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cjt_sessions_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _CJTSESSIONS_HH_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _CJTSESSIONS_HH_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_sessio_8hh.html">Sessio.hh</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_cjt_sessions.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cjt_sessions.html">CjtSessions</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:    </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_cjt_sessions.html#abb3d96796babe113f8d9f3498296c482">   23</a></span>&#160;    map &lt;string, Sessio&gt; <a class="code" href="class_cjt_sessions.html#abb3d96796babe113f8d9f3498296c482">sessions</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_cjt_sessions.html#ae505260659b246160a41a36fadbf454d">   24</a></span>&#160;    <a class="code" href="class_sessio.html">Sessio</a> <a class="code" href="class_cjt_sessions.html#ae505260659b246160a41a36fadbf454d">nulo</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//Constructora</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_cjt_sessions.html#acfe3023a40e3dcbfeb558466a013ca87">CjtSessions</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//Consultors</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_cjt_sessions.html#ae0d6dfe6e1bab2746fa03dc852f2f4a9">existeix_sessio</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_sessio.html">Sessio</a> <a class="code" href="class_cjt_sessions.html#acd571b77f121308bfcb01124fd713aa5">accedir_sessio</a> (<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">//Modificadorss</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt_sessions.html#ac6e00a3727d5ece89965a4f38d707273">nova_sessio</a> (<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; s);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//Llegir</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt_sessions.html#a4ea0fafab13c9db8fe385f62fb572fc0">llegir_sessions_inicials</a> ();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//Escriure</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt_sessions.html#abebc8e545104a42a266439097f8ca353">llistat_sessions</a> ();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_cjt_sessions_html_acd571b77f121308bfcb01124fd713aa5"><div class="ttname"><a href="class_cjt_sessions.html#acd571b77f121308bfcb01124fd713aa5">CjtSessions::accedir_sessio</a></div><div class="ttdeci">Sessio accedir_sessio(const string &amp;s) const</div><div class="ttdoc">Accedeix a la Sessió s.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8cc_source.html#l00010">CjtSessions.cc:10</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html_a4ea0fafab13c9db8fe385f62fb572fc0"><div class="ttname"><a href="class_cjt_sessions.html#a4ea0fafab13c9db8fe385f62fb572fc0">CjtSessions::llegir_sessions_inicials</a></div><div class="ttdeci">void llegir_sessions_inicials()</div><div class="ttdoc">Llegeix les sessions inicials.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8cc_source.html#l00028">CjtSessions.cc:28</a></div></div>
+<div class="ttc" id="a_sessio_8hh_html"><div class="ttname"><a href="_sessio_8hh.html">Sessio.hh</a></div><div class="ttdoc">Especificació de la classe Sessio.</div></div>
+<div class="ttc" id="aclass_sessio_html"><div class="ttname"><a href="class_sessio.html">Sessio</a></div><div class="ttdoc">Representa una Sessio.</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8hh_source.html#l00020">Sessio.hh:20</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html_ae505260659b246160a41a36fadbf454d"><div class="ttname"><a href="class_cjt_sessions.html#ae505260659b246160a41a36fadbf454d">CjtSessions::nulo</a></div><div class="ttdeci">Sessio nulo</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8hh_source.html#l00024">CjtSessions.hh:24</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html"><div class="ttname"><a href="class_cjt_sessions.html">CjtSessions</a></div><div class="ttdoc">Representa un Conjunt de sessions (Sessio).</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8hh_source.html#l00018">CjtSessions.hh:18</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html_acfe3023a40e3dcbfeb558466a013ca87"><div class="ttname"><a href="class_cjt_sessions.html#acfe3023a40e3dcbfeb558466a013ca87">CjtSessions::CjtSessions</a></div><div class="ttdeci">CjtSessions()</div><div class="ttdoc">Creadora por defecte.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8cc_source.html#l00003">CjtSessions.cc:3</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html_abebc8e545104a42a266439097f8ca353"><div class="ttname"><a href="class_cjt_sessions.html#abebc8e545104a42a266439097f8ca353">CjtSessions::llistat_sessions</a></div><div class="ttdeci">void llistat_sessions()</div><div class="ttdoc">Llistat de Sessions.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8cc_source.html#l00041">CjtSessions.cc:41</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html_ac6e00a3727d5ece89965a4f38d707273"><div class="ttname"><a href="class_cjt_sessions.html#ac6e00a3727d5ece89965a4f38d707273">CjtSessions::nova_sessio</a></div><div class="ttdeci">void nova_sessio(const string &amp;s)</div><div class="ttdoc">Afageix un sessio.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8cc_source.html#l00019">CjtSessions.cc:19</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html_abb3d96796babe113f8d9f3498296c482"><div class="ttname"><a href="class_cjt_sessions.html#abb3d96796babe113f8d9f3498296c482">CjtSessions::sessions</a></div><div class="ttdeci">map&lt; string, Sessio &gt; sessions</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8hh_source.html#l00023">CjtSessions.hh:23</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html_ae0d6dfe6e1bab2746fa03dc852f2f4a9"><div class="ttname"><a href="class_cjt_sessions.html#ae0d6dfe6e1bab2746fa03dc852f2f4a9">CjtSessions::existeix_sessio</a></div><div class="ttdeci">bool existeix_sessio(const string &amp;s) const</div><div class="ttdoc">Consulta si la Sessió s existeix s.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8cc_source.html#l00005">CjtSessions.cc:5</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

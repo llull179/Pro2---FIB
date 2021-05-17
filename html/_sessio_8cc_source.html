@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EVALUATOR. Plataforma de gestión de problemas y cursos de programación.: Fichero Fuente Sessio.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EVALUATOR. Plataforma de gestión de problemas y cursos de programación.
+   &#160;<span id="projectnumber">Pràctica PRO2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Sessio.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_sessio_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_sessio_8hh.html">Sessio.hh</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_sessio.html#a2aeda3ca0902761f07d837538244539b">    3</a></span>&#160;<a class="code" href="class_sessio.html#a2aeda3ca0902761f07d837538244539b">Sessio::Sessio</a>() {}</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_sessio.html#aae5c29d51deddcec563af12a7b683747">    5</a></span>&#160;<a class="code" href="class_sessio.html#a2aeda3ca0902761f07d837538244539b">Sessio::Sessio</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; x) {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="class_sessio.html#ad433f574e41563b07cf7c357d9475b44">ident</a> =x;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_sessio.html#a4a9fcbfd3973be306c7076af557a431c">    9</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_sessio.html#a4a9fcbfd3973be306c7076af557a431c">Sessio::escriure_sessio</a>( )<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>&lt;&lt; <a class="code" href="class_sessio.html#a547be0df0427575c9154d4597b1b24c6">copia_pre</a>.size() &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_sessio.html#a869ae4cc657173a8297dfe895a617463">escriure_BinTree</a>(<a class="code" href="class_sessio.html#a4f10e53de9fea5b8b64a512d72a6edc9">prerequisits</a>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_sessio.html#ac461dad4b5440b44afe62a042ab0c4b2">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_sessio.html#ac461dad4b5440b44afe62a042ab0c4b2">Sessio::lletgir_BinTree</a>(BinTree&lt;string&gt;&amp; a) {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">string</span> x;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    cin &gt;&gt; x;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (x != <span class="stringliteral">&quot;0&quot;</span>) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        BinTree&lt;string&gt; l;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        BinTree&lt;string&gt; r;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_sessio.html#ac461dad4b5440b44afe62a042ab0c4b2">lletgir_BinTree</a>(l);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_sessio.html#ac461dad4b5440b44afe62a042ab0c4b2">lletgir_BinTree</a>(r);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        a = BinTree&lt;string&gt;(x,l,r);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_sessio.html#a4f10e53de9fea5b8b64a512d72a6edc9">prerequisits</a> = a;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;         <span class="keywordtype">string</span> esq, dre;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        esq = dre = <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">if</span> (not a.left().empty()) esq = a.left().value();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (not a.right().empty()) dre = a.right().value();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_sessio.html#a547be0df0427575c9154d4597b1b24c6">copia_pre</a>.insert(make_pair(x,make_pair(esq,dre)));</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_sessio.html#a869ae4cc657173a8297dfe895a617463">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_sessio.html#a869ae4cc657173a8297dfe895a617463">Sessio::escriure_BinTree</a>(<span class="keyword">const</span> BinTree&lt;string&gt;&amp; a) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span>(not a.empty()){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        BinTree&lt;string&gt; l = a.left();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        BinTree&lt;string&gt; r = a.right();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        cout &lt;&lt; <span class="charliteral">&#39;(&#39;</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_sessio.html#a869ae4cc657173a8297dfe895a617463">escriure_BinTree</a>(l);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_sessio.html#a869ae4cc657173a8297dfe895a617463">escriure_BinTree</a>(r);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        cout &lt;&lt; a.value();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        cout &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;} </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_sessio.html#a7debf7a4cea225e8d5ae08c6f92f111d">   47</a></span>&#160;BinTree&lt;string&gt; <a class="code" href="class_sessio.html#a7debf7a4cea225e8d5ae08c6f92f111d">Sessio::cerca_subarbre</a>(<span class="keyword">const</span> BinTree&lt;string&gt;&amp; a, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; problema) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    BinTree&lt;string&gt; r;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span>(a.empty()) <span class="keywordflow">return</span> r;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(a.value() == problema) <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        r = <a class="code" href="class_sessio.html#a7debf7a4cea225e8d5ae08c6f92f111d">cerca_subarbre</a>(a.left(),problema);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span>(r.empty()) r = <a class="code" href="class_sessio.html#a7debf7a4cea225e8d5ae08c6f92f111d">cerca_subarbre</a>(a.right(),problema);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> r;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_sessio.html#a67ac5733369ebe1415442c25a42c05c1">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_sessio.html#a67ac5733369ebe1415442c25a42c05c1">Sessio::iniciar_enviables</a>( <span class="keyword">const</span> <a class="code" href="class_grup_prob.html">GrupProb</a>&amp; resolts, <a class="code" href="class_grup_prob.html">GrupProb</a>&amp; env) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> acaba = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_sessio.html#a550064975a99688947106fba3f6e1f82">iniciar_enviables_recursiu</a>(<a class="code" href="class_sessio.html#a4f10e53de9fea5b8b64a512d72a6edc9">prerequisits</a>, resolts, env, acaba);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_sessio.html#a550064975a99688947106fba3f6e1f82">   63</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_sessio.html#a550064975a99688947106fba3f6e1f82">Sessio::iniciar_enviables_recursiu</a>(<span class="keyword">const</span> BinTree&lt;string&gt;&amp; a, <span class="keyword">const</span> <a class="code" href="class_grup_prob.html">GrupProb</a>&amp; resolts, <a class="code" href="class_grup_prob.html">GrupProb</a>&amp; env, <span class="keywordtype">bool</span> acaba) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span>(not a.empty()) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">if</span>(not resolts.<a class="code" href="class_grup_prob.html#ae2458618fb4c82b2284bdcb4309babd3">pertany</a>(a.value())) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            env.<a class="code" href="class_grup_prob.html#abd71628b23dcce60d6da79a52c62487d">afegeix</a>(a.value(),0);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        } </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="class_sessio.html#a550064975a99688947106fba3f6e1f82">iniciar_enviables_recursiu</a>(a.left(), resolts, env,acaba);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="class_sessio.html#a550064975a99688947106fba3f6e1f82">iniciar_enviables_recursiu</a>(a.right(), resolts, env,acaba);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_sessio.html#a7fbf8b4c23d0861f04b2a90e8f9012d4">   76</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_sessio.html#a7fbf8b4c23d0861f04b2a90e8f9012d4">Sessio::actualitza_env</a>(<span class="keyword">const</span> <a class="code" href="class_grup_prob.html">GrupProb</a>&amp; resolts, <a class="code" href="class_grup_prob.html">GrupProb</a>&amp; env, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; p) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">bool</span> acaba = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    BinTree&lt;string&gt; a = <a class="code" href="class_sessio.html#a7debf7a4cea225e8d5ae08c6f92f111d">cerca_subarbre</a>(<a class="code" href="class_sessio.html#a4f10e53de9fea5b8b64a512d72a6edc9">prerequisits</a>, p);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="class_sessio.html#a550064975a99688947106fba3f6e1f82">iniciar_enviables_recursiu</a>(a, resolts,env,acaba );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_sessio.html#ac3d5700464345fcf0398cec95d158abc">   82</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_sessio.html#ac3d5700464345fcf0398cec95d158abc">Sessio::recorrer_i_afegir</a>(<a class="code" href="class_probs_sessio.html">ProbsSessio</a>&amp; probs) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">bool</span> creat = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="class_sessio.html#a9743a5bd852c2041832e45e8a534338e">recorrer</a>(<a class="code" href="class_sessio.html#a4f10e53de9fea5b8b64a512d72a6edc9">prerequisits</a>, probs, <a class="code" href="class_sessio.html#ad433f574e41563b07cf7c357d9475b44">ident</a>, creat);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> creat;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_sessio.html#a9743a5bd852c2041832e45e8a534338e">   88</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_sessio.html#a9743a5bd852c2041832e45e8a534338e">Sessio::recorrer</a>(<span class="keyword">const</span> BinTree&lt;string&gt;&amp; a, <a class="code" href="class_probs_sessio.html">ProbsSessio</a>&amp; probs, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s, <span class="keywordtype">bool</span>&amp; creable) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span>(not a.empty() and creable) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        creable = probs.<a class="code" href="class_probs_sessio.html#a9a6e3f9ccd5649f9911c51ad395be786">afegeix_i_comprova</a>(a.value(), s);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="class_sessio.html#a9743a5bd852c2041832e45e8a534338e">recorrer</a>(a.left(),probs,s, creable);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="class_sessio.html#a9743a5bd852c2041832e45e8a534338e">recorrer</a>(a.right(),probs,s, creable);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_sessio.html#a2d22238df1eaf03ee0d29211f8cea5b6">   97</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_sessio.html#a2d22238df1eaf03ee0d29211f8cea5b6">Sessio::existeix_prob</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; p) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="class_sessio.html#ac208c88abd0f481e8c8bc2344d0112ec">existeix_BinTree_prob</a>(<a class="code" href="class_sessio.html#a4f10e53de9fea5b8b64a512d72a6edc9">prerequisits</a>, p);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_sessio.html#ac208c88abd0f481e8c8bc2344d0112ec">  102</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_sessio.html#ac208c88abd0f481e8c8bc2344d0112ec">Sessio::existeix_BinTree_prob</a>(<span class="keyword">const</span> BinTree&lt;string&gt;&amp; a, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; p) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">bool</span> b;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">if</span> (a.empty()) b=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a.value()==p) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        b=<a class="code" href="class_sessio.html#ac208c88abd0f481e8c8bc2344d0112ec">existeix_BinTree_prob</a>(a.left(),p);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span> (not b) b=<a class="code" href="class_sessio.html#ac208c88abd0f481e8c8bc2344d0112ec">existeix_BinTree_prob</a>(a.right(),p);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> b;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_probs_sessio_html_a9a6e3f9ccd5649f9911c51ad395be786"><div class="ttname"><a href="class_probs_sessio.html#a9a6e3f9ccd5649f9911c51ad395be786">ProbsSessio::afegeix_i_comprova</a></div><div class="ttdeci">bool afegeix_i_comprova(const string &amp;p, const string &amp;s)</div><div class="ttdoc">Afegeix el problema p al grup de problemes amb la sessio s.</div><div class="ttdef"><b>Definition:</b> <a href="_probs_sessio_8cc_source.html#l00009">ProbsSessio.cc:9</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a7debf7a4cea225e8d5ae08c6f92f111d"><div class="ttname"><a href="class_sessio.html#a7debf7a4cea225e8d5ae08c6f92f111d">Sessio::cerca_subarbre</a></div><div class="ttdeci">BinTree&lt; string &gt; cerca_subarbre(const BinTree&lt; string &gt; &amp;a, const string &amp;problema)</div><div class="ttdoc">Retorna l'arbre a partir del qual s'ha de recorrer perque els problemes anteriors ja s'han completat.</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00047">Sessio.cc:47</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a7fbf8b4c23d0861f04b2a90e8f9012d4"><div class="ttname"><a href="class_sessio.html#a7fbf8b4c23d0861f04b2a90e8f9012d4">Sessio::actualitza_env</a></div><div class="ttdeci">void actualitza_env(const GrupProb &amp;resolts, GrupProb &amp;env, const string &amp;p)</div><div class="ttdoc">Actualitza tots els problemes enviables.</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00076">Sessio.cc:76</a></div></div>
+<div class="ttc" id="a_sessio_8hh_html"><div class="ttname"><a href="_sessio_8hh.html">Sessio.hh</a></div><div class="ttdoc">Especificació de la classe Sessio.</div></div>
+<div class="ttc" id="aclass_sessio_html_a547be0df0427575c9154d4597b1b24c6"><div class="ttname"><a href="class_sessio.html#a547be0df0427575c9154d4597b1b24c6">Sessio::copia_pre</a></div><div class="ttdeci">map&lt; string, pair&lt; string, string &gt; &gt; copia_pre</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8hh_source.html#l00026">Sessio.hh:26</a></div></div>
+<div class="ttc" id="aclass_sessio_html_ad433f574e41563b07cf7c357d9475b44"><div class="ttname"><a href="class_sessio.html#ad433f574e41563b07cf7c357d9475b44">Sessio::ident</a></div><div class="ttdeci">string ident</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8hh_source.html#l00024">Sessio.hh:24</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a67ac5733369ebe1415442c25a42c05c1"><div class="ttname"><a href="class_sessio.html#a67ac5733369ebe1415442c25a42c05c1">Sessio::iniciar_enviables</a></div><div class="ttdeci">void iniciar_enviables(const GrupProb &amp;resolts, GrupProb &amp;env)</div><div class="ttdoc">Inicialitza els problemes enviables quan un usuari s'inscriu a un curs.</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00058">Sessio.cc:58</a></div></div>
+<div class="ttc" id="aclass_sessio_html_ac208c88abd0f481e8c8bc2344d0112ec"><div class="ttname"><a href="class_sessio.html#ac208c88abd0f481e8c8bc2344d0112ec">Sessio::existeix_BinTree_prob</a></div><div class="ttdeci">static bool existeix_BinTree_prob(const BinTree&lt; string &gt; &amp;a, const string &amp;p)</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00102">Sessio.cc:102</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a4f10e53de9fea5b8b64a512d72a6edc9"><div class="ttname"><a href="class_sessio.html#a4f10e53de9fea5b8b64a512d72a6edc9">Sessio::prerequisits</a></div><div class="ttdeci">BinTree&lt; string &gt; prerequisits</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8hh_source.html#l00025">Sessio.hh:25</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a2aeda3ca0902761f07d837538244539b"><div class="ttname"><a href="class_sessio.html#a2aeda3ca0902761f07d837538244539b">Sessio::Sessio</a></div><div class="ttdeci">Sessio()</div><div class="ttdoc">Creadora por defecte.</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00003">Sessio.cc:3</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a869ae4cc657173a8297dfe895a617463"><div class="ttname"><a href="class_sessio.html#a869ae4cc657173a8297dfe895a617463">Sessio::escriure_BinTree</a></div><div class="ttdeci">static void escriure_BinTree(const BinTree&lt; string &gt; &amp;a)</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00034">Sessio.cc:34</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html"><div class="ttname"><a href="class_grup_prob.html">GrupProb</a></div><div class="ttdoc">Representa un Grup de problemes.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8hh_source.html#l00020">GrupProb.hh:20</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a4a9fcbfd3973be306c7076af557a431c"><div class="ttname"><a href="class_sessio.html#a4a9fcbfd3973be306c7076af557a431c">Sessio::escriure_sessio</a></div><div class="ttdeci">void escriure_sessio() const</div><div class="ttdoc">Retorna les estadístiques d'una sessió.</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00009">Sessio.cc:9</a></div></div>
+<div class="ttc" id="aclass_probs_sessio_html"><div class="ttname"><a href="class_probs_sessio.html">ProbsSessio</a></div><div class="ttdoc">Representa un Grup de problemes que pertanyen a un curs i la Sessió a la qual pertanyen.</div><div class="ttdef"><b>Definition:</b> <a href="_probs_sessio_8hh_source.html#l00021">ProbsSessio.hh:21</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_ae2458618fb4c82b2284bdcb4309babd3"><div class="ttname"><a href="class_grup_prob.html#ae2458618fb4c82b2284bdcb4309babd3">GrupProb::pertany</a></div><div class="ttdeci">bool pertany(const string &amp;p) const</div><div class="ttdoc">Comrpova si el problema p pertany al p.i.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00015">GrupProb.cc:15</a></div></div>
+<div class="ttc" id="aclass_sessio_html_ac3d5700464345fcf0398cec95d158abc"><div class="ttname"><a href="class_sessio.html#ac3d5700464345fcf0398cec95d158abc">Sessio::recorrer_i_afegir</a></div><div class="ttdeci">bool recorrer_i_afegir(ProbsSessio &amp;probs)</div><div class="ttdoc">Recorr el BinTree de prerequisits i afegeix a la classe ProbsSessio tots els problemes que pertanyen.</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00082">Sessio.cc:82</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a550064975a99688947106fba3f6e1f82"><div class="ttname"><a href="class_sessio.html#a550064975a99688947106fba3f6e1f82">Sessio::iniciar_enviables_recursiu</a></div><div class="ttdeci">static void iniciar_enviables_recursiu(const BinTree&lt; string &gt; &amp;a, const GrupProb &amp;resolts, GrupProb &amp;env, bool acaba)</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00063">Sessio.cc:63</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_abd71628b23dcce60d6da79a52c62487d"><div class="ttname"><a href="class_grup_prob.html#abd71628b23dcce60d6da79a52c62487d">GrupProb::afegeix</a></div><div class="ttdeci">void afegeix(const string &amp;p, int x)</div><div class="ttdoc">Afegeix l'elemetn p al grup de problemes.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00020">GrupProb.cc:20</a></div></div>
+<div class="ttc" id="aclass_sessio_html_ac461dad4b5440b44afe62a042ab0c4b2"><div class="ttname"><a href="class_sessio.html#ac461dad4b5440b44afe62a042ab0c4b2">Sessio::lletgir_BinTree</a></div><div class="ttdeci">void lletgir_BinTree(BinTree&lt; string &gt; &amp;a)</div><div class="ttdoc">Lletgeix els problemes de la sessió en preordre dels prerequisits.</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00015">Sessio.cc:15</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a2d22238df1eaf03ee0d29211f8cea5b6"><div class="ttname"><a href="class_sessio.html#a2d22238df1eaf03ee0d29211f8cea5b6">Sessio::existeix_prob</a></div><div class="ttdeci">bool existeix_prob(const string &amp;p)</div><div class="ttdoc">Comprova si el problema p pertany a la Sessió</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00097">Sessio.cc:97</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a9743a5bd852c2041832e45e8a534338e"><div class="ttname"><a href="class_sessio.html#a9743a5bd852c2041832e45e8a534338e">Sessio::recorrer</a></div><div class="ttdeci">static void recorrer(const BinTree&lt; string &gt; &amp;a, ProbsSessio &amp;probs, const string &amp;s, bool &amp;creable)</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00088">Sessio.cc:88</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

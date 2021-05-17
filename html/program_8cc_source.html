@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EVALUATOR. Plataforma de gestión de problemas y cursos de programación.: Fichero Fuente program.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EVALUATOR. Plataforma de gestión de problemas y cursos de programación.
+   &#160;<span id="projectnumber">Pràctica PRO2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">program.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="program_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt_usuaris_8hh.html">CjtUsuaris.hh</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt_cursos_8hh.html">CjtCursos.hh</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    8</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_cjt_problemes.html">CjtProblemes</a> cjtProb;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_cjt_sessions.html">CjtSessions</a> cjtSes;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_cjt_cursos.html">CjtCursos</a> cjtCurs;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_cjt_usuaris.html">CjtUsuaris</a> cjtUs;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">string</span> op;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    cjtProb.<a class="code" href="class_cjt_problemes.html#ac320f52e566402ed341d2f67176be14a">llegir_problemes_inicials</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    cjtSes.<a class="code" href="class_cjt_sessions.html#a4ea0fafab13c9db8fe385f62fb572fc0">llegir_sessions_inicials</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_cjt_sessions.html">CjtSessions</a> cjtSes_aux = cjtSes;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    cjtCurs.<a class="code" href="class_cjt_cursos.html#a4f0a73967e26a9c4cf9eca1f406a16b5">llegir_cursos_inicials</a>(cjtSes_aux);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    cjtUs.<a class="code" href="class_cjt_usuaris.html#acb8d525b500b034d277c48197d16a682">llegir_usuaris_inicials</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    cin &gt;&gt; op;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">while</span>(op != <span class="stringliteral">&quot;fin&quot;</span>) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">string</span> auxString;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">int</span> auxInt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;np&quot;</span> or op == <span class="stringliteral">&quot;nuevo_problema&quot;</span>) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            cin &gt;&gt; auxString;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            cout  &lt;&lt; auxString &lt;&lt;endl;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span>(not cjtProb.<a class="code" href="class_cjt_problemes.html#a27f5be292f79fd47915093fb84013e67">existeix_problema</a>(auxString)){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                cjtProb.<a class="code" href="class_cjt_problemes.html#a7a41c837128c629f7a4dcf81b1592581">nou_problema</a>(auxString);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">else</span> cout&lt;&lt;<span class="stringliteral">&quot;error: el problema ya existe&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;ns&quot;</span> or op == <span class="stringliteral">&quot;nueva_sesion&quot;</span>) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            cin &gt;&gt; auxString;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            cout &lt;&lt; auxString &lt;&lt;endl;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span>(not cjtSes.<a class="code" href="class_cjt_sessions.html#ae0d6dfe6e1bab2746fa03dc852f2f4a9">existeix_sessio</a>(auxString)){</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                cjtSes.<a class="code" href="class_cjt_sessions.html#ac6e00a3727d5ece89965a4f38d707273">nova_sessio</a>( auxString );</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">else</span> cout&lt;&lt;<span class="stringliteral">&quot;error: la sesion ya existe&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;nc&quot;</span> or op == <span class="stringliteral">&quot;nuevo_curso&quot;</span>) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt; endl;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_curs.html">Curs</a> c;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="class_cjt_sessions.html">CjtSessions</a> cjtses = cjtSes;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">if</span>(c.<a class="code" href="class_curs.html#a7f454b234464f736b73fd558266c190e">curs_pot_crear</a>(cjtses)) cjtCurs.<a class="code" href="class_cjt_cursos.html#a02e7c84113d70d2bbc9603c3f1d98620">nou_curs</a>(c);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: curso mal formado&quot;</span> &lt;&lt;endl;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;a&quot;</span> or op == <span class="stringliteral">&quot;alta_usuario&quot;</span>) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            cin &gt;&gt; auxString;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            cout &lt;&lt; auxString &lt;&lt;endl;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordtype">bool</span> insertat = cjtUs.<a class="code" href="class_cjt_usuaris.html#a64292f06aebc73b47ecc57d815c6e4e4">alta_usuari</a>(auxString);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">if</span>(not insertat) cout &lt;&lt; <span class="stringliteral">&quot;error: el usuario ya existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;b&quot;</span> or op == <span class="stringliteral">&quot;baja_usuario&quot;</span>) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            cin &gt;&gt; auxString;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            cout &lt;&lt; auxString &lt;&lt;endl;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordtype">int</span> curs = 0;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordtype">bool</span> eliminat = cjtUs.<a class="code" href="class_cjt_usuaris.html#a3984165521bf0eddf7c80c4354dd4ad0">baixa_usuari</a>( auxString, curs );</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">if</span>(not eliminat) cout &lt;&lt; <span class="stringliteral">&quot;error: el usuario no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(curs != 0){</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <a class="code" href="class_curs.html">Curs</a>&amp; c = cjtCurs.<a class="code" href="class_cjt_cursos.html#a9fa0ca235b1ffd165689a67ad1263e64">accedir_curs</a>(curs);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                c.<a class="code" href="class_curs.html#ab256af7896eb803bbf4af25b00c4799c">act_inscrits</a>(-1);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;i&quot;</span> or op == <span class="stringliteral">&quot;inscribir_curso&quot;</span>) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            cin &gt;&gt; auxString &gt;&gt; auxInt;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            cout &lt;&lt; auxString &lt;&lt;<span class="charliteral">&#39; &#39;</span> &lt;&lt; auxInt &lt;&lt;endl;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordtype">bool</span> found;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="class_usuari.html">Usuari</a>&amp; u=cjtUs.<a class="code" href="class_cjt_usuaris.html#a0f819716b29d35d7e8d5a52ea4f3347d">accedir_usuari</a>(auxString, found);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">if</span> (found) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keywordflow">if</span>(cjtCurs.<a class="code" href="class_cjt_cursos.html#ad12b1174de2a5f09cb0c2558645d74dc">existeix_curs</a>(auxInt)) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="keywordflow">if</span> (u.<a class="code" href="class_usuari.html#a0eca3eccc4961632cb2be807f864d7f9">curs_inscrit</a>() == 0){</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                        <a class="code" href="class_curs.html">Curs</a>&amp; c =cjtCurs.<a class="code" href="class_cjt_cursos.html#a9fa0ca235b1ffd165689a67ad1263e64">accedir_curs</a>( auxInt );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        <a class="code" href="class_cjt_sessions.html">CjtSessions</a> cjtses = cjtSes;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                        <a class="code" href="class_curs.html">Curs</a> c_aux = c;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                        u.<a class="code" href="class_usuari.html#a5dd52c7dca6f7cb5ba4eb872f8cafe5c">inscribir_curso</a>( auxInt, cjtses, c);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                        c.<a class="code" href="class_curs.html#ab256af7896eb803bbf4af25b00c4799c">act_inscrits</a>(1);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                        cout &lt;&lt; c.<a class="code" href="class_curs.html#a4269ba5a107f32fc3fcfef9943420cf2">usuaris_inscrits</a>() &lt;&lt;endl;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: usuario inscrito en otro curso&quot;</span> &lt;&lt;endl;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: el curso no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: el usuario no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;cu&quot;</span> or op == <span class="stringliteral">&quot;curso_usuario&quot;</span>) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            cin &gt;&gt; auxString;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            cout &lt;&lt; auxString &lt;&lt;endl;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordtype">bool</span> found;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <a class="code" href="class_usuari.html">Usuari</a>&amp; u=cjtUs.<a class="code" href="class_cjt_usuaris.html#a0f819716b29d35d7e8d5a52ea4f3347d">accedir_usuari</a>(auxString, found);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;             <span class="keywordflow">if</span> (found) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                cout &lt;&lt; u.<a class="code" href="class_usuari.html#a0eca3eccc4961632cb2be807f864d7f9">curs_inscrit</a>() &lt;&lt;endl;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: el usuario no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;sp&quot;</span> or op == <span class="stringliteral">&quot;sesion_problema&quot;</span>) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            cin &gt;&gt; auxInt &gt;&gt; auxString;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            cout &lt;&lt; auxInt &lt;&lt;<span class="charliteral">&#39; &#39;</span> &lt;&lt; auxString &lt;&lt;endl;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">if</span>(cjtCurs.<a class="code" href="class_cjt_cursos.html#ad12b1174de2a5f09cb0c2558645d74dc">existeix_curs</a>(auxInt)){</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keywordflow">if</span>(cjtProb.<a class="code" href="class_cjt_problemes.html#a27f5be292f79fd47915093fb84013e67">existeix_problema</a>(auxString)){</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    <span class="keywordtype">string</span> ses = cjtCurs.<a class="code" href="class_cjt_cursos.html#a9fa0ca235b1ffd165689a67ad1263e64">accedir_curs</a>(auxInt).<a class="code" href="class_curs.html#a036d33b6fca73638b197eef9abb32ffd">retorna_sessio</a>(auxString);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    <span class="keywordflow">if</span>(ses!=<span class="stringliteral">&quot;0&quot;</span>){</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                        cout &lt;&lt; ses &lt;&lt; endl;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                    <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: el problema no pertenece al curso&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: el problema no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: el curso no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;pr&quot;</span> or op == <span class="stringliteral">&quot;problemas_resueltos&quot;</span>) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            cin &gt;&gt; auxString;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            cout &lt;&lt; auxString &lt;&lt;endl;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordtype">bool</span> found;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <a class="code" href="class_usuari.html">Usuari</a>&amp; u=cjtUs.<a class="code" href="class_cjt_usuaris.html#a0f819716b29d35d7e8d5a52ea4f3347d">accedir_usuari</a>(auxString, found);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">if</span>(found) {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                u.<a class="code" href="class_usuari.html#a3ef9f5ec04fe13ecfaf6d2f02bcd30bd">problemes_resolts</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: el usuario no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;pe&quot;</span> or op == <span class="stringliteral">&quot;problemas_enviables&quot;</span>) {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            cin &gt;&gt; auxString;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            cout &lt;&lt; auxString &lt;&lt;endl;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordtype">bool</span> found;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <a class="code" href="class_usuari.html">Usuari</a>&amp; u=cjtUs.<a class="code" href="class_cjt_usuaris.html#a0f819716b29d35d7e8d5a52ea4f3347d">accedir_usuari</a>(auxString, found);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordflow">if</span>(found) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                <span class="keywordflow">if</span>(u.<a class="code" href="class_usuari.html#a0eca3eccc4961632cb2be807f864d7f9">curs_inscrit</a>()){</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                    u.<a class="code" href="class_usuari.html#a84e0532f6b7ae4c4022e4739ca7abade">problemes_enviables</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: usuario no inscrito en ningun curso&quot;</span> &lt;&lt;endl;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: el usuario no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;e&quot;</span> or op == <span class="stringliteral">&quot;envio&quot;</span>) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordtype">bool</span> r;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordtype">string</span> p;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            cin &gt;&gt; auxString &gt;&gt; p &gt;&gt; r;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            cout &lt;&lt; auxString &lt;&lt;<span class="charliteral">&#39; &#39;</span> &lt;&lt; p &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; r &lt;&lt; endl;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keywordtype">bool</span> foundUser, foundProb, curs_completat = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            ;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <a class="code" href="class_usuari.html">Usuari</a>&amp; us=cjtUs.<a class="code" href="class_cjt_usuaris.html#a0f819716b29d35d7e8d5a52ea4f3347d">accedir_usuari</a>(auxString, foundUser);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <a class="code" href="class_problema.html">Problema</a>&amp; prob = cjtProb.<a class="code" href="class_cjt_problemes.html#aa68c5649a11c7031411cf6947bbcec1f">accedir_problema</a>( p, foundProb );</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <a class="code" href="class_curs.html">Curs</a>&amp; c = cjtCurs.<a class="code" href="class_cjt_cursos.html#a9fa0ca235b1ffd165689a67ad1263e64">accedir_curs</a>(us.<a class="code" href="class_usuari.html#a0eca3eccc4961632cb2be807f864d7f9">curs_inscrit</a>());</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            prob.<a class="code" href="class_problema.html#a769d7920810acf042cdd6aa9c3236a0c">actualitzar_stats</a>( r );</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;           </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <a class="code" href="class_cjt_sessions.html">CjtSessions</a> cjtses = cjtSes;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            us.<a class="code" href="class_usuari.html#a037628345ca3cfd7ea8c093738a8887b">actualitzar_stats</a>(p, r,curs_completat, cjtses, c);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">if</span> (curs_completat != 0){</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                c.<a class="code" href="class_curs.html#ab278b85d4668d83b9f817aa6c5232c62">actualitzar_completat</a>();</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            } </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;lp&quot;</span> or op == <span class="stringliteral">&quot;listar_problemas&quot;</span>) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            cout &lt;&lt;endl;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            cjtProb.<a class="code" href="class_cjt_problemes.html#af748e9cc914cba49f24305a5b2a891ce">ordenar_problemes</a>();</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            cjtProb.<a class="code" href="class_cjt_problemes.html#a976ab13903046970b2e128a3fa4df8fa">llistat_problemes</a>();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;ep&quot;</span> or op == <span class="stringliteral">&quot;escribir_problema&quot;</span>) {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            cin &gt;&gt; auxString;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            cout  &lt;&lt; auxString &lt;&lt;endl;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordtype">bool</span> found;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <a class="code" href="class_problema.html">Problema</a>&amp; prob = cjtProb.<a class="code" href="class_cjt_problemes.html#aa68c5649a11c7031411cf6947bbcec1f">accedir_problema</a> ( auxString, found );</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keywordflow">if</span>(found){</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                cout &lt;&lt; auxString;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                prob.<a class="code" href="class_problema.html#a6faae2ee8a1812951b22565cc234e8a4">escriure_problema</a>();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: el problema no existe&quot;</span>  &lt;&lt; endl;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;ls&quot;</span> or op == <span class="stringliteral">&quot;listar_sesiones&quot;</span>) {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;endl;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            cjtSes.<a class="code" href="class_cjt_sessions.html#abebc8e545104a42a266439097f8ca353">llistat_sessions</a>();</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;es&quot;</span> or op == <span class="stringliteral">&quot;escribir_sesion&quot;</span>) {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            cin &gt;&gt; auxString;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            cout &lt;&lt; auxString &lt;&lt;endl;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">if</span>(cjtSes.<a class="code" href="class_cjt_sessions.html#ae0d6dfe6e1bab2746fa03dc852f2f4a9">existeix_sessio</a>(auxString)){</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                <a class="code" href="class_sessio.html">Sessio</a> ses = cjtSes.<a class="code" href="class_cjt_sessions.html#acd571b77f121308bfcb01124fd713aa5">accedir_sessio</a> ( auxString );</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                cout &lt;&lt; auxString;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                ses.<a class="code" href="class_sessio.html#a4a9fcbfd3973be306c7076af557a431c">escriure_sessio</a>();</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: la sesion no existe&quot;</span>  &lt;&lt; endl;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;lc&quot;</span> or op == <span class="stringliteral">&quot;listar_cursos&quot;</span>) {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;endl;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            cjtCurs.<a class="code" href="class_cjt_cursos.html#a9a772bfad772e507fa9b8f5194b13873">llistat_cursos</a>();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;ec&quot;</span> or op == <span class="stringliteral">&quot;escribir_curso&quot;</span>) {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            cin &gt;&gt; auxInt;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            cout &lt;&lt; auxInt &lt;&lt;endl;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;             <span class="keywordflow">if</span> (cjtCurs.<a class="code" href="class_cjt_cursos.html#ad12b1174de2a5f09cb0c2558645d74dc">existeix_curs</a>( auxInt )) { </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                <a class="code" href="class_curs.html">Curs</a>&amp; curs = cjtCurs.<a class="code" href="class_cjt_cursos.html#a9fa0ca235b1ffd165689a67ad1263e64">accedir_curs</a> ( auxInt );</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                cout &lt;&lt; auxInt;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                curs.<a class="code" href="class_curs.html#a54b500f472e5ae51395bca6fe1e0bd09">escriure_curs</a>();</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: el curso no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;lu&quot;</span> or op == <span class="stringliteral">&quot;listar_usuarios&quot;</span>) {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt; op &lt;&lt; endl;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            cjtUs.<a class="code" href="class_cjt_usuaris.html#a28020e6e834b3c483198285fb35436fc">llistat_usuaris</a>();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (op == <span class="stringliteral">&quot;eu&quot;</span> or op == <span class="stringliteral">&quot;escribir_usuario&quot;</span>) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;#&#39;</span> &lt;&lt;op&lt;&lt;<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            cin &gt;&gt; auxString;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            cout &lt;&lt; auxString &lt;&lt;endl;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordtype">bool</span> found;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <a class="code" href="class_usuari.html">Usuari</a>&amp; u=cjtUs.<a class="code" href="class_cjt_usuaris.html#a0f819716b29d35d7e8d5a52ea4f3347d">accedir_usuari</a>(auxString,found);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;             <span class="keywordflow">if</span> (found) {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                cout &lt;&lt; auxString;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                u.<a class="code" href="class_usuari.html#a19ce3acaf6693208eed30686bd79c30e">escriure_usuari</a>();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;error: el usuario no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        cin &gt;&gt; op;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_cjt_sessions_html_acd571b77f121308bfcb01124fd713aa5"><div class="ttname"><a href="class_cjt_sessions.html#acd571b77f121308bfcb01124fd713aa5">CjtSessions::accedir_sessio</a></div><div class="ttdeci">Sessio accedir_sessio(const string &amp;s) const</div><div class="ttdoc">Accedeix a la Sessió s.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8cc_source.html#l00010">CjtSessions.cc:10</a></div></div>
+<div class="ttc" id="aclass_usuari_html_a3ef9f5ec04fe13ecfaf6d2f02bcd30bd"><div class="ttname"><a href="class_usuari.html#a3ef9f5ec04fe13ecfaf6d2f02bcd30bd">Usuari::problemes_resolts</a></div><div class="ttdeci">void problemes_resolts() const</div><div class="ttdoc">Llista tots els problemes resolts per l'usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00014">Usuari.cc:14</a></div></div>
+<div class="ttc" id="aclass_cjt_cursos_html_a9fa0ca235b1ffd165689a67ad1263e64"><div class="ttname"><a href="class_cjt_cursos.html#a9fa0ca235b1ffd165689a67ad1263e64">CjtCursos::accedir_curs</a></div><div class="ttdeci">Curs &amp; accedir_curs(int c)</div><div class="ttdoc">Accedeix al Curs c</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_cursos_8cc_source.html#l00011">CjtCursos.cc:11</a></div></div>
+<div class="ttc" id="aclass_curs_html"><div class="ttname"><a href="class_curs.html">Curs</a></div><div class="ttdoc">Representa un Curs.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8hh_source.html#l00013">Curs.hh:13</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html_a4ea0fafab13c9db8fe385f62fb572fc0"><div class="ttname"><a href="class_cjt_sessions.html#a4ea0fafab13c9db8fe385f62fb572fc0">CjtSessions::llegir_sessions_inicials</a></div><div class="ttdeci">void llegir_sessions_inicials()</div><div class="ttdoc">Llegeix les sessions inicials.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8cc_source.html#l00028">CjtSessions.cc:28</a></div></div>
+<div class="ttc" id="a_cjt_usuaris_8hh_html"><div class="ttname"><a href="_cjt_usuaris_8hh.html">CjtUsuaris.hh</a></div><div class="ttdoc">Especificació de la classe CjtUsuaris.</div></div>
+<div class="ttc" id="aclass_cjt_cursos_html"><div class="ttname"><a href="class_cjt_cursos.html">CjtCursos</a></div><div class="ttdoc">Representa un conjunt de cursos (Curs).</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_cursos_8hh_source.html#l00018">CjtCursos.hh:18</a></div></div>
+<div class="ttc" id="aclass_usuari_html"><div class="ttname"><a href="class_usuari.html">Usuari</a></div><div class="ttdoc">Representa un Usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8hh_source.html#l00022">Usuari.hh:22</a></div></div>
+<div class="ttc" id="aclass_problema_html"><div class="ttname"><a href="class_problema.html">Problema</a></div><div class="ttdoc">Representa un Problema.</div><div class="ttdef"><b>Definition:</b> <a href="_problema_8hh_source.html#l00018">Problema.hh:18</a></div></div>
+<div class="ttc" id="aclass_cjt_usuaris_html_a64292f06aebc73b47ecc57d815c6e4e4"><div class="ttname"><a href="class_cjt_usuaris.html#a64292f06aebc73b47ecc57d815c6e4e4">CjtUsuaris::alta_usuari</a></div><div class="ttdeci">bool alta_usuari(const string &amp;u)</div><div class="ttdoc">Dona d'alta un nou usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_usuaris_8cc_source.html#l00024">CjtUsuaris.cc:24</a></div></div>
+<div class="ttc" id="aclass_cjt_cursos_html_a02e7c84113d70d2bbc9603c3f1d98620"><div class="ttname"><a href="class_cjt_cursos.html#a02e7c84113d70d2bbc9603c3f1d98620">CjtCursos::nou_curs</a></div><div class="ttdeci">void nou_curs(const Curs &amp;c)</div><div class="ttdoc">Afageix un nou curs.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_cursos_8cc_source.html#l00022">CjtCursos.cc:22</a></div></div>
+<div class="ttc" id="aclass_sessio_html"><div class="ttname"><a href="class_sessio.html">Sessio</a></div><div class="ttdoc">Representa una Sessio.</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8hh_source.html#l00020">Sessio.hh:20</a></div></div>
+<div class="ttc" id="aclass_cjt_usuaris_html"><div class="ttname"><a href="class_cjt_usuaris.html">CjtUsuaris</a></div><div class="ttdoc">Representa el conjunt de tots els usuaris (Usuari).</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_usuaris_8hh_source.html#l00016">CjtUsuaris.hh:16</a></div></div>
+<div class="ttc" id="aclass_cjt_problemes_html_ac320f52e566402ed341d2f67176be14a"><div class="ttname"><a href="class_cjt_problemes.html#ac320f52e566402ed341d2f67176be14a">CjtProblemes::llegir_problemes_inicials</a></div><div class="ttdeci">void llegir_problemes_inicials()</div><div class="ttdoc">Llegeix els problemes inicials.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_problemes_8cc_source.html#l00026">CjtProblemes.cc:26</a></div></div>
+<div class="ttc" id="aclass_curs_html_a7f454b234464f736b73fd558266c190e"><div class="ttname"><a href="class_curs.html#a7f454b234464f736b73fd558266c190e">Curs::curs_pot_crear</a></div><div class="ttdeci">bool curs_pot_crear(const CjtSessions &amp;cjtses)</div><div class="ttdoc">Comprova si el curs es pot crear.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00036">Curs.cc:36</a></div></div>
+<div class="ttc" id="aclass_usuari_html_a5dd52c7dca6f7cb5ba4eb872f8cafe5c"><div class="ttname"><a href="class_usuari.html#a5dd52c7dca6f7cb5ba4eb872f8cafe5c">Usuari::inscribir_curso</a></div><div class="ttdeci">void inscribir_curso(int c, const CjtSessions &amp;ses, const Curs &amp;curs)</div><div class="ttdoc">Inscriu l'usuari al curs amb identificador c.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00018">Usuari.cc:18</a></div></div>
+<div class="ttc" id="aclass_usuari_html_a0eca3eccc4961632cb2be807f864d7f9"><div class="ttname"><a href="class_usuari.html#a0eca3eccc4961632cb2be807f864d7f9">Usuari::curs_inscrit</a></div><div class="ttdeci">int curs_inscrit() const</div><div class="ttdoc">Consulta si l'estudiante està inscrit a algun curso.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00006">Usuari.cc:6</a></div></div>
+<div class="ttc" id="aclass_cjt_problemes_html_a7a41c837128c629f7a4dcf81b1592581"><div class="ttname"><a href="class_cjt_problemes.html#a7a41c837128c629f7a4dcf81b1592581">CjtProblemes::nou_problema</a></div><div class="ttdeci">void nou_problema(const string &amp;p)</div><div class="ttdoc">Afageix un problema.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_problemes_8cc_source.html#l00020">CjtProblemes.cc:20</a></div></div>
+<div class="ttc" id="aclass_curs_html_ab278b85d4668d83b9f817aa6c5232c62"><div class="ttname"><a href="class_curs.html#ab278b85d4668d83b9f817aa6c5232c62">Curs::actualitzar_completat</a></div><div class="ttdeci">void actualitzar_completat()</div><div class="ttdoc">Actualitza el curs després de ser completat per un usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00052">Curs.cc:52</a></div></div>
+<div class="ttc" id="aclass_cjt_usuaris_html_a28020e6e834b3c483198285fb35436fc"><div class="ttname"><a href="class_cjt_usuaris.html#a28020e6e834b3c483198285fb35436fc">CjtUsuaris::llistat_usuaris</a></div><div class="ttdeci">void llistat_usuaris()</div><div class="ttdoc">Llistat d'usuaris.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_usuaris_8cc_source.html#l00006">CjtUsuaris.cc:6</a></div></div>
+<div class="ttc" id="aprogram_8cc_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="program_8cc_source.html#l00008">program.cc:8</a></div></div>
+<div class="ttc" id="aclass_cjt_cursos_html_a4f0a73967e26a9c4cf9eca1f406a16b5"><div class="ttname"><a href="class_cjt_cursos.html#a4f0a73967e26a9c4cf9eca1f406a16b5">CjtCursos::llegir_cursos_inicials</a></div><div class="ttdeci">void llegir_cursos_inicials(const CjtSessions &amp;cjtses)</div><div class="ttdoc">Llegeix els cursos inicials.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_cursos_8cc_source.html#l00027">CjtCursos.cc:27</a></div></div>
+<div class="ttc" id="aclass_problema_html_a769d7920810acf042cdd6aa9c3236a0c"><div class="ttname"><a href="class_problema.html#a769d7920810acf042cdd6aa9c3236a0c">Problema::actualitzar_stats</a></div><div class="ttdeci">void actualitzar_stats(bool r)</div><div class="ttdoc">Actualitza les estadístiques del problema.</div><div class="ttdef"><b>Definition:</b> <a href="_problema_8cc_source.html#l00005">Problema.cc:5</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html"><div class="ttname"><a href="class_cjt_sessions.html">CjtSessions</a></div><div class="ttdoc">Representa un Conjunt de sessions (Sessio).</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8hh_source.html#l00018">CjtSessions.hh:18</a></div></div>
+<div class="ttc" id="aclass_cjt_problemes_html_af748e9cc914cba49f24305a5b2a891ce"><div class="ttname"><a href="class_cjt_problemes.html#af748e9cc914cba49f24305a5b2a891ce">CjtProblemes::ordenar_problemes</a></div><div class="ttdeci">void ordenar_problemes()</div><div class="ttdoc">Ordenar problemes.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_problemes_8cc_source.html#l00044">CjtProblemes.cc:44</a></div></div>
+<div class="ttc" id="aclass_cjt_problemes_html_a27f5be292f79fd47915093fb84013e67"><div class="ttname"><a href="class_cjt_problemes.html#a27f5be292f79fd47915093fb84013e67">CjtProblemes::existeix_problema</a></div><div class="ttdeci">bool existeix_problema(const string &amp;p) const</div><div class="ttdoc">Consultora de problemes.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_problemes_8cc_source.html#l00005">CjtProblemes.cc:5</a></div></div>
+<div class="ttc" id="a_cjt_cursos_8hh_html"><div class="ttname"><a href="_cjt_cursos_8hh.html">CjtCursos.hh</a></div><div class="ttdoc">Especificació de la clase CjtCursos.</div></div>
+<div class="ttc" id="aclass_usuari_html_a037628345ca3cfd7ea8c093738a8887b"><div class="ttname"><a href="class_usuari.html#a037628345ca3cfd7ea8c093738a8887b">Usuari::actualitzar_stats</a></div><div class="ttdeci">void actualitzar_stats(const string &amp;p, int r, bool &amp;cur_completat, const CjtSessions &amp;cjtses, const Curs &amp;cjtcurs)</div><div class="ttdoc">Actualitza les estadístiques de l'Usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00026">Usuari.cc:26</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html_abebc8e545104a42a266439097f8ca353"><div class="ttname"><a href="class_cjt_sessions.html#abebc8e545104a42a266439097f8ca353">CjtSessions::llistat_sessions</a></div><div class="ttdeci">void llistat_sessions()</div><div class="ttdoc">Llistat de Sessions.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8cc_source.html#l00041">CjtSessions.cc:41</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html_ac6e00a3727d5ece89965a4f38d707273"><div class="ttname"><a href="class_cjt_sessions.html#ac6e00a3727d5ece89965a4f38d707273">CjtSessions::nova_sessio</a></div><div class="ttdeci">void nova_sessio(const string &amp;s)</div><div class="ttdoc">Afageix un sessio.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8cc_source.html#l00019">CjtSessions.cc:19</a></div></div>
+<div class="ttc" id="aclass_curs_html_ab256af7896eb803bbf4af25b00c4799c"><div class="ttname"><a href="class_curs.html#ab256af7896eb803bbf4af25b00c4799c">Curs::act_inscrits</a></div><div class="ttdeci">void act_inscrits(int x)</div><div class="ttdoc">Actualitza el nombre d'usuaris inscrits a un curs.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00019">Curs.cc:19</a></div></div>
+<div class="ttc" id="aclass_cjt_cursos_html_ad12b1174de2a5f09cb0c2558645d74dc"><div class="ttname"><a href="class_cjt_cursos.html#ad12b1174de2a5f09cb0c2558645d74dc">CjtCursos::existeix_curs</a></div><div class="ttdeci">bool existeix_curs(int c) const</div><div class="ttdoc">Consultora de cursos.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_cursos_8cc_source.html#l00005">CjtCursos.cc:5</a></div></div>
+<div class="ttc" id="aclass_cjt_problemes_html_aa68c5649a11c7031411cf6947bbcec1f"><div class="ttname"><a href="class_cjt_problemes.html#aa68c5649a11c7031411cf6947bbcec1f">CjtProblemes::accedir_problema</a></div><div class="ttdeci">Problema &amp; accedir_problema(const string &amp;p, bool &amp;found)</div><div class="ttdoc">Accedeix a al Problema p</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_problemes_8cc_source.html#l00010">CjtProblemes.cc:10</a></div></div>
+<div class="ttc" id="aclass_cjt_usuaris_html_a3984165521bf0eddf7c80c4354dd4ad0"><div class="ttname"><a href="class_cjt_usuaris.html#a3984165521bf0eddf7c80c4354dd4ad0">CjtUsuaris::baixa_usuari</a></div><div class="ttdeci">bool baixa_usuari(const string &amp;u, int &amp;inscrit)</div><div class="ttdoc">Dona de baixa un usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_usuaris_8cc_source.html#l00030">CjtUsuaris.cc:30</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a4a9fcbfd3973be306c7076af557a431c"><div class="ttname"><a href="class_sessio.html#a4a9fcbfd3973be306c7076af557a431c">Sessio::escriure_sessio</a></div><div class="ttdeci">void escriure_sessio() const</div><div class="ttdoc">Retorna les estadístiques d'una sessió.</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00009">Sessio.cc:9</a></div></div>
+<div class="ttc" id="aclass_problema_html_a6faae2ee8a1812951b22565cc234e8a4"><div class="ttname"><a href="class_problema.html#a6faae2ee8a1812951b22565cc234e8a4">Problema::escriure_problema</a></div><div class="ttdeci">void escriure_problema() const</div><div class="ttdoc">Retorna el ratio del problema.</div><div class="ttdef"><b>Definition:</b> <a href="_problema_8cc_source.html#l00014">Problema.cc:14</a></div></div>
+<div class="ttc" id="aclass_curs_html_a036d33b6fca73638b197eef9abb32ffd"><div class="ttname"><a href="class_curs.html#a036d33b6fca73638b197eef9abb32ffd">Curs::retorna_sessio</a></div><div class="ttdeci">string retorna_sessio(const string &amp;p) const</div><div class="ttdoc">Retorna una string amb la sessio a la qual pertany el problema p</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00023">Curs.cc:23</a></div></div>
+<div class="ttc" id="aclass_usuari_html_a19ce3acaf6693208eed30686bd79c30e"><div class="ttname"><a href="class_usuari.html#a19ce3acaf6693208eed30686bd79c30e">Usuari::escriure_usuari</a></div><div class="ttdeci">void escriure_usuari()</div><div class="ttdoc">Retorna les estadístiques d'un usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00045">Usuari.cc:45</a></div></div>
+<div class="ttc" id="aclass_curs_html_a4269ba5a107f32fc3fcfef9943420cf2"><div class="ttname"><a href="class_curs.html#a4269ba5a107f32fc3fcfef9943420cf2">Curs::usuaris_inscrits</a></div><div class="ttdeci">int usuaris_inscrits()</div><div class="ttdoc">Retorna el nombre d'usuaris inscrits.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00015">Curs.cc:15</a></div></div>
+<div class="ttc" id="aclass_cjt_problemes_html"><div class="ttname"><a href="class_cjt_problemes.html">CjtProblemes</a></div><div class="ttdoc">Representa un conjunt de problemes (Problema).</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_problemes_8hh_source.html#l00020">CjtProblemes.hh:20</a></div></div>
+<div class="ttc" id="aclass_cjt_usuaris_html_acb8d525b500b034d277c48197d16a682"><div class="ttname"><a href="class_cjt_usuaris.html#acb8d525b500b034d277c48197d16a682">CjtUsuaris::llegir_usuaris_inicials</a></div><div class="ttdeci">void llegir_usuaris_inicials()</div><div class="ttdoc">Llegeix els usuaris inicials.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_usuaris_8cc_source.html#l00041">CjtUsuaris.cc:41</a></div></div>
+<div class="ttc" id="aclass_cjt_problemes_html_a976ab13903046970b2e128a3fa4df8fa"><div class="ttname"><a href="class_cjt_problemes.html#a976ab13903046970b2e128a3fa4df8fa">CjtProblemes::llistat_problemes</a></div><div class="ttdeci">void llistat_problemes()</div><div class="ttdoc">Llistat de problemes.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_problemes_8cc_source.html#l00037">CjtProblemes.cc:37</a></div></div>
+<div class="ttc" id="aclass_curs_html_a54b500f472e5ae51395bca6fe1e0bd09"><div class="ttname"><a href="class_curs.html#a54b500f472e5ae51395bca6fe1e0bd09">Curs::escriure_curs</a></div><div class="ttdeci">void escriure_curs() const</div><div class="ttdoc">Retorna les estadístiques d'un curs.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00006">Curs.cc:6</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html_ae0d6dfe6e1bab2746fa03dc852f2f4a9"><div class="ttname"><a href="class_cjt_sessions.html#ae0d6dfe6e1bab2746fa03dc852f2f4a9">CjtSessions::existeix_sessio</a></div><div class="ttdeci">bool existeix_sessio(const string &amp;s) const</div><div class="ttdoc">Consulta si la Sessió s existeix s.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8cc_source.html#l00005">CjtSessions.cc:5</a></div></div>
+<div class="ttc" id="aclass_usuari_html_a84e0532f6b7ae4c4022e4739ca7abade"><div class="ttname"><a href="class_usuari.html#a84e0532f6b7ae4c4022e4739ca7abade">Usuari::problemes_enviables</a></div><div class="ttdeci">void problemes_enviables() const</div><div class="ttdoc">Llista tots els problemes enviats i resolts per l'usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00010">Usuari.cc:10</a></div></div>
+<div class="ttc" id="aclass_cjt_usuaris_html_a0f819716b29d35d7e8d5a52ea4f3347d"><div class="ttname"><a href="class_cjt_usuaris.html#a0f819716b29d35d7e8d5a52ea4f3347d">CjtUsuaris::accedir_usuari</a></div><div class="ttdeci">Usuari &amp; accedir_usuari(const string &amp;s, bool &amp;found)</div><div class="ttdoc">Accedeix a l'Usuari u</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_usuaris_8cc_source.html#l00013">CjtUsuaris.cc:13</a></div></div>
+<div class="ttc" id="aclass_cjt_cursos_html_a9a772bfad772e507fa9b8f5194b13873"><div class="ttname"><a href="class_cjt_cursos.html#a9a772bfad772e507fa9b8f5194b13873">CjtCursos::llistat_cursos</a></div><div class="ttdeci">void llistat_cursos() const</div><div class="ttdoc">Llistat de cursos.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_cursos_8cc_source.html#l00015">CjtCursos.cc:15</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

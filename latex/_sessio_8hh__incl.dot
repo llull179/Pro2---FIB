@@ -1,0 +1,17 @@
+digraph "Sessio.hh"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="Sessio.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Especificació de la classe Sessio."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CjtProblemes.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cjt_problemes_8hh.html",tooltip="Especificació de la clase CjtProblemes."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Problema.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_problema_8hh.html",tooltip="Especificació de la classe Problema."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="GrupProb.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_grup_prob_8hh.html",tooltip="Especificació de la classe GrupProb."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="BinTree.hh",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="ProbsSessio.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_probs_sessio_8hh.html",tooltip="Especificació de la classe ProbsSessio."];
+}

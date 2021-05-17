@@ -1,0 +1,31 @@
+digraph "program.cc"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="program.cc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Programa principal."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CjtUsuaris.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cjt_usuaris_8hh.html",tooltip="Especificació de la classe CjtUsuaris."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Usuari.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_usuari_8hh.html",tooltip="Especificació de la classe Usuari."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="CjtCursos.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cjt_cursos_8hh.html",tooltip="Especificació de la clase CjtCursos."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Curs.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_curs_8hh.html",tooltip="Especificació de la clase Curs."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="CjtSessions.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cjt_sessions_8hh.html",tooltip="Especificació de la classe CjtSessions."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Sessio.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_sessio_8hh.html",tooltip="Especificació de la classe Sessio."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="CjtProblemes.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cjt_problemes_8hh.html",tooltip="Especificació de la clase CjtProblemes."];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Problema.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_problema_8hh.html",tooltip="Especificació de la classe Problema."];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="GrupProb.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_grup_prob_8hh.html",tooltip="Especificació de la classe GrupProb."];
+  Node7 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="BinTree.hh",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="ProbsSessio.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_probs_sessio_8hh.html",tooltip="Especificació de la classe ProbsSessio."];
+  Node3 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+}

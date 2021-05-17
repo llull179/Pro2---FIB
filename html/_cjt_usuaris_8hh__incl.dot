@@ -1,0 +1,28 @@
+digraph "CjtUsuaris.hh"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="CjtUsuaris.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Especificació de la classe CjtUsuaris."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="Usuari.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_usuari_8hh.html",tooltip="Especificació de la classe Usuari."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="CjtCursos.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cjt_cursos_8hh.html",tooltip="Especificació de la clase CjtCursos."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="Curs.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_curs_8hh.html",tooltip="Especificació de la clase Curs."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="CjtSessions.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cjt_sessions_8hh.html",tooltip="Especificació de la classe CjtSessions."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="Sessio.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_sessio_8hh.html",tooltip="Especificació de la classe Sessio."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="CjtProblemes.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cjt_problemes_8hh.html",tooltip="Especificació de la clase CjtProblemes."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="Problema.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_problema_8hh.html",tooltip="Especificació de la classe Problema."];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="GrupProb.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_grup_prob_8hh.html",tooltip="Especificació de la classe GrupProb."];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="BinTree.hh",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="ProbsSessio.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_probs_sessio_8hh.html",tooltip="Especificació de la classe ProbsSessio."];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

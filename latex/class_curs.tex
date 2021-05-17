@@ -1,0 +1,369 @@
+\hypertarget{class_curs}{}\doxysection{Referencia de la Clase Curs}
+\label{class_curs}\index{Curs@{Curs}}
+
+
+Representa un \mbox{\hyperlink{class_curs}{Curs}}.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_curs_acecd9c67882f6d09fc15fb822420e245}{Curs}} ()
+\begin{DoxyCompactList}\small\item\em Creadora per defecte. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_curs_a4269ba5a107f32fc3fcfef9943420cf2}{usuaris\+\_\+inscrits}} ()
+\begin{DoxyCompactList}\small\item\em Retorna el nombre d\textquotesingle{}usuaris inscrits. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_curs_a0f405f291a64eb1e8fdd25028d39108b}{num\+\_\+sessions}} () const
+\begin{DoxyCompactList}\small\item\em Retorna el nombre de sesions que te el curs. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_curs_ae99ad436377d441b543a33d98a629d7a}{get\+\_\+sessio}} (int i) const
+\begin{DoxyCompactList}\small\item\em Retorna la sessio numero i del curs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_curs_a7f454b234464f736b73fd558266c190e}{curs\+\_\+pot\+\_\+crear}} (const \mbox{\hyperlink{class_cjt_sessions}{Cjt\+Sessions}} \&cjtses)
+\begin{DoxyCompactList}\small\item\em Comprova si el curs es pot crear. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_curs_a036d33b6fca73638b197eef9abb32ffd}{retorna\+\_\+sessio}} (const string \&p) const
+\begin{DoxyCompactList}\small\item\em Retorna una string amb la sessio a la qual pertany el problema {\itshape p} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curs_ab278b85d4668d83b9f817aa6c5232c62}{actualitzar\+\_\+completat}} ()
+\begin{DoxyCompactList}\small\item\em Actualitza el curs després de ser completat per un usuari. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curs_ab256af7896eb803bbf4af25b00c4799c}{act\+\_\+inscrits}} (int x)
+\begin{DoxyCompactList}\small\item\em Actualitza el nombre d\textquotesingle{}usuaris inscrits a un curs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curs_a54b500f472e5ae51395bca6fe1e0bd09}{escriure\+\_\+curs}} () const
+\begin{DoxyCompactList}\small\item\em Retorna les estadístiques d\textquotesingle{}un curs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curs_a55be35736f029e6248b89527e6525e1f}{lletgir\+\_\+sessions}} ()
+\begin{DoxyCompactList}\small\item\em Lletgeix les sessions del p.\+i quan el curs s\textquotesingle{}incialitza al principi del programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_probs_sessio}{Probs\+Sessio}} \mbox{\hyperlink{class_curs_ae5f7a3b29ed1d2f295a315ad54805e61}{problemes}}
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_curs_a285972a8437653132561a58e2ff4c9d2}{sessions}}
+\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{class_curs_ab1e2ef1c041ff35680b7416de281910e}{users}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un \mbox{\hyperlink{class_curs}{Curs}}. 
+
+@ 
+
+Definición en la línea 13 del archivo Curs.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_curs_acecd9c67882f6d09fc15fb822420e245}\label{class_curs_acecd9c67882f6d09fc15fb822420e245}} 
+\index{Curs@{Curs}!Curs@{Curs}}
+\index{Curs@{Curs}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{Curs()}{Curs()}}
+{\footnotesize\ttfamily Curs\+::\+Curs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora per defecte. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultat és un nou curs. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 3 del archivo Curs.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_curs_a4269ba5a107f32fc3fcfef9943420cf2}\label{class_curs_a4269ba5a107f32fc3fcfef9943420cf2}} 
+\index{Curs@{Curs}!usuaris\_inscrits@{usuaris\_inscrits}}
+\index{usuaris\_inscrits@{usuaris\_inscrits}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{usuaris\_inscrits()}{usuaris\_inscrits()}}
+{\footnotesize\ttfamily int Curs\+::usuaris\+\_\+inscrits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna el nombre d\textquotesingle{}usuaris inscrits. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el nombre d\textquotesingle{}usuaris inscrits. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 15 del archivo Curs.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                            \{}
+\DoxyCodeLine{16     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_curs_ab1e2ef1c041ff35680b7416de281910e}{users}}.second;}
+\DoxyCodeLine{17 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curs_a0f405f291a64eb1e8fdd25028d39108b}\label{class_curs_a0f405f291a64eb1e8fdd25028d39108b}} 
+\index{Curs@{Curs}!num\_sessions@{num\_sessions}}
+\index{num\_sessions@{num\_sessions}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{num\_sessions()}{num\_sessions()}}
+{\footnotesize\ttfamily int Curs\+::num\+\_\+sessions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna el nombre de sesions que te el curs. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna la mida del vector sessions del p.\+i. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 28 del archivo Curs.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28                             \{}
+\DoxyCodeLine{29     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_curs_a285972a8437653132561a58e2ff4c9d2}{sessions}}.size();}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curs_ae99ad436377d441b543a33d98a629d7a}\label{class_curs_ae99ad436377d441b543a33d98a629d7a}} 
+\index{Curs@{Curs}!get\_sessio@{get\_sessio}}
+\index{get\_sessio@{get\_sessio}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{get\_sessio()}{get\_sessio()}}
+{\footnotesize\ttfamily string Curs\+::get\+\_\+sessio (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Retorna la sessio numero i del curs. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna la sessio numero i del curs 
+\end{DoxyPostcond}
+
+
+Definición en la línea 32 del archivo Curs.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                   \{}
+\DoxyCodeLine{33     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_curs_a285972a8437653132561a58e2ff4c9d2}{sessions}}[i];}
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curs_a7f454b234464f736b73fd558266c190e}\label{class_curs_a7f454b234464f736b73fd558266c190e}} 
+\index{Curs@{Curs}!curs\_pot\_crear@{curs\_pot\_crear}}
+\index{curs\_pot\_crear@{curs\_pot\_crear}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{curs\_pot\_crear()}{curs\_pot\_crear()}}
+{\footnotesize\ttfamily bool Curs\+::curs\+\_\+pot\+\_\+crear (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cjt_sessions}{Cjt\+Sessions}} \&}]{cjtses }\end{DoxyParamCaption})}
+
+
+
+Comprova si el curs es pot crear. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Recorr les sesions del curs per comprovar que no hi hagui interessecció entre problemes, a més crea un map amb tots els problemes del curs i un vectir amb totes les sessions 
+\end{DoxyPostcond}
+
+
+Definición en la línea 36 del archivo Curs.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36                                                   \{}
+\DoxyCodeLine{37    \textcolor{keywordtype}{int} num;}
+\DoxyCodeLine{38     \textcolor{keywordtype}{string} aux;}
+\DoxyCodeLine{39     \textcolor{keywordtype}{bool} creat;}
+\DoxyCodeLine{40     cin >> num;}
+\DoxyCodeLine{41     vector<string> auxSes(num);}
+\DoxyCodeLine{42     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < num; ++i) \{ }
+\DoxyCodeLine{43         cin >> aux;}
+\DoxyCodeLine{44         auxSes[i] = aux;}
+\DoxyCodeLine{45         creat = cjtses.\mbox{\hyperlink{class_cjt_sessions_acd571b77f121308bfcb01124fd713aa5}{accedir\_sessio}}(aux).\mbox{\hyperlink{class_sessio_ac3d5700464345fcf0398cec95d158abc}{recorrer\_i\_afegir}}(\mbox{\hyperlink{class_curs_ae5f7a3b29ed1d2f295a315ad54805e61}{problemes}});}
+\DoxyCodeLine{46        \textcolor{keywordflow}{if}(not creat) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48     \mbox{\hyperlink{class_curs_a285972a8437653132561a58e2ff4c9d2}{sessions}} = auxSes;}
+\DoxyCodeLine{49    \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curs_a036d33b6fca73638b197eef9abb32ffd}\label{class_curs_a036d33b6fca73638b197eef9abb32ffd}} 
+\index{Curs@{Curs}!retorna\_sessio@{retorna\_sessio}}
+\index{retorna\_sessio@{retorna\_sessio}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{retorna\_sessio()}{retorna\_sessio()}}
+{\footnotesize\ttfamily string Curs\+::retorna\+\_\+sessio (\begin{DoxyParamCaption}\item[{const string \&}]{p }\end{DoxyParamCaption}) const}
+
+
+
+Retorna una string amb la sessio a la qual pertany el problema {\itshape p} 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna una string amb la sessio a la qual pertany el problema {\itshape p} 
+\end{DoxyPostcond}
+
+
+Definición en la línea 23 del archivo Curs.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23                                                 \{}
+\DoxyCodeLine{24    \textcolor{keywordflow}{return} \mbox{\hyperlink{class_curs_ae5f7a3b29ed1d2f295a315ad54805e61}{problemes}}.\mbox{\hyperlink{class_probs_sessio_ab8499580f4e8f415e734ac45ea297d2f}{retorna\_sessio}}(p);}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curs_ab278b85d4668d83b9f817aa6c5232c62}\label{class_curs_ab278b85d4668d83b9f817aa6c5232c62}} 
+\index{Curs@{Curs}!actualitzar\_completat@{actualitzar\_completat}}
+\index{actualitzar\_completat@{actualitzar\_completat}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{actualitzar\_completat()}{actualitzar\_completat()}}
+{\footnotesize\ttfamily void Curs\+::actualitzar\+\_\+completat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Actualitza el curs després de ser completat per un usuari. 
+
+\begin{DoxyPrecond}{Precondición}
+cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Suma 1 als usuaris completats i resta 1 als usuaris inscrits. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 52 del archivo Curs.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                                  \{}
+\DoxyCodeLine{53     ++\mbox{\hyperlink{class_curs_ab1e2ef1c041ff35680b7416de281910e}{users}}.first;}
+\DoxyCodeLine{54     -\/-\/\mbox{\hyperlink{class_curs_ab1e2ef1c041ff35680b7416de281910e}{users}}.second;}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curs_ab256af7896eb803bbf4af25b00c4799c}\label{class_curs_ab256af7896eb803bbf4af25b00c4799c}} 
+\index{Curs@{Curs}!act\_inscrits@{act\_inscrits}}
+\index{act\_inscrits@{act\_inscrits}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{act\_inscrits()}{act\_inscrits()}}
+{\footnotesize\ttfamily void Curs\+::act\+\_\+inscrits (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Actualitza el nombre d\textquotesingle{}usuaris inscrits a un curs. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Suma als usuaris iscrits al p.\+i el nombre x. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 19 del archivo Curs.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                             \{}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_curs_ab1e2ef1c041ff35680b7416de281910e}{users}}.second += x;}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curs_a54b500f472e5ae51395bca6fe1e0bd09}\label{class_curs_a54b500f472e5ae51395bca6fe1e0bd09}} 
+\index{Curs@{Curs}!escriure\_curs@{escriure\_curs}}
+\index{escriure\_curs@{escriure\_curs}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{escriure\_curs()}{escriure\_curs()}}
+{\footnotesize\ttfamily void Curs\+::escriure\+\_\+curs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna les estadístiques d\textquotesingle{}un curs. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Mostra el nombre d\textquotesingle{}usuaris actuals o passats que l\textquotesingle{}han completat, el nombre d\textquotesingle{}usuaris inscirts actualment i els seus identificadors, seguit del nombre de sessions que el formen i els seus identificadors. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 6 del archivo Curs.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6                                \{}
+\DoxyCodeLine{7     cout <<\textcolor{charliteral}{' '} << \mbox{\hyperlink{class_curs_ab1e2ef1c041ff35680b7416de281910e}{users}}.first << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_curs_ab1e2ef1c041ff35680b7416de281910e}{users}}.second << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_curs_a285972a8437653132561a58e2ff4c9d2}{sessions}}.size() <<\textcolor{charliteral}{' '};}
+\DoxyCodeLine{8     cout << \textcolor{charliteral}{'('};}
+\DoxyCodeLine{9     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_curs_a285972a8437653132561a58e2ff4c9d2}{sessions}}.size(); ++i) \{}
+\DoxyCodeLine{10         \textcolor{keywordflow}{if}(i != 0) cout << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{11         cout << \mbox{\hyperlink{class_curs_a285972a8437653132561a58e2ff4c9d2}{sessions}}[i];}
+\DoxyCodeLine{12     \}}
+\DoxyCodeLine{13     cout<< \textcolor{charliteral}{')'} <<endl;}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_curs_a55be35736f029e6248b89527e6525e1f}\label{class_curs_a55be35736f029e6248b89527e6525e1f}} 
+\index{Curs@{Curs}!lletgir\_sessions@{lletgir\_sessions}}
+\index{lletgir\_sessions@{lletgir\_sessions}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{lletgir\_sessions()}{lletgir\_sessions()}}
+{\footnotesize\ttfamily void Curs\+::lletgir\+\_\+sessions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lletgeix les sessions del p.\+i quan el curs s\textquotesingle{}incialitza al principi del programa. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Lletgeix les sessions del p.\+i quan el curs s\textquotesingle{}incialitza al principi del programa. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_curs_ae5f7a3b29ed1d2f295a315ad54805e61}\label{class_curs_ae5f7a3b29ed1d2f295a315ad54805e61}} 
+\index{Curs@{Curs}!problemes@{problemes}}
+\index{problemes@{problemes}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{problemes}{problemes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_probs_sessio}{Probs\+Sessio}} Curs\+::problemes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 17 del archivo Curs.\+hh.
+
+\mbox{\Hypertarget{class_curs_a285972a8437653132561a58e2ff4c9d2}\label{class_curs_a285972a8437653132561a58e2ff4c9d2}} 
+\index{Curs@{Curs}!sessions@{sessions}}
+\index{sessions@{sessions}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{sessions}{sessions}}
+{\footnotesize\ttfamily vector$<$string$>$ Curs\+::sessions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 18 del archivo Curs.\+hh.
+
+\mbox{\Hypertarget{class_curs_ab1e2ef1c041ff35680b7416de281910e}\label{class_curs_ab1e2ef1c041ff35680b7416de281910e}} 
+\index{Curs@{Curs}!users@{users}}
+\index{users@{users}!Curs@{Curs}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily pair$<$int, int$>$ Curs\+::users\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 20 del archivo Curs.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_curs_8hh}{Curs.\+hh}}\item 
+\mbox{\hyperlink{_curs_8cc}{Curs.\+cc}}\end{DoxyCompactItemize}

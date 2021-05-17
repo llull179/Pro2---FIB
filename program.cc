@@ -14,7 +14,8 @@ int main() {
     string op;
     cjtProb.llegir_problemes_inicials();
     cjtSes.llegir_sessions_inicials();
-    cjtCurs.llegir_cursos_inicials(cjtSes);
+    CjtSessions cjtSes_aux = cjtSes;
+    cjtCurs.llegir_cursos_inicials(cjtSes_aux);
     cjtUs.llegir_usuaris_inicials();
 
     cin >> op;
@@ -43,13 +44,16 @@ int main() {
             }
             else cout<<"error: la sesion ya existe"<<endl;
         }
+        
         else if (op == "nc" or op == "nuevo_curso") {
             cout << '#' <<op<< endl;
             Curs c;
-            if(c.curs_pot_crear(cjtSes)) cjtCurs.nou_curs(c);
+            CjtSessions cjtses = cjtSes;
+            if(c.curs_pot_crear(cjtses)) cjtCurs.nou_curs(c);
             else cout << "error: curso mal formado" <<endl;
 
         }
+        
         else if (op == "a" or op == "alta_usuario") {
             cout << '#' <<op<<' ';
             cin >> auxString;
@@ -82,7 +86,9 @@ int main() {
                 if(cjtCurs.existeix_curs(auxInt)) {
                     if (u.curs_inscrit() == 0){
                         Curs& c =cjtCurs.accedir_curs( auxInt );
-                        u.inscribir_curso( auxInt, cjtSes, c);
+                        CjtSessions cjtses = cjtSes;
+                        Curs c_aux = c;
+                        u.inscribir_curso( auxInt, cjtses, c);
                         c.act_inscrits(1);
                         cout << c.usuaris_inscrits() <<endl;
                     }
@@ -112,7 +118,8 @@ int main() {
 
             if(cjtCurs.existeix_curs(auxInt)){
                 if(cjtProb.existeix_problema(auxString)){
-                    string ses = cjtCurs.accedir_curs( auxInt ).retorna_sessio(auxString);
+                    string ses = cjtCurs.accedir_curs(auxInt).retorna_sessio(auxString);
+                    
                     if(ses!="0"){
                         cout << ses << endl;
                     }
@@ -159,14 +166,18 @@ int main() {
             cin >> auxString >> p >> r;
             cout << auxString <<' ' << p << ' ' << r << endl;
             bool foundUser, foundProb, curs_completat = false;
+            ;
 
             Usuari& us=cjtUs.accedir_usuari(auxString, foundUser);
             Problema& prob = cjtProb.accedir_problema( p, foundProb );
-            prob.actualitzar_stats( r );
             Curs& c = cjtCurs.accedir_curs(us.curs_inscrit());
-            
-            us.actualitzar_stats(p, r,curs_completat, cjtSes, cjtCurs);
-            if (curs_completat) c.actualitzar_completat();
+            prob.actualitzar_stats( r );
+           
+            CjtSessions cjtses = cjtSes;
+            us.actualitzar_stats(p, r,curs_completat, cjtses, c);
+            if (curs_completat != 0){
+                c.actualitzar_completat();
+            } 
             
         }
 
@@ -200,9 +211,10 @@ int main() {
             cout << '#' <<op<<' ';
             cin >> auxString;
             cout << auxString <<endl;
-            bool found;
-            Sessio& ses = cjtSes.accedir_sessio ( auxString, found );
-            if(found){
+            
+            
+            if(cjtSes.existeix_sessio(auxString)){
+                Sessio ses = cjtSes.accedir_sessio ( auxString );
                 cout << auxString;
                 ses.escriure_sessio();
             }

@@ -81,7 +81,7 @@ public:
 
     */
 
-    void llegir_cursos_inicials (CjtSessions cjtses);
+    void llegir_cursos_inicials (const CjtSessions& cjtses);
 
 };
 #endif

@@ -1,0 +1,25 @@
+digraph "CjtCursos.cc"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="CjtCursos.cc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CjtCursos.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cjt_cursos_8hh.html",tooltip="Especificació de la clase CjtCursos."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Curs.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_curs_8hh.html",tooltip="Especificació de la clase Curs."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="CjtSessions.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cjt_sessions_8hh.html",tooltip="Especificació de la classe CjtSessions."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Sessio.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_sessio_8hh.html",tooltip="Especificació de la classe Sessio."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="CjtProblemes.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cjt_problemes_8hh.html",tooltip="Especificació de la clase CjtProblemes."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Problema.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_problema_8hh.html",tooltip="Especificació de la classe Problema."];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="GrupProb.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_grup_prob_8hh.html",tooltip="Especificació de la classe GrupProb."];
+  Node5 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="BinTree.hh",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="ProbsSessio.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_probs_sessio_8hh.html",tooltip="Especificació de la classe ProbsSessio."];
+}

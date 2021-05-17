@@ -1,0 +1,282 @@
+\hypertarget{class_grup_prob}{}\doxysection{Referencia de la Clase Grup\+Prob}
+\label{class_grup_prob}\index{GrupProb@{GrupProb}}
+
+
+Representa un Grup de problemes.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_grup_prob_a6540aa9f3b135f9adfa080cfd09cb83d}{Grup\+Prob}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecte. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_grup_prob_a90edf905703674b139b7a235f94199e3}{get\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Retorna quants d\textquotesingle{}elements pertanyen al grup. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_grup_prob_ab944443458f693ed354c2cf4448c54c9}{get\+\_\+intents}} (const string \&p)
+\begin{DoxyCompactList}\small\item\em Retorna el numero d\textquotesingle{}intents que s\textquotesingle{}han realitzat a aquest problema. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_grup_prob_ae2458618fb4c82b2284bdcb4309babd3}{pertany}} (const string \&p) const
+\begin{DoxyCompactList}\small\item\em Comrpova si el problema p pertany al p.\+i. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_grup_prob_abd71628b23dcce60d6da79a52c62487d}{afegeix}} (const string \&p, int x)
+\begin{DoxyCompactList}\small\item\em Afegeix l\textquotesingle{}elemetn p al grup de problemes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_grup_prob_a795700af835108f984dd6f7aac8fa9a0}{suma\+\_\+int}} (const string \&p)
+\begin{DoxyCompactList}\small\item\em Suma 1 intent al problema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_grup_prob_ae8f107772440abfb3d0163e4ce30c6a9}{elimina}} (const string \&p)
+\begin{DoxyCompactList}\small\item\em Elimina l\textquotesingle{}elemetn p del grup de problemes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_grup_prob_af6cde21c8a09ae65b2ccb5134c2a6dfd}{mostrar\+\_\+problemes}} () const
+\begin{DoxyCompactList}\small\item\em Escriu tots els problemes que pertanyen al grup de problemes i el nombre d\textquotesingle{}enviaments realitzats al problema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, int $>$ \mbox{\hyperlink{class_grup_prob_a69789efd8ff03a5711b7cd3a7db4d5a7}{probs\+\_\+enviaments}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un Grup de problemes. 
+
+Definición en la línea 20 del archivo Grup\+Prob.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_grup_prob_a6540aa9f3b135f9adfa080cfd09cb83d}\label{class_grup_prob_a6540aa9f3b135f9adfa080cfd09cb83d}} 
+\index{GrupProb@{GrupProb}!GrupProb@{GrupProb}}
+\index{GrupProb@{GrupProb}!GrupProb@{GrupProb}}
+\doxysubsubsection{\texorpdfstring{GrupProb()}{GrupProb()}}
+{\footnotesize\ttfamily Grup\+Prob\+::\+Grup\+Prob (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecte. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultat és un nou Grup de Problemes. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 3 del archivo Grup\+Prob.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_grup_prob_a90edf905703674b139b7a235f94199e3}\label{class_grup_prob_a90edf905703674b139b7a235f94199e3}} 
+\index{GrupProb@{GrupProb}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!GrupProb@{GrupProb}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily int Grup\+Prob\+::get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna quants d\textquotesingle{}elements pertanyen al grup. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna quants d\textquotesingle{}elements pertanyen al grup. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 11 del archivo Grup\+Prob.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11                        \{}
+\DoxyCodeLine{12     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_grup_prob_a69789efd8ff03a5711b7cd3a7db4d5a7}{probs\_enviaments}}.size();}
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_grup_prob_ab944443458f693ed354c2cf4448c54c9}\label{class_grup_prob_ab944443458f693ed354c2cf4448c54c9}} 
+\index{GrupProb@{GrupProb}!get\_intents@{get\_intents}}
+\index{get\_intents@{get\_intents}!GrupProb@{GrupProb}}
+\doxysubsubsection{\texorpdfstring{get\_intents()}{get\_intents()}}
+{\footnotesize\ttfamily int Grup\+Prob\+::get\+\_\+intents (\begin{DoxyParamCaption}\item[{const string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Retorna el numero d\textquotesingle{}intents que s\textquotesingle{}han realitzat a aquest problema. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el numero d\textquotesingle{}intents que s\textquotesingle{}han realitzat a aquest problema.. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 28 del archivo Grup\+Prob.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28                                         \{}
+\DoxyCodeLine{29     map<string,int>::const\_iterator it = \mbox{\hyperlink{class_grup_prob_a69789efd8ff03a5711b7cd3a7db4d5a7}{probs\_enviaments}}.find(p);}
+\DoxyCodeLine{30     \textcolor{keywordflow}{return} (*it).second;}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_grup_prob_ae2458618fb4c82b2284bdcb4309babd3}\label{class_grup_prob_ae2458618fb4c82b2284bdcb4309babd3}} 
+\index{GrupProb@{GrupProb}!pertany@{pertany}}
+\index{pertany@{pertany}!GrupProb@{GrupProb}}
+\doxysubsubsection{\texorpdfstring{pertany()}{pertany()}}
+{\footnotesize\ttfamily bool Grup\+Prob\+::pertany (\begin{DoxyParamCaption}\item[{const string \&}]{p }\end{DoxyParamCaption}) const}
+
+
+
+Comrpova si el problema p pertany al p.\+i. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna true si el problema pertany al grup. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 15 del archivo Grup\+Prob.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                                             \{}
+\DoxyCodeLine{16     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_grup_prob_a69789efd8ff03a5711b7cd3a7db4d5a7}{probs\_enviaments}}.find(p) == \mbox{\hyperlink{class_grup_prob_a69789efd8ff03a5711b7cd3a7db4d5a7}{probs\_enviaments}}.end()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_grup_prob_abd71628b23dcce60d6da79a52c62487d}\label{class_grup_prob_abd71628b23dcce60d6da79a52c62487d}} 
+\index{GrupProb@{GrupProb}!afegeix@{afegeix}}
+\index{afegeix@{afegeix}!GrupProb@{GrupProb}}
+\doxysubsubsection{\texorpdfstring{afegeix()}{afegeix()}}
+{\footnotesize\ttfamily void Grup\+Prob\+::afegeix (\begin{DoxyParamCaption}\item[{const string \&}]{p,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Afegeix l\textquotesingle{}elemetn p al grup de problemes. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Afegeix l\textquotesingle{}element p al grup de problemes amb x entregues. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 20 del archivo Grup\+Prob.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                                              \{}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_grup_prob_a69789efd8ff03a5711b7cd3a7db4d5a7}{probs\_enviaments}}.insert(make\_pair(p,x));}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_grup_prob_a795700af835108f984dd6f7aac8fa9a0}\label{class_grup_prob_a795700af835108f984dd6f7aac8fa9a0}} 
+\index{GrupProb@{GrupProb}!suma\_int@{suma\_int}}
+\index{suma\_int@{suma\_int}!GrupProb@{GrupProb}}
+\doxysubsubsection{\texorpdfstring{suma\_int()}{suma\_int()}}
+{\footnotesize\ttfamily void Grup\+Prob\+::suma\+\_\+int (\begin{DoxyParamCaption}\item[{const string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Suma 1 intent al problema. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Suma 1 intent al problema. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 33 del archivo Grup\+Prob.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                        \{}
+\DoxyCodeLine{34     map<string,int>::iterator it = \mbox{\hyperlink{class_grup_prob_a69789efd8ff03a5711b7cd3a7db4d5a7}{probs\_enviaments}}.find(p);}
+\DoxyCodeLine{35     ++(*it).second;}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_grup_prob_ae8f107772440abfb3d0163e4ce30c6a9}\label{class_grup_prob_ae8f107772440abfb3d0163e4ce30c6a9}} 
+\index{GrupProb@{GrupProb}!elimina@{elimina}}
+\index{elimina@{elimina}!GrupProb@{GrupProb}}
+\doxysubsubsection{\texorpdfstring{elimina()}{elimina()}}
+{\footnotesize\ttfamily void Grup\+Prob\+::elimina (\begin{DoxyParamCaption}\item[{const string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Elimina l\textquotesingle{}elemetn p del grup de problemes. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Elimina l\textquotesingle{}element p del grup de problemes. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 24 del archivo Grup\+Prob.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                       \{}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_grup_prob_a69789efd8ff03a5711b7cd3a7db4d5a7}{probs\_enviaments}}.erase(p);}
+\DoxyCodeLine{26 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_grup_prob_af6cde21c8a09ae65b2ccb5134c2a6dfd}\label{class_grup_prob_af6cde21c8a09ae65b2ccb5134c2a6dfd}} 
+\index{GrupProb@{GrupProb}!mostrar\_problemes@{mostrar\_problemes}}
+\index{mostrar\_problemes@{mostrar\_problemes}!GrupProb@{GrupProb}}
+\doxysubsubsection{\texorpdfstring{mostrar\_problemes()}{mostrar\_problemes()}}
+{\footnotesize\ttfamily void Grup\+Prob\+::mostrar\+\_\+problemes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Escriu tots els problemes que pertanyen al grup de problemes i el nombre d\textquotesingle{}enviaments realitzats al problema. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escriu tots els problemes que pertanyen al grup de problemes i el nombre d\textquotesingle{}enviaments realitzats al problema. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 5 del archivo Grup\+Prob.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5                                        \{}
+\DoxyCodeLine{6     \textcolor{keywordflow}{for}(map<string,int>::const\_iterator it = \mbox{\hyperlink{class_grup_prob_a69789efd8ff03a5711b7cd3a7db4d5a7}{probs\_enviaments}}.begin(); it != \mbox{\hyperlink{class_grup_prob_a69789efd8ff03a5711b7cd3a7db4d5a7}{probs\_enviaments}}.end(); ++it) \{}
+\DoxyCodeLine{7         cout << (*it).first << \textcolor{charliteral}{'('}<< (*it).second <<\textcolor{charliteral}{')'} << endl;}
+\DoxyCodeLine{8     \}}
+\DoxyCodeLine{9 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_grup_prob_a69789efd8ff03a5711b7cd3a7db4d5a7}\label{class_grup_prob_a69789efd8ff03a5711b7cd3a7db4d5a7}} 
+\index{GrupProb@{GrupProb}!probs\_enviaments@{probs\_enviaments}}
+\index{probs\_enviaments@{probs\_enviaments}!GrupProb@{GrupProb}}
+\doxysubsubsection{\texorpdfstring{probs\_enviaments}{probs\_enviaments}}
+{\footnotesize\ttfamily map$<$string, int$>$ Grup\+Prob\+::probs\+\_\+enviaments\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 25 del archivo Grup\+Prob.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_grup_prob_8hh}{Grup\+Prob.\+hh}}\item 
+\mbox{\hyperlink{_grup_prob_8cc}{Grup\+Prob.\+cc}}\end{DoxyCompactItemize}

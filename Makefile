@@ -1,8 +1,8 @@
 OPCIONS = -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-uninitialized -Wno-sign-compare -std=c++11
 # OPCIONS = -D_GLIBCXX_DEBUG -O2 -Wall -std=c++11
 
-program.exe: GrupProb.o CjtSessions.o Sessio.o CjtCursos.o program.o Curs.o CjtUsuaris.o Usuari.o CjtProblemes.o Problema.o
-	g++ $(OPCIONS) -o program.exe GrupProb.o CjtSessions.o Sessio.o CjtCursos.o program.o Curs.o CjtUsuaris.o Usuari.o CjtProblemes.o Problema.o
+program.exe: GrupProb.o CjtSessions.o Sessio.o CjtCursos.o program.o Curs.o CjtUsuaris.o Usuari.o CjtProblemes.o Problema.o ProbsSessio.o
+	g++ $(OPCIONS) -o program.exe GrupProb.o CjtSessions.o Sessio.o CjtCursos.o program.o Curs.o CjtUsuaris.o Usuari.o CjtProblemes.o Problema.o ProbsSessio.o
 
 program.o: program.cc
 	g++ $(OPCIONS) -c program.cc
@@ -37,10 +37,12 @@ Sessio.o: Sessio.hh Sessio.cc
 GrupProb.o: GrupProb.hh GrupProb.cc
 	g++ $(OPCIONS) -c GrupProb.cc
 
+ProbsSessio.o: ProbsSessio.hh ProbsSessio.cc
+	g++ $(OPCIONS) -c ProbsSessio.cc
 
 
 
-practica.tar: Makefile CjtUsuaris.cc CjtUsuaris.hh Usuari.hh Usuari.cc CjtSessions.cc CjtSessions.hh Sessio.hh Sessio.cc CjtCursos.cc  CjtCursos.hh Curs.hh Curs.hh BinTree.hh program.cc GrupProb.cc GrupProb.hh
+practica.tar: Makefile ProbsSessio.hh ProbsSessio.cc CjtUsuaris.cc CjtUsuaris.hh Usuari.hh Usuari.cc CjtSessions.cc CjtSessions.hh Sessio.hh Sessio.cc CjtCursos.cc  CjtCursos.hh Curs.hh Curs.hh BinTree.hh program.cc GrupProb.cc GrupProb.hh
 	tar -cvf practica.tar *.cc *.hh Makefile
 	
 clean: 

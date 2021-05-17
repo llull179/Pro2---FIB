@@ -63,7 +63,7 @@ public:
       \post Llista en ordre creixent per identificador de tots els problemes solucionats.
         També s'imprimeix el nombre d'enviaments a cada problema.
   */
-  void problemes_resolts ();
+  void problemes_resolts ()const;
 
   /** @brief Llista tots els problemes enviats i resolts per l'usuari
 
@@ -71,7 +71,7 @@ public:
       \post Llista en ordre creixent per identificador de tots els problemes solucionats.
         També s'imprimeix el nombre d'enviaments a cada problema  resolt.
   */
-  void problemes_enviables () ;
+  void problemes_enviables () const;
 
 
 //Modificadores
@@ -81,14 +81,8 @@ public:
       \pre <em>cierto</em>
       \post Inscriu l'usuari al curs c.
   */
-  void inscribir_curso(int c, CjtSessions ses,  Curs curs);
+  void inscribir_curso(int c, const CjtSessions& ses,  const Curs& curs);
 
-    /** @brief Comprova quins problemes ja han estat resolts i actualitza la llista de problemes enviables.
-
-      \pre <em>cierto</em>
-      \post Comprova quins problemes ja han estat resolts i actualitza la llista de problemes enviables.
-  */
-    void propaga(const string& p,  CjtSessions cjtses,  CjtCursos cjtcurs);
 
   /** @brief Actualitza les estadístiques de l'Usuari.
 
@@ -96,7 +90,7 @@ public:
       \post Retorna l'Usuari amb les estadístiques actualitzades.
   */
 
-  void actualitzar_stats(const string& p, int r, bool& cur_completat,  CjtSessions cjtses,  CjtCursos cjtcurs);
+  void actualitzar_stats(const string& p, int r, bool& cur_completat,const  CjtSessions& cjtses,  const Curs& cjtcurs);
 
     //Escriure
 

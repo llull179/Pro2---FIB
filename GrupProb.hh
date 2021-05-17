@@ -5,14 +5,16 @@
 #ifndef _GRUPPROB_HH_
 #define _GRUPPROB_HH_
 
-#include "CjtProblemes.hh"
-#include "BinTree.hh"
 #ifndef NO_DIAGRAM
+#include <map>
+#include <string>
+#include <iostream>
+using namespace std;
 #endif
 
 
 /** @class GrupProb
-    @brief Representa un Grup d'un problema. 
+    @brief Representa un Grup de problemes. 
 
 */
 class GrupProb
@@ -20,7 +22,8 @@ class GrupProb
     
 private:    
  //string = identificador problema,int = enviaments al problema
-    map<string, int> probs;
+    map<string, int> probs_enviaments;   
+//
 public:
     
     //Constructora
@@ -82,7 +85,7 @@ public:
         \post Escriu tots els problemes que pertanyen al grup de problemes i el nombre d'enviaments realitzats al problema.
     */
 
-    void mostrar_problemes();
+    void mostrar_problemes() const;
 
 
 };

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EVALUATOR. Plataforma de gestión de problemas y cursos de programación.: Fichero Fuente GrupProb.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EVALUATOR. Plataforma de gestión de problemas y cursos de programación.
+   &#160;<span id="projectnumber">Pràctica PRO2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">GrupProb.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_grup_prob_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_grup_prob_8hh.html">GrupProb.hh</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_grup_prob.html#a6540aa9f3b135f9adfa080cfd09cb83d">    3</a></span>&#160;<a class="code" href="class_grup_prob.html#a6540aa9f3b135f9adfa080cfd09cb83d">GrupProb::GrupProb</a>() {}</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_grup_prob.html#af6cde21c8a09ae65b2ccb5134c2a6dfd">    5</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_grup_prob.html#af6cde21c8a09ae65b2ccb5134c2a6dfd">GrupProb::mostrar_problemes</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordflow">for</span>(map&lt;string,int&gt;::const_iterator it = <a class="code" href="class_grup_prob.html#a69789efd8ff03a5711b7cd3a7db4d5a7">probs_enviaments</a>.begin(); it != <a class="code" href="class_grup_prob.html#a69789efd8ff03a5711b7cd3a7db4d5a7">probs_enviaments</a>.end(); ++it) {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        cout &lt;&lt; (*it).first &lt;&lt; <span class="charliteral">&#39;(&#39;</span>&lt;&lt; (*it).second &lt;&lt;<span class="charliteral">&#39;)&#39;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    }</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_grup_prob.html#a90edf905703674b139b7a235f94199e3">   11</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_grup_prob.html#a90edf905703674b139b7a235f94199e3">GrupProb::get_size</a>() {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_grup_prob.html#a69789efd8ff03a5711b7cd3a7db4d5a7">probs_enviaments</a>.size();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_grup_prob.html#ae2458618fb4c82b2284bdcb4309babd3">   15</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_grup_prob.html#ae2458618fb4c82b2284bdcb4309babd3">GrupProb::pertany</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; p)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_grup_prob.html#a69789efd8ff03a5711b7cd3a7db4d5a7">probs_enviaments</a>.find(p) == <a class="code" href="class_grup_prob.html#a69789efd8ff03a5711b7cd3a7db4d5a7">probs_enviaments</a>.end()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_grup_prob.html#abd71628b23dcce60d6da79a52c62487d">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_grup_prob.html#abd71628b23dcce60d6da79a52c62487d">GrupProb::afegeix</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; p, <span class="keywordtype">int</span> x) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_grup_prob.html#a69789efd8ff03a5711b7cd3a7db4d5a7">probs_enviaments</a>.insert(make_pair(p,x));</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_grup_prob.html#ae8f107772440abfb3d0163e4ce30c6a9">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_grup_prob.html#ae8f107772440abfb3d0163e4ce30c6a9">GrupProb::elimina</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; p) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_grup_prob.html#a69789efd8ff03a5711b7cd3a7db4d5a7">probs_enviaments</a>.erase(p);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_grup_prob.html#ab944443458f693ed354c2cf4448c54c9">   28</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_grup_prob.html#ab944443458f693ed354c2cf4448c54c9">GrupProb::get_intents</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; p){</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    map&lt;string,int&gt;::const_iterator it = <a class="code" href="class_grup_prob.html#a69789efd8ff03a5711b7cd3a7db4d5a7">probs_enviaments</a>.find(p);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> (*it).second;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_grup_prob.html#a795700af835108f984dd6f7aac8fa9a0">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_grup_prob.html#a795700af835108f984dd6f7aac8fa9a0">GrupProb::suma_int</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; p) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    map&lt;string,int&gt;::iterator it = <a class="code" href="class_grup_prob.html#a69789efd8ff03a5711b7cd3a7db4d5a7">probs_enviaments</a>.find(p);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ++(*it).second;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_grup_prob_html_a69789efd8ff03a5711b7cd3a7db4d5a7"><div class="ttname"><a href="class_grup_prob.html#a69789efd8ff03a5711b7cd3a7db4d5a7">GrupProb::probs_enviaments</a></div><div class="ttdeci">map&lt; string, int &gt; probs_enviaments</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8hh_source.html#l00025">GrupProb.hh:25</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_af6cde21c8a09ae65b2ccb5134c2a6dfd"><div class="ttname"><a href="class_grup_prob.html#af6cde21c8a09ae65b2ccb5134c2a6dfd">GrupProb::mostrar_problemes</a></div><div class="ttdeci">void mostrar_problemes() const</div><div class="ttdoc">Escriu tots els problemes que pertanyen al grup de problemes i el nombre d'enviaments realitzats al p...</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00005">GrupProb.cc:5</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_a795700af835108f984dd6f7aac8fa9a0"><div class="ttname"><a href="class_grup_prob.html#a795700af835108f984dd6f7aac8fa9a0">GrupProb::suma_int</a></div><div class="ttdeci">void suma_int(const string &amp;p)</div><div class="ttdoc">Suma 1 intent al problema.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00033">GrupProb.cc:33</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_a6540aa9f3b135f9adfa080cfd09cb83d"><div class="ttname"><a href="class_grup_prob.html#a6540aa9f3b135f9adfa080cfd09cb83d">GrupProb::GrupProb</a></div><div class="ttdeci">GrupProb()</div><div class="ttdoc">Creadora por defecte.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00003">GrupProb.cc:3</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_ab944443458f693ed354c2cf4448c54c9"><div class="ttname"><a href="class_grup_prob.html#ab944443458f693ed354c2cf4448c54c9">GrupProb::get_intents</a></div><div class="ttdeci">int get_intents(const string &amp;p)</div><div class="ttdoc">Retorna el numero d'intents que s'han realitzat a aquest problema.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00028">GrupProb.cc:28</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_ae8f107772440abfb3d0163e4ce30c6a9"><div class="ttname"><a href="class_grup_prob.html#ae8f107772440abfb3d0163e4ce30c6a9">GrupProb::elimina</a></div><div class="ttdeci">void elimina(const string &amp;p)</div><div class="ttdoc">Elimina l'elemetn p del grup de problemes.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00024">GrupProb.cc:24</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_a90edf905703674b139b7a235f94199e3"><div class="ttname"><a href="class_grup_prob.html#a90edf905703674b139b7a235f94199e3">GrupProb::get_size</a></div><div class="ttdeci">int get_size()</div><div class="ttdoc">Retorna quants d'elements pertanyen al grup.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00011">GrupProb.cc:11</a></div></div>
+<div class="ttc" id="a_grup_prob_8hh_html"><div class="ttname"><a href="_grup_prob_8hh.html">GrupProb.hh</a></div><div class="ttdoc">Especificació de la classe GrupProb.</div></div>
+<div class="ttc" id="aclass_grup_prob_html_ae2458618fb4c82b2284bdcb4309babd3"><div class="ttname"><a href="class_grup_prob.html#ae2458618fb4c82b2284bdcb4309babd3">GrupProb::pertany</a></div><div class="ttdeci">bool pertany(const string &amp;p) const</div><div class="ttdoc">Comrpova si el problema p pertany al p.i.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00015">GrupProb.cc:15</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_abd71628b23dcce60d6da79a52c62487d"><div class="ttname"><a href="class_grup_prob.html#abd71628b23dcce60d6da79a52c62487d">GrupProb::afegeix</a></div><div class="ttdeci">void afegeix(const string &amp;p, int x)</div><div class="ttdoc">Afegeix l'elemetn p al grup de problemes.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00020">GrupProb.cc:20</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

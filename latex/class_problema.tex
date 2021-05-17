@@ -1,0 +1,244 @@
+\hypertarget{class_problema}{}\doxysection{Referencia de la Clase Problema}
+\label{class_problema}\index{Problema@{Problema}}
+
+
+Representa un \mbox{\hyperlink{class_problema}{Problema}}.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_problema_a9d81af5f3f42a1b4354ad8f3c022fca3}{Problema}} ()
+\begin{DoxyCompactList}\small\item\em Creadora per defecte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_problema_a6faae2ee8a1812951b22565cc234e8a4}{escriure\+\_\+problema}} () const
+\begin{DoxyCompactList}\small\item\em Retorna el ratio del problema. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_problema_a98e674c569659df029013960e5d9bfd2}{get\+\_\+ratio}} () const
+\begin{DoxyCompactList}\small\item\em Retorna el ratio del problema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_problema_a769d7920810acf042cdd6aa9c3236a0c}{actualitzar\+\_\+stats}} (bool r)
+\begin{DoxyCompactList}\small\item\em Actualitza les estadístiques del problema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_problema_aa72017807ae42ccd3f4ccaf8f6601f00}{actualitzar\+\_\+ratio}} ()
+\begin{DoxyCompactList}\small\item\em Actualitza el ratio del problema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_problema_ae7632024578d37da4caa9637d4a89260}{escriure\+\_\+problema}} ()
+\begin{DoxyCompactList}\small\item\em Retorna les estadístiques del problema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>double \mbox{\hyperlink{class_problema_a05c8fcf17e30ddc3a4490419d9c3fde6}{env\_totals}} = 0\\
+\>double \mbox{\hyperlink{class_problema_a75542c77e8f93e2e98fc6c1aabdb1d3a}{env\_exit}} = 0\\
+\>double \mbox{\hyperlink{class_problema_acc3d2ce24418ad68650108de4b603d99}{ratio}} = 1\\
+\} \mbox{\hyperlink{class_problema_a6b2853858c949832026af09426cb347c}{stats}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un \mbox{\hyperlink{class_problema}{Problema}}. 
+
+Definición en la línea 18 del archivo Problema.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_problema_a9d81af5f3f42a1b4354ad8f3c022fca3}\label{class_problema_a9d81af5f3f42a1b4354ad8f3c022fca3}} 
+\index{Problema@{Problema}!Problema@{Problema}}
+\index{Problema@{Problema}!Problema@{Problema}}
+\doxysubsubsection{\texorpdfstring{Problema()}{Problema()}}
+{\footnotesize\ttfamily Problema\+::\+Problema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora per defecte. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultat és un nou \mbox{\hyperlink{class_problema}{Problema}}. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 3 del archivo Problema.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_problema_a6faae2ee8a1812951b22565cc234e8a4}\label{class_problema_a6faae2ee8a1812951b22565cc234e8a4}} 
+\index{Problema@{Problema}!escriure\_problema@{escriure\_problema}}
+\index{escriure\_problema@{escriure\_problema}!Problema@{Problema}}
+\doxysubsubsection{\texorpdfstring{escriure\_problema()}{escriure\_problema()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Problema\+::escriure\+\_\+problema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna el ratio del problema. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retrona el ratio del problema 
+\end{DoxyPostcond}
+
+
+Definición en la línea 14 del archivo Problema.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14                                   \{}
+\DoxyCodeLine{15     cout << \textcolor{charliteral}{'('} <<\mbox{\hyperlink{class_problema_a6b2853858c949832026af09426cb347c}{stats}}.env\_totals << \textcolor{charliteral}{','} << \mbox{\hyperlink{class_problema_a6b2853858c949832026af09426cb347c}{stats}}.env\_exit << \textcolor{charliteral}{','};}
+\DoxyCodeLine{16     cout  << double(\mbox{\hyperlink{class_problema_a6b2853858c949832026af09426cb347c}{stats}}.env\_totals + 1)/(\mbox{\hyperlink{class_problema_a6b2853858c949832026af09426cb347c}{stats}}.env\_exit + 1) << \textcolor{charliteral}{')'} << endl;}
+\DoxyCodeLine{17 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_problema_a98e674c569659df029013960e5d9bfd2}\label{class_problema_a98e674c569659df029013960e5d9bfd2}} 
+\index{Problema@{Problema}!get\_ratio@{get\_ratio}}
+\index{get\_ratio@{get\_ratio}!Problema@{Problema}}
+\doxysubsubsection{\texorpdfstring{get\_ratio()}{get\_ratio()}}
+{\footnotesize\ttfamily double Problema\+::get\+\_\+ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna el ratio del problema. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el ratio del problema. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 19 del archivo Problema.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                  \{}
+\DoxyCodeLine{20   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_problema_a6b2853858c949832026af09426cb347c}{stats}}.ratio;}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_problema_a769d7920810acf042cdd6aa9c3236a0c}\label{class_problema_a769d7920810acf042cdd6aa9c3236a0c}} 
+\index{Problema@{Problema}!actualitzar\_stats@{actualitzar\_stats}}
+\index{actualitzar\_stats@{actualitzar\_stats}!Problema@{Problema}}
+\doxysubsubsection{\texorpdfstring{actualitzar\_stats()}{actualitzar\_stats()}}
+{\footnotesize\ttfamily void Problema\+::actualitzar\+\_\+stats (\begin{DoxyParamCaption}\item[{bool}]{r }\end{DoxyParamCaption})}
+
+
+
+Actualitza les estadístiques del problema. 
+
+\begin{DoxyPrecond}{Precondición}
+El problema p existeix, r és si s\textquotesingle{}ha completat amb èxit el problema. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Es suma 1 al nombre d\textquotesingle{}enviaments total, s\textquotesingle{}actualitza els enviaments amb èxit i el ratio. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 5 del archivo Problema.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5                                        \{}
+\DoxyCodeLine{6     ++\mbox{\hyperlink{class_problema_a6b2853858c949832026af09426cb347c}{stats}}.env\_totals;}
+\DoxyCodeLine{7     \textcolor{keywordflow}{if}( r ) ++\mbox{\hyperlink{class_problema_a6b2853858c949832026af09426cb347c}{stats}}.env\_exit;}
+\DoxyCodeLine{8     }
+\DoxyCodeLine{9 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_problema_aa72017807ae42ccd3f4ccaf8f6601f00}\label{class_problema_aa72017807ae42ccd3f4ccaf8f6601f00}} 
+\index{Problema@{Problema}!actualitzar\_ratio@{actualitzar\_ratio}}
+\index{actualitzar\_ratio@{actualitzar\_ratio}!Problema@{Problema}}
+\doxysubsubsection{\texorpdfstring{actualitzar\_ratio()}{actualitzar\_ratio()}}
+{\footnotesize\ttfamily void Problema\+::actualitzar\+\_\+ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Actualitza el ratio del problema. 
+
+\begin{DoxyPrecond}{Precondición}
+cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El ratio canvia a (enviaments totals + 1)/(enviaments exit + 1) 
+\end{DoxyPostcond}
+
+
+Definición en la línea 10 del archivo Problema.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                                  \{}
+\DoxyCodeLine{11   \mbox{\hyperlink{class_problema_a6b2853858c949832026af09426cb347c}{stats}}.ratio = double(\mbox{\hyperlink{class_problema_a6b2853858c949832026af09426cb347c}{stats}}.env\_totals + 1)/(\mbox{\hyperlink{class_problema_a6b2853858c949832026af09426cb347c}{stats}}.env\_exit + 1);}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_problema_ae7632024578d37da4caa9637d4a89260}\label{class_problema_ae7632024578d37da4caa9637d4a89260}} 
+\index{Problema@{Problema}!escriure\_problema@{escriure\_problema}}
+\index{escriure\_problema@{escriure\_problema}!Problema@{Problema}}
+\doxysubsubsection{\texorpdfstring{escriure\_problema()}{escriure\_problema()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Problema\+::escriure\+\_\+problema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna les estadístiques del problema. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si p no existeix s\textquotesingle{}imprimeix un misatge d\textquotesingle{}error. S\textquotesingle{}indica el nombre d\textquotesingle{}enviaments al problema, també s\textquotesingle{}indiquen els enviaments amb èxit i el ratio 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_problema_a05c8fcf17e30ddc3a4490419d9c3fde6}\label{class_problema_a05c8fcf17e30ddc3a4490419d9c3fde6}} 
+\index{Problema@{Problema}!env\_totals@{env\_totals}}
+\index{env\_totals@{env\_totals}!Problema@{Problema}}
+\doxysubsubsection{\texorpdfstring{env\_totals}{env\_totals}}
+{\footnotesize\ttfamily double Problema\+::env\+\_\+totals = 0}
+
+
+
+Definición en la línea 24 del archivo Problema.\+hh.
+
+\mbox{\Hypertarget{class_problema_a75542c77e8f93e2e98fc6c1aabdb1d3a}\label{class_problema_a75542c77e8f93e2e98fc6c1aabdb1d3a}} 
+\index{Problema@{Problema}!env\_exit@{env\_exit}}
+\index{env\_exit@{env\_exit}!Problema@{Problema}}
+\doxysubsubsection{\texorpdfstring{env\_exit}{env\_exit}}
+{\footnotesize\ttfamily double Problema\+::env\+\_\+exit = 0}
+
+
+
+Definición en la línea 25 del archivo Problema.\+hh.
+
+\mbox{\Hypertarget{class_problema_acc3d2ce24418ad68650108de4b603d99}\label{class_problema_acc3d2ce24418ad68650108de4b603d99}} 
+\index{Problema@{Problema}!ratio@{ratio}}
+\index{ratio@{ratio}!Problema@{Problema}}
+\doxysubsubsection{\texorpdfstring{ratio}{ratio}}
+{\footnotesize\ttfamily double Problema\+::ratio = 1}
+
+
+
+Definición en la línea 26 del archivo Problema.\+hh.
+
+\mbox{\Hypertarget{class_problema_a6b2853858c949832026af09426cb347c}\label{class_problema_a6b2853858c949832026af09426cb347c}} 
+\index{Problema@{Problema}!stats@{stats}}
+\index{stats@{stats}!Problema@{Problema}}
+\doxysubsubsection{\texorpdfstring{stats}{stats}}
+{\footnotesize\ttfamily struct \{ ... \}  Problema\+::stats\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_problema_8hh}{Problema.\+hh}}\item 
+\mbox{\hyperlink{_problema_8cc}{Problema.\+cc}}\end{DoxyCompactItemize}

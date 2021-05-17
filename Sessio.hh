@@ -8,6 +8,7 @@
 #include "CjtProblemes.hh"
 #include "GrupProb.hh"
 #include "BinTree.hh"
+#include "ProbsSessio.hh"
 #ifndef NO_DIAGRAM
 #endif
 
@@ -24,7 +25,9 @@ private:
     BinTree <string> prerequisits;
     map<string, pair<string,string>> copia_pre;
     static void escriure_BinTree (const BinTree<string> & a);
-    static void iniciar_enviables_recursiu(const BinTree<string>& a, const GrupProb& resolts, GrupProb& env);
+    static void iniciar_enviables_recursiu(const BinTree<string>& a, const GrupProb& resolts, GrupProb& env, bool acaba);
+    static void recorrer(const BinTree<string>& a, ProbsSessio& probs, const string& s, bool& creable);
+    static bool existeix_BinTree_prob(const BinTree<string>& a, const string& p);
 public:
     
     //Constructora
@@ -35,22 +38,20 @@ public:
     */
 
     Sessio();
+
+    Sessio(const string& x);
     
 
     //Consultors
 
-     /** @brief Retorna la cantidad de problemes de la Sessió.
+
+    /** @brief Comprova si el problema p pertany a la Sessió
         \pre <em>cert</em>.
-        \post Retorna la cantidad de problemes de la Sessió.
+        \post Comprova si el problema p pertany a la Sessió
     */
 
-    int get_size();
+    bool existeix_prob(const string& p);
 
-    /** @brief  Retorna l'string de la posició x del map de tots els problemes del p.i.
-        \pre <em>cert</em>.
-        \post Retorna l'string de la posició x del map de tots els problemes del p.i.
-    */
-    string agafa_iessim(int x);
 
     /** @brief  Retorna l'arbre a partir del qual s'ha de recorrer perque els problemes anteriors ja s'han completat.
         \pre <em>cert</em>.
@@ -65,6 +66,13 @@ public:
         \post Actualitza tots els problemes enviables
     */
     void actualitza_env(const GrupProb& resolts, GrupProb& env, const string& p );
+
+    /** @brief Recorr el BinTree de prerequisits i afegeix a la classe ProbsSessio tots els problemes que pertanyen.
+        \pre <em>cert</em>.
+        \post Recorr el BinTree de prerequisits i afegeix a la classe ProbsSessio tots els problemes que pertanyen. 
+        Retorna true si s'han pogut afegir tots els problemes fora intersecció i fals en cas contrari.
+    */
+    bool recorrer_i_afegir(ProbsSessio& probs);
 
     /** @brief Lletgeix els problemes de la sessió en preordre dels prerequisits.
         \pre <em>cert</em>.
@@ -90,7 +98,7 @@ public:
          seguit de l'estructura de prequisits en preordre.
     */
 
-    void escriure_sessio () ;
+    void escriure_sessio () const;
     
     
    

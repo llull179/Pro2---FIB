@@ -12,6 +12,7 @@
         "map": "cpp",
         "ostream": "cpp",
         "deque": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "random": "cpp"
     }
 }

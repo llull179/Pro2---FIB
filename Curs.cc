@@ -12,7 +12,7 @@ void Curs::escriure_curs( ) const{
     }
     cout<< ')' <<endl;
 }
-int Curs::usuaris_inscrits( ){
+int Curs::usuaris_inscrits() {
     return users.second;
 }
 
@@ -20,41 +20,30 @@ void Curs::act_inscrits(int x){
     users.second += x;
 }
 
-string Curs::retorna_sessio(const string& p) {
-    map<string,string>::const_iterator it = problemes.find(p);
-
-    if(it != problemes.end()) return (*it).second;
-    return "0";
+string Curs::retorna_sessio(const string& p) const{
+   return problemes.retorna_sessio(p);
 }
 
 
-int Curs::num_sessions() {
+int Curs::num_sessions() const{
     return sessions.size();
 }
 
-string Curs::get_sessio(int i) {
+string Curs::get_sessio(int i) const{
     return sessions[i];
 }
 
-bool Curs::curs_pot_crear( CjtSessions cjtses) {
-    int num;
-    string aux, p;
-    bool found;
+bool Curs::curs_pot_crear(const CjtSessions& cjtses){
+   int num;
+    string aux;
+    bool creat;
     cin >> num;
     vector<string> auxSes(num);
     for(int i = 0; i < num; ++i) { 
         cin >> aux;
         auxSes[i] = aux;
-        
-        Sessio& s = cjtses.accedir_sessio(aux, found);
-        if (found) {
-            int numSes = s.get_size();
-            for(int j = 0; j < numSes; ++j) {
-                p = s.agafa_iessim(j);
-                pair<map<string,string>::iterator,bool> r = problemes.insert(make_pair(p,aux));
-                if(not r.second) return false;
-            }
-        }
+        creat = cjtses.accedir_sessio(aux).recorrer_i_afegir(problemes);
+       if(not creat) return false;
     }
     sessions = auxSes;
    return true;

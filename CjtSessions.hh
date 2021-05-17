@@ -51,7 +51,7 @@ public:
 
     */
 
-    Sessio& accedir_sessio (const string& s, bool& found);
+    Sessio accedir_sessio (const string& s) const;
 
     //Modificadorss
     

@@ -13,7 +13,7 @@ void Problema::actualitzar_ratio() {
 
 void Problema::escriure_problema()  {
     cout << '(' <<stats.env_totals << ',' << stats.env_exit << ',';
-    cout << stats.ratio << ')' << endl;
+    cout  << double(stats.env_totals + 1)/(stats.env_exit + 1) << ')' << endl;
 }
 
 double Problema::get_ratio() const {

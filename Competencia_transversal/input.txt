@@ -1,58 +1,70 @@
-12
-p01 p02 p03
-v01 v02 v03
+22 
+p01 p02 p03 p04 p05
+v01 v02 v03 v04
 r01 r02 r03 r04 r05
 aa01
-5
+m01 m02 m03 m04 m05 m06 m07
+6
 vectors v01 v02 0 0 v03 0 0
 piles p01 p02 0 0 p03 0 0
 examens1 p01 0 p02 0 p03 0 v02 0 0
 examens2 aa01 0 0
 cues r01 r02 r03 0 0 r04 0 0 r05 0 0
-3
-1 examens1
-4 piles examens2 vectors cues
-2 examens1 examens2
+maps m01 m02 m03 0 0 m04 0 0 m05 0 m06 0 m07 0 0 
 4
+1
+examens1
+4
+piles examens2 vectors cues
+2
+examens1 examens2
+2
+maps vectors
+7
 Javi
 Alejandro
 Cesc
 Pere
+Lluc
+Nacho
+Alberto
 np k01
 np k02
-nuevo_problema p01
-nueva_sesion piles
-k01 k02 0 0 0
-ns examens2 
+np k03
+nuevo_problema p1
+ns
+pilas k01 k02 0 0 k03 0 0
+nueva_sesion examens2
 nc
 2 examens1 vectors
-nuevo_curso
-2 piles cues
+nuevo_curso 2 piles cues
 a Javi
 a Sergio
-alta_usuario Joan
+a Joan 
 b Joan
-baja_usuario Fernando
+b Fernando
 pe Javi
-pe Sergio
+pr Sergio
 i Alejandro 1
 i Pere 2
 i Cesc 3
+i Lluc 4
 inscribir_curso Fernando 2
 i Javi 0
 i Alejandro 2
 cu Alejandro
-cu Cesc
+cu Cecsc
 cu Javi
 cu Mateu
 listar_problemas
-ls
+ls 
 lc
 lu
 pe Alejandro
 pr Alejandro
 pe Cesc
 pr Cesc
+
 e Alejandro p01 1
 e Alejandro p02 1
 e Alejandro p03 0
@@ -87,4 +99,16 @@ ls
 lu
 listar_cursos
 listar_problemas
+e Lluc m01 0
+e Lluc m01 1
+pe Lluc
+e Lluc m02 1
+e Lluc v01 0
+e Lluc v01 1
+ep m01
+pe Lluc
+pr Lluc
+eu Lluc
+ec 4
+lu
 fin

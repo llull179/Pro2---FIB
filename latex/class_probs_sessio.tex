@@ -1,0 +1,215 @@
+\hypertarget{class_probs_sessio}{}\doxysection{Referencia de la Clase Probs\+Sessio}
+\label{class_probs_sessio}\index{ProbsSessio@{ProbsSessio}}
+
+
+Representa un Grup de problemes que pertanyen a un curs i la Sessió a la qual pertanyen.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_probs_sessio_a355752f678a66dd1178317683440ae15}{Probs\+Sessio}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecte. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_probs_sessio_af3e5b24705245cbbc9995460325e6615}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Retorna true si el map està buid. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_probs_sessio_ab8499580f4e8f415e734ac45ea297d2f}{retorna\+\_\+sessio}} (const string \&p) const
+\begin{DoxyCompactList}\small\item\em Retorna la sessió a la qual pertany el problema. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_probs_sessio_a9a6e3f9ccd5649f9911c51ad395be786}{afegeix\+\_\+i\+\_\+comprova}} (const string \&p, const string \&s)
+\begin{DoxyCompactList}\small\item\em Afegeix el problema p al grup de problemes amb la sessio s. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_probs_sessio_a998d4e98b65ebe4c92c97c971822e8c4}{afegeix}} (const string \&p, const string \&s)
+\begin{DoxyCompactList}\small\item\em Afegeix el problema p al grup de problemes amb la sessio s. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_probs_sessio_ab7147573f6b796b4fb69d8a9da64de3b}{mostra}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, string $>$ \mbox{\hyperlink{class_probs_sessio_a415cb5511d5efef397146a2e903ba516}{probs\+\_\+ses}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un Grup de problemes que pertanyen a un curs i la Sessió a la qual pertanyen. 
+
+Definición en la línea 21 del archivo Probs\+Sessio.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_probs_sessio_a355752f678a66dd1178317683440ae15}\label{class_probs_sessio_a355752f678a66dd1178317683440ae15}} 
+\index{ProbsSessio@{ProbsSessio}!ProbsSessio@{ProbsSessio}}
+\index{ProbsSessio@{ProbsSessio}!ProbsSessio@{ProbsSessio}}
+\doxysubsubsection{\texorpdfstring{ProbsSessio()}{ProbsSessio()}}
+{\footnotesize\ttfamily Probs\+Sessio\+::\+Probs\+Sessio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecte. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultat és un nou Grup de Problemes. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 3 del archivo Probs\+Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_probs_sessio_af3e5b24705245cbbc9995460325e6615}\label{class_probs_sessio_af3e5b24705245cbbc9995460325e6615}} 
+\index{ProbsSessio@{ProbsSessio}!empty@{empty}}
+\index{empty@{empty}!ProbsSessio@{ProbsSessio}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Probs\+Sessio\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna true si el map està buid. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna true si el map està buid. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 25 del archivo Probs\+Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                              \{}
+\DoxyCodeLine{26     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_probs_sessio_a415cb5511d5efef397146a2e903ba516}{probs\_ses}}.size() == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{27     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_probs_sessio_ab8499580f4e8f415e734ac45ea297d2f}\label{class_probs_sessio_ab8499580f4e8f415e734ac45ea297d2f}} 
+\index{ProbsSessio@{ProbsSessio}!retorna\_sessio@{retorna\_sessio}}
+\index{retorna\_sessio@{retorna\_sessio}!ProbsSessio@{ProbsSessio}}
+\doxysubsubsection{\texorpdfstring{retorna\_sessio()}{retorna\_sessio()}}
+{\footnotesize\ttfamily string Probs\+Sessio\+::retorna\+\_\+sessio (\begin{DoxyParamCaption}\item[{const string \&}]{p }\end{DoxyParamCaption}) const}
+
+
+
+Retorna la sessió a la qual pertany el problema. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna la sessió a la qual pertany el problema. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 14 del archivo Probs\+Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14                                                        \{}
+\DoxyCodeLine{15     map<string,string>::const\_iterator it = \mbox{\hyperlink{class_probs_sessio_a415cb5511d5efef397146a2e903ba516}{probs\_ses}}.find(p);}
+\DoxyCodeLine{16     \textcolor{keywordflow}{if}(it != \mbox{\hyperlink{class_probs_sessio_a415cb5511d5efef397146a2e903ba516}{probs\_ses}}.end()) \textcolor{keywordflow}{return} (*it).second;}
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"0"};}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_probs_sessio_a9a6e3f9ccd5649f9911c51ad395be786}\label{class_probs_sessio_a9a6e3f9ccd5649f9911c51ad395be786}} 
+\index{ProbsSessio@{ProbsSessio}!afegeix\_i\_comprova@{afegeix\_i\_comprova}}
+\index{afegeix\_i\_comprova@{afegeix\_i\_comprova}!ProbsSessio@{ProbsSessio}}
+\doxysubsubsection{\texorpdfstring{afegeix\_i\_comprova()}{afegeix\_i\_comprova()}}
+{\footnotesize\ttfamily bool Probs\+Sessio\+::afegeix\+\_\+i\+\_\+comprova (\begin{DoxyParamCaption}\item[{const string \&}]{p,  }\item[{const string \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Afegeix el problema p al grup de problemes amb la sessio s. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Afegeix l\textquotesingle{}element p al grup de problemes amb la Sessió s. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 9 del archivo Probs\+Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9                                                                      \{}
+\DoxyCodeLine{10     pair<map<string,string>::const\_iterator,\textcolor{keywordtype}{bool}> r = \mbox{\hyperlink{class_probs_sessio_a415cb5511d5efef397146a2e903ba516}{probs\_ses}}.insert(make\_pair(p,s));}
+\DoxyCodeLine{11     \textcolor{keywordflow}{return} r.second;}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_probs_sessio_a998d4e98b65ebe4c92c97c971822e8c4}\label{class_probs_sessio_a998d4e98b65ebe4c92c97c971822e8c4}} 
+\index{ProbsSessio@{ProbsSessio}!afegeix@{afegeix}}
+\index{afegeix@{afegeix}!ProbsSessio@{ProbsSessio}}
+\doxysubsubsection{\texorpdfstring{afegeix()}{afegeix()}}
+{\footnotesize\ttfamily void Probs\+Sessio\+::afegeix (\begin{DoxyParamCaption}\item[{const string \&}]{p,  }\item[{const string \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Afegeix el problema p al grup de problemes amb la sessio s. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Afegeix l\textquotesingle{}element p al grup de problemes amb la Sessió s. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 5 del archivo Probs\+Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5                                                           \{}
+\DoxyCodeLine{6      \mbox{\hyperlink{class_probs_sessio_a415cb5511d5efef397146a2e903ba516}{probs\_ses}}.insert(make\_pair(p,s));}
+\DoxyCodeLine{7 \}   }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_probs_sessio_ab7147573f6b796b4fb69d8a9da64de3b}\label{class_probs_sessio_ab7147573f6b796b4fb69d8a9da64de3b}} 
+\index{ProbsSessio@{ProbsSessio}!mostra@{mostra}}
+\index{mostra@{mostra}!ProbsSessio@{ProbsSessio}}
+\doxysubsubsection{\texorpdfstring{mostra()}{mostra()}}
+{\footnotesize\ttfamily void Probs\+Sessio\+::mostra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 20 del archivo Probs\+Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                          \{}
+\DoxyCodeLine{21    \textcolor{keywordflow}{for}( map<string,string>::const\_iterator it = \mbox{\hyperlink{class_probs_sessio_a415cb5511d5efef397146a2e903ba516}{probs\_ses}}.begin();it!=\mbox{\hyperlink{class_probs_sessio_a415cb5511d5efef397146a2e903ba516}{probs\_ses}}.end();++it) \{}
+\DoxyCodeLine{22        cout<<(*it).first<<\textcolor{stringliteral}{" i "} << (*it).second<<endl;}
+\DoxyCodeLine{23    \}}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_probs_sessio_a415cb5511d5efef397146a2e903ba516}\label{class_probs_sessio_a415cb5511d5efef397146a2e903ba516}} 
+\index{ProbsSessio@{ProbsSessio}!probs\_ses@{probs\_ses}}
+\index{probs\_ses@{probs\_ses}!ProbsSessio@{ProbsSessio}}
+\doxysubsubsection{\texorpdfstring{probs\_ses}{probs\_ses}}
+{\footnotesize\ttfamily map$<$string, string$>$ Probs\+Sessio\+::probs\+\_\+ses\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 26 del archivo Probs\+Sessio.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_probs_sessio_8hh}{Probs\+Sessio.\+hh}}\item 
+\mbox{\hyperlink{_probs_sessio_8cc}{Probs\+Sessio.\+cc}}\end{DoxyCompactItemize}

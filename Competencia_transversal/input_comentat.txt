@@ -1,17 +1,21 @@
 //Introducció de problemes
-12 
-p01 p02 p03 v01 v02 v03 r01 r02 r03 r04 r05 aa01
+22 
+p01 p02 p03 p04 p05
+v01 v02 v03 v04
+r01 r02 r03 r04 r05
+aa01
+m01 m02 m03 m04 m05 m06 m07
 //Introducció de sessions
-5
+6
 vectors v01 v02 0 0 v03 0 0
 piles p01 p02 0 0 p03 0 0
 //provam el cas on l'arbre de prerequisits només té problemes als fills de la dreta
-examens1 p01 0 p02 0 p03 0 v02 0
+examens1 p01 0 p02 0 p03 0 v02 0 0
 //provam el cas d'un arbre que tan sols té l'arrel
 examens2 aa01 0 0
 cues r01 r02 r03 0 0 r04 0 0 r05 0 0
+maps m01 m02 m03 0 0 m04 0 0 m05 0 m06 0 m07 0 0 
 //Introducció de cursos
-3
 //Cas amb només una sessió
 1
 examens1
@@ -20,21 +24,27 @@ examens1
 piles examens2 vectors cues
 2
 examens1 examens2
+2
+maps vectors
 //Introducció Usuaris
-4
+7
 Javi
 Alejandro
 Cesc
 Pere
+Lluc
+Nacho
+Alberto
 //Fin de introducció inicial; Introducció d'operacions:
 // Problema que no existeix
 np k01
 np k02
+np k03
 // Problema que ja existeix
 nuevo_problema p1
 // Sessio que no existeix
 ns
-pilas k01 k02 0 0 0
+pilas k01 k02 0 0 k03 0 0
 // Curso que ja existeix
 nueva_sesion examens2
 //Nou curs que no es pot crear per interessció de problemes
@@ -58,6 +68,7 @@ pr Sergio
 i Alejandro 1
 i Pere 2
 i Cesc 3
+i Lluc 4
 //Usuari no existeix
 inscribir_curso Fernando 2
 //Curs 0 no pot exisir mai 
@@ -122,3 +133,18 @@ ls
 lu
 listar_cursos
 listar_problemas
+//envios 
+e Lluc m01 0
+e Lluc m01 1
+pe Lluc
+e Lluc m02 1
+e Lluc v01 0
+e Lluc v01 1
+//Comprovam actualitzacions
+ep m01
+pe Lluc
+pr Lluc
+eu Lluc
+ec 4
+lu
+fin

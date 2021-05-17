@@ -1,0 +1,458 @@
+\hypertarget{class_sessio}{}\doxysection{Referencia de la Clase Sessio}
+\label{class_sessio}\index{Sessio@{Sessio}}
+
+
+Representa una \mbox{\hyperlink{class_sessio}{Sessio}}.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sessio_a2aeda3ca0902761f07d837538244539b}{Sessio}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecte. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sessio_aae5c29d51deddcec563af12a7b683747}{Sessio}} (const string \&x)
+\item 
+bool \mbox{\hyperlink{class_sessio_a2d22238df1eaf03ee0d29211f8cea5b6}{existeix\+\_\+prob}} (const string \&p)
+\begin{DoxyCompactList}\small\item\em Comprova si el problema p pertany a la Sessió \end{DoxyCompactList}\item 
+Bin\+Tree$<$ string $>$ \mbox{\hyperlink{class_sessio_a7debf7a4cea225e8d5ae08c6f92f111d}{cerca\+\_\+subarbre}} (const Bin\+Tree$<$ string $>$ \&a, const string \&problema)
+\begin{DoxyCompactList}\small\item\em Retorna l\textquotesingle{}arbre a partir del qual s\textquotesingle{}ha de recorrer perque els problemes anteriors ja s\textquotesingle{}han completat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sessio_a7fbf8b4c23d0861f04b2a90e8f9012d4}{actualitza\+\_\+env}} (const \mbox{\hyperlink{class_grup_prob}{Grup\+Prob}} \&resolts, \mbox{\hyperlink{class_grup_prob}{Grup\+Prob}} \&env, const string \&p)
+\begin{DoxyCompactList}\small\item\em Actualitza tots els problemes enviables. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sessio_ac3d5700464345fcf0398cec95d158abc}{recorrer\+\_\+i\+\_\+afegir}} (\mbox{\hyperlink{class_probs_sessio}{Probs\+Sessio}} \&probs)
+\begin{DoxyCompactList}\small\item\em Recorr el Bin\+Tree de prerequisits i afegeix a la classe \mbox{\hyperlink{class_probs_sessio}{Probs\+Sessio}} tots els problemes que pertanyen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sessio_ac461dad4b5440b44afe62a042ab0c4b2}{lletgir\+\_\+\+Bin\+Tree}} (Bin\+Tree$<$ string $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Lletgeix els problemes de la sessió en preordre dels prerequisits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sessio_a67ac5733369ebe1415442c25a42c05c1}{iniciar\+\_\+enviables}} (const \mbox{\hyperlink{class_grup_prob}{Grup\+Prob}} \&resolts, \mbox{\hyperlink{class_grup_prob}{Grup\+Prob}} \&env)
+\begin{DoxyCompactList}\small\item\em Inicialitza els problemes enviables quan un usuari s\textquotesingle{}inscriu a un curs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sessio_a4a9fcbfd3973be306c7076af557a431c}{escriure\+\_\+sessio}} () const
+\begin{DoxyCompactList}\small\item\em Retorna les estadístiques d\textquotesingle{}una sessió. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_sessio_a869ae4cc657173a8297dfe895a617463}{escriure\+\_\+\+Bin\+Tree}} (const Bin\+Tree$<$ string $>$ \&a)
+\item 
+static void \mbox{\hyperlink{class_sessio_a550064975a99688947106fba3f6e1f82}{iniciar\+\_\+enviables\+\_\+recursiu}} (const Bin\+Tree$<$ string $>$ \&a, const \mbox{\hyperlink{class_grup_prob}{Grup\+Prob}} \&resolts, \mbox{\hyperlink{class_grup_prob}{Grup\+Prob}} \&env, bool acaba)
+\item 
+static void \mbox{\hyperlink{class_sessio_a9743a5bd852c2041832e45e8a534338e}{recorrer}} (const Bin\+Tree$<$ string $>$ \&a, \mbox{\hyperlink{class_probs_sessio}{Probs\+Sessio}} \&probs, const string \&s, bool \&creable)
+\item 
+static bool \mbox{\hyperlink{class_sessio_ac208c88abd0f481e8c8bc2344d0112ec}{existeix\+\_\+\+Bin\+Tree\+\_\+prob}} (const Bin\+Tree$<$ string $>$ \&a, const string \&p)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_sessio_ad433f574e41563b07cf7c357d9475b44}{ident}}
+\item 
+Bin\+Tree$<$ string $>$ \mbox{\hyperlink{class_sessio_a4f10e53de9fea5b8b64a512d72a6edc9}{prerequisits}}
+\item 
+map$<$ string, pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_sessio_a547be0df0427575c9154d4597b1b24c6}{copia\+\_\+pre}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa una \mbox{\hyperlink{class_sessio}{Sessio}}. 
+
+Definición en la línea 20 del archivo Sessio.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_sessio_a2aeda3ca0902761f07d837538244539b}\label{class_sessio_a2aeda3ca0902761f07d837538244539b}} 
+\index{Sessio@{Sessio}!Sessio@{Sessio}}
+\index{Sessio@{Sessio}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{Sessio()}{Sessio()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sessio\+::\+Sessio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecte. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultat és una nova Sessió. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 3 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sessio_aae5c29d51deddcec563af12a7b683747}\label{class_sessio_aae5c29d51deddcec563af12a7b683747}} 
+\index{Sessio@{Sessio}!Sessio@{Sessio}}
+\index{Sessio@{Sessio}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{Sessio()}{Sessio()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sessio\+::\+Sessio (\begin{DoxyParamCaption}\item[{const string \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 5 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5                               \{}
+\DoxyCodeLine{6     \mbox{\hyperlink{class_sessio_ad433f574e41563b07cf7c357d9475b44}{ident}} =x;}
+\DoxyCodeLine{7 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_sessio_a869ae4cc657173a8297dfe895a617463}\label{class_sessio_a869ae4cc657173a8297dfe895a617463}} 
+\index{Sessio@{Sessio}!escriure\_BinTree@{escriure\_BinTree}}
+\index{escriure\_BinTree@{escriure\_BinTree}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{escriure\_BinTree()}{escriure\_BinTree()}}
+{\footnotesize\ttfamily void Sessio\+::escriure\+\_\+\+Bin\+Tree (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ string $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 34 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                                       \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{if}(not a.empty())\{}
+\DoxyCodeLine{36         BinTree<string> l = a.left();}
+\DoxyCodeLine{37         BinTree<string> r = a.right();}
+\DoxyCodeLine{38         cout << \textcolor{charliteral}{'('};}
+\DoxyCodeLine{39         \mbox{\hyperlink{class_sessio_a869ae4cc657173a8297dfe895a617463}{escriure\_BinTree}}(l);}
+\DoxyCodeLine{40         \mbox{\hyperlink{class_sessio_a869ae4cc657173a8297dfe895a617463}{escriure\_BinTree}}(r);}
+\DoxyCodeLine{41         cout << a.value();}
+\DoxyCodeLine{42         cout << \textcolor{charliteral}{')'};}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44 \} }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sessio_a550064975a99688947106fba3f6e1f82}\label{class_sessio_a550064975a99688947106fba3f6e1f82}} 
+\index{Sessio@{Sessio}!iniciar\_enviables\_recursiu@{iniciar\_enviables\_recursiu}}
+\index{iniciar\_enviables\_recursiu@{iniciar\_enviables\_recursiu}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{iniciar\_enviables\_recursiu()}{iniciar\_enviables\_recursiu()}}
+{\footnotesize\ttfamily void Sessio\+::iniciar\+\_\+enviables\+\_\+recursiu (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ string $>$ \&}]{a,  }\item[{const \mbox{\hyperlink{class_grup_prob}{Grup\+Prob}} \&}]{resolts,  }\item[{\mbox{\hyperlink{class_grup_prob}{Grup\+Prob}} \&}]{env,  }\item[{bool}]{acaba }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 63 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                                                                                                     \{}
+\DoxyCodeLine{64     \textcolor{keywordflow}{if}(not a.empty()) \{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{if}(not resolts.\mbox{\hyperlink{class_grup_prob_ae2458618fb4c82b2284bdcb4309babd3}{pertany}}(a.value())) \{}
+\DoxyCodeLine{66         }
+\DoxyCodeLine{67             env.\mbox{\hyperlink{class_grup_prob_abd71628b23dcce60d6da79a52c62487d}{afegeix}}(a.value(),0);}
+\DoxyCodeLine{68         \} }
+\DoxyCodeLine{69         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{70             \mbox{\hyperlink{class_sessio_a550064975a99688947106fba3f6e1f82}{iniciar\_enviables\_recursiu}}(a.left(), resolts, env,acaba);}
+\DoxyCodeLine{71             \mbox{\hyperlink{class_sessio_a550064975a99688947106fba3f6e1f82}{iniciar\_enviables\_recursiu}}(a.right(), resolts, env,acaba);}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73     \}}
+\DoxyCodeLine{74 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sessio_a9743a5bd852c2041832e45e8a534338e}\label{class_sessio_a9743a5bd852c2041832e45e8a534338e}} 
+\index{Sessio@{Sessio}!recorrer@{recorrer}}
+\index{recorrer@{recorrer}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{recorrer()}{recorrer()}}
+{\footnotesize\ttfamily void Sessio\+::recorrer (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ string $>$ \&}]{a,  }\item[{\mbox{\hyperlink{class_probs_sessio}{Probs\+Sessio}} \&}]{probs,  }\item[{const string \&}]{s,  }\item[{bool \&}]{creable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 88 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{88                                                                                                   \{}
+\DoxyCodeLine{89     \textcolor{keywordflow}{if}(not a.empty() and creable) \{}
+\DoxyCodeLine{90         creable = probs.\mbox{\hyperlink{class_probs_sessio_a9a6e3f9ccd5649f9911c51ad395be786}{afegeix\_i\_comprova}}(a.value(), s);}
+\DoxyCodeLine{91         \mbox{\hyperlink{class_sessio_a9743a5bd852c2041832e45e8a534338e}{recorrer}}(a.left(),probs,s, creable);}
+\DoxyCodeLine{92         \mbox{\hyperlink{class_sessio_a9743a5bd852c2041832e45e8a534338e}{recorrer}}(a.right(),probs,s, creable);}
+\DoxyCodeLine{93         }
+\DoxyCodeLine{94     \}}
+\DoxyCodeLine{95 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sessio_ac208c88abd0f481e8c8bc2344d0112ec}\label{class_sessio_ac208c88abd0f481e8c8bc2344d0112ec}} 
+\index{Sessio@{Sessio}!existeix\_BinTree\_prob@{existeix\_BinTree\_prob}}
+\index{existeix\_BinTree\_prob@{existeix\_BinTree\_prob}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{existeix\_BinTree\_prob()}{existeix\_BinTree\_prob()}}
+{\footnotesize\ttfamily bool Sessio\+::existeix\+\_\+\+Bin\+Tree\+\_\+prob (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ string $>$ \&}]{a,  }\item[{const string \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 102 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                                                             \{}
+\DoxyCodeLine{103     \textcolor{keywordtype}{bool} b;}
+\DoxyCodeLine{104     \textcolor{keywordflow}{if} (a.empty()) b=\textcolor{keyword}{false};}
+\DoxyCodeLine{105     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (a.value()==p) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{106     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{107         b=\mbox{\hyperlink{class_sessio_ac208c88abd0f481e8c8bc2344d0112ec}{existeix\_BinTree\_prob}}(a.left(),p);}
+\DoxyCodeLine{108         \textcolor{keywordflow}{if} (not b) b=\mbox{\hyperlink{class_sessio_ac208c88abd0f481e8c8bc2344d0112ec}{existeix\_BinTree\_prob}}(a.right(),p);}
+\DoxyCodeLine{109     \}}
+\DoxyCodeLine{110     \textcolor{keywordflow}{return} b;}
+\DoxyCodeLine{111 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sessio_a2d22238df1eaf03ee0d29211f8cea5b6}\label{class_sessio_a2d22238df1eaf03ee0d29211f8cea5b6}} 
+\index{Sessio@{Sessio}!existeix\_prob@{existeix\_prob}}
+\index{existeix\_prob@{existeix\_prob}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{existeix\_prob()}{existeix\_prob()}}
+{\footnotesize\ttfamily bool Sessio\+::existeix\+\_\+prob (\begin{DoxyParamCaption}\item[{const string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Comprova si el problema p pertany a la Sessió 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Comprova si el problema p pertany a la Sessió 
+\end{DoxyPostcond}
+
+
+Definición en la línea 97 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97                                           \{}
+\DoxyCodeLine{98    \textcolor{keywordflow}{return} \mbox{\hyperlink{class_sessio_ac208c88abd0f481e8c8bc2344d0112ec}{existeix\_BinTree\_prob}}(\mbox{\hyperlink{class_sessio_a4f10e53de9fea5b8b64a512d72a6edc9}{prerequisits}}, p);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sessio_a7debf7a4cea225e8d5ae08c6f92f111d}\label{class_sessio_a7debf7a4cea225e8d5ae08c6f92f111d}} 
+\index{Sessio@{Sessio}!cerca\_subarbre@{cerca\_subarbre}}
+\index{cerca\_subarbre@{cerca\_subarbre}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{cerca\_subarbre()}{cerca\_subarbre()}}
+{\footnotesize\ttfamily Bin\+Tree$<$ string $>$ Sessio\+::cerca\+\_\+subarbre (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ string $>$ \&}]{a,  }\item[{const string \&}]{problema }\end{DoxyParamCaption})}
+
+
+
+Retorna l\textquotesingle{}arbre a partir del qual s\textquotesingle{}ha de recorrer perque els problemes anteriors ja s\textquotesingle{}han completat. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna l\textquotesingle{}arbre a partir del qual s\textquotesingle{}ha de recorrer perque els problemes anteriors ja s\textquotesingle{}han completat. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 47 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                                                                        \{}
+\DoxyCodeLine{48     BinTree<string> r;}
+\DoxyCodeLine{49     \textcolor{keywordflow}{if}(a.empty()) \textcolor{keywordflow}{return} r;}
+\DoxyCodeLine{50     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(a.value() == problema) \textcolor{keywordflow}{return} a;}
+\DoxyCodeLine{51     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{52         r = \mbox{\hyperlink{class_sessio_a7debf7a4cea225e8d5ae08c6f92f111d}{cerca\_subarbre}}(a.left(),problema);}
+\DoxyCodeLine{53         \textcolor{keywordflow}{if}(r.empty()) r = \mbox{\hyperlink{class_sessio_a7debf7a4cea225e8d5ae08c6f92f111d}{cerca\_subarbre}}(a.right(),problema);}
+\DoxyCodeLine{54         \textcolor{keywordflow}{return} r;}
+\DoxyCodeLine{55     \}}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sessio_a7fbf8b4c23d0861f04b2a90e8f9012d4}\label{class_sessio_a7fbf8b4c23d0861f04b2a90e8f9012d4}} 
+\index{Sessio@{Sessio}!actualitza\_env@{actualitza\_env}}
+\index{actualitza\_env@{actualitza\_env}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{actualitza\_env()}{actualitza\_env()}}
+{\footnotesize\ttfamily void Sessio\+::actualitza\+\_\+env (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_grup_prob}{Grup\+Prob}} \&}]{resolts,  }\item[{\mbox{\hyperlink{class_grup_prob}{Grup\+Prob}} \&}]{env,  }\item[{const string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Actualitza tots els problemes enviables. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Actualitza tots els problemes enviables 
+\end{DoxyPostcond}
+
+
+Definición en la línea 76 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76                                                                                    \{}
+\DoxyCodeLine{77     \textcolor{keywordtype}{bool} acaba = \textcolor{keyword}{false};}
+\DoxyCodeLine{78     BinTree<string> a = \mbox{\hyperlink{class_sessio_a7debf7a4cea225e8d5ae08c6f92f111d}{cerca\_subarbre}}(\mbox{\hyperlink{class_sessio_a4f10e53de9fea5b8b64a512d72a6edc9}{prerequisits}}, p);}
+\DoxyCodeLine{79     \mbox{\hyperlink{class_sessio_a550064975a99688947106fba3f6e1f82}{iniciar\_enviables\_recursiu}}(a, resolts,env,acaba );}
+\DoxyCodeLine{80 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sessio_ac3d5700464345fcf0398cec95d158abc}\label{class_sessio_ac3d5700464345fcf0398cec95d158abc}} 
+\index{Sessio@{Sessio}!recorrer\_i\_afegir@{recorrer\_i\_afegir}}
+\index{recorrer\_i\_afegir@{recorrer\_i\_afegir}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{recorrer\_i\_afegir()}{recorrer\_i\_afegir()}}
+{\footnotesize\ttfamily bool Sessio\+::recorrer\+\_\+i\+\_\+afegir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_probs_sessio}{Probs\+Sessio}} \&}]{probs }\end{DoxyParamCaption})}
+
+
+
+Recorr el Bin\+Tree de prerequisits i afegeix a la classe \mbox{\hyperlink{class_probs_sessio}{Probs\+Sessio}} tots els problemes que pertanyen. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Recorr el Bin\+Tree de prerequisits i afegeix a la classe \mbox{\hyperlink{class_probs_sessio}{Probs\+Sessio}} tots els problemes que pertanyen. Retorna true si s\textquotesingle{}han pogut afegir tots els problemes fora intersecció i fals en cas contrari. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 82 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82                                                  \{}
+\DoxyCodeLine{83     \textcolor{keywordtype}{bool} creat = \textcolor{keyword}{true};}
+\DoxyCodeLine{84     \mbox{\hyperlink{class_sessio_a9743a5bd852c2041832e45e8a534338e}{recorrer}}(\mbox{\hyperlink{class_sessio_a4f10e53de9fea5b8b64a512d72a6edc9}{prerequisits}}, probs, \mbox{\hyperlink{class_sessio_ad433f574e41563b07cf7c357d9475b44}{ident}}, creat);}
+\DoxyCodeLine{85     \textcolor{keywordflow}{return} creat;}
+\DoxyCodeLine{86 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sessio_ac461dad4b5440b44afe62a042ab0c4b2}\label{class_sessio_ac461dad4b5440b44afe62a042ab0c4b2}} 
+\index{Sessio@{Sessio}!lletgir\_BinTree@{lletgir\_BinTree}}
+\index{lletgir\_BinTree@{lletgir\_BinTree}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{lletgir\_BinTree()}{lletgir\_BinTree()}}
+{\footnotesize\ttfamily void Sessio\+::lletgir\+\_\+\+Bin\+Tree (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ string $>$ \&}]{a }\end{DoxyParamCaption})}
+
+
+
+Lletgeix els problemes de la sessió en preordre dels prerequisits. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+{\itshape  a} es un Bin\+Tree amb tots els prerequisits dels problemes. L\textquotesingle{}arbre a tambées guarda als prerequisits del p.\+i. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 15 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                                                \{}
+\DoxyCodeLine{16     \textcolor{keywordtype}{string} x;}
+\DoxyCodeLine{17     cin >> x;}
+\DoxyCodeLine{18     }
+\DoxyCodeLine{19     \textcolor{keywordflow}{if} (x != \textcolor{stringliteral}{"0"}) \{}
+\DoxyCodeLine{20         BinTree<string> l;}
+\DoxyCodeLine{21         BinTree<string> r;}
+\DoxyCodeLine{22         \mbox{\hyperlink{class_sessio_ac461dad4b5440b44afe62a042ab0c4b2}{lletgir\_BinTree}}(l);}
+\DoxyCodeLine{23         \mbox{\hyperlink{class_sessio_ac461dad4b5440b44afe62a042ab0c4b2}{lletgir\_BinTree}}(r);}
+\DoxyCodeLine{24         a = BinTree<string>(x,l,r);}
+\DoxyCodeLine{25         \mbox{\hyperlink{class_sessio_a4f10e53de9fea5b8b64a512d72a6edc9}{prerequisits}} = a;}
+\DoxyCodeLine{26          \textcolor{keywordtype}{string} esq, dre;}
+\DoxyCodeLine{27         esq = dre = \textcolor{stringliteral}{"0"};}
+\DoxyCodeLine{28         \textcolor{keywordflow}{if} (not a.left().empty()) esq = a.left().value();}
+\DoxyCodeLine{29         \textcolor{keywordflow}{if} (not a.right().empty()) dre = a.right().value();}
+\DoxyCodeLine{30         \mbox{\hyperlink{class_sessio_a547be0df0427575c9154d4597b1b24c6}{copia\_pre}}.insert(make\_pair(x,make\_pair(esq,dre)));}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sessio_a67ac5733369ebe1415442c25a42c05c1}\label{class_sessio_a67ac5733369ebe1415442c25a42c05c1}} 
+\index{Sessio@{Sessio}!iniciar\_enviables@{iniciar\_enviables}}
+\index{iniciar\_enviables@{iniciar\_enviables}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{iniciar\_enviables()}{iniciar\_enviables()}}
+{\footnotesize\ttfamily void Sessio\+::iniciar\+\_\+enviables (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_grup_prob}{Grup\+Prob}} \&}]{resolts,  }\item[{\mbox{\hyperlink{class_grup_prob}{Grup\+Prob}} \&}]{env }\end{DoxyParamCaption})}
+
+
+
+Inicialitza els problemes enviables quan un usuari s\textquotesingle{}inscriu a un curs. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Inicialitza els problemes enviables quan un usuari s\textquotesingle{}inscriu a un curs. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 58 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58                                                                       \{}
+\DoxyCodeLine{59     \textcolor{keywordtype}{bool} acaba = \textcolor{keyword}{false};}
+\DoxyCodeLine{60     \mbox{\hyperlink{class_sessio_a550064975a99688947106fba3f6e1f82}{iniciar\_enviables\_recursiu}}(\mbox{\hyperlink{class_sessio_a4f10e53de9fea5b8b64a512d72a6edc9}{prerequisits}}, resolts, env, acaba);}
+\DoxyCodeLine{61 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sessio_a4a9fcbfd3973be306c7076af557a431c}\label{class_sessio_a4a9fcbfd3973be306c7076af557a431c}} 
+\index{Sessio@{Sessio}!escriure\_sessio@{escriure\_sessio}}
+\index{escriure\_sessio@{escriure\_sessio}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{escriure\_sessio()}{escriure\_sessio()}}
+{\footnotesize\ttfamily void Sessio\+::escriure\+\_\+sessio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna les estadístiques d\textquotesingle{}una sessió. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+S\textquotesingle{}imprimeix el nombre de problemes que formen la sessió i els seus identificadors, seguit de l\textquotesingle{}estructura de prequisits en preordre. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 9 del archivo Sessio.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9                                    \{}
+\DoxyCodeLine{10     cout << \textcolor{charliteral}{' '}<< \mbox{\hyperlink{class_sessio_a547be0df0427575c9154d4597b1b24c6}{copia\_pre}}.size() << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_sessio_a869ae4cc657173a8297dfe895a617463}{escriure\_BinTree}}(\mbox{\hyperlink{class_sessio_a4f10e53de9fea5b8b64a512d72a6edc9}{prerequisits}});}
+\DoxyCodeLine{12     cout << endl;}
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_sessio_ad433f574e41563b07cf7c357d9475b44}\label{class_sessio_ad433f574e41563b07cf7c357d9475b44}} 
+\index{Sessio@{Sessio}!ident@{ident}}
+\index{ident@{ident}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{ident}{ident}}
+{\footnotesize\ttfamily string Sessio\+::ident\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 24 del archivo Sessio.\+hh.
+
+\mbox{\Hypertarget{class_sessio_a4f10e53de9fea5b8b64a512d72a6edc9}\label{class_sessio_a4f10e53de9fea5b8b64a512d72a6edc9}} 
+\index{Sessio@{Sessio}!prerequisits@{prerequisits}}
+\index{prerequisits@{prerequisits}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{prerequisits}{prerequisits}}
+{\footnotesize\ttfamily Bin\+Tree$<$string$>$ Sessio\+::prerequisits\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 25 del archivo Sessio.\+hh.
+
+\mbox{\Hypertarget{class_sessio_a547be0df0427575c9154d4597b1b24c6}\label{class_sessio_a547be0df0427575c9154d4597b1b24c6}} 
+\index{Sessio@{Sessio}!copia\_pre@{copia\_pre}}
+\index{copia\_pre@{copia\_pre}!Sessio@{Sessio}}
+\doxysubsubsection{\texorpdfstring{copia\_pre}{copia\_pre}}
+{\footnotesize\ttfamily map$<$string, pair$<$string,string$>$ $>$ Sessio\+::copia\+\_\+pre\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 26 del archivo Sessio.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_sessio_8hh}{Sessio.\+hh}}\item 
+\mbox{\hyperlink{_sessio_8cc}{Sessio.\+cc}}\end{DoxyCompactItemize}

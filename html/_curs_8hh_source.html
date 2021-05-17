@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EVALUATOR. Plataforma de gestión de problemas y cursos de programación.: Fichero Fuente Curs.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EVALUATOR. Plataforma de gestión de problemas y cursos de programación.
+   &#160;<span id="projectnumber">Pràctica PRO2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Curs.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_curs_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _CURS_HH_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _CURS_HH_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt_sessions_8hh.html">CjtSessions.hh</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_curs.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_curs.html">Curs</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:    </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_curs.html#ae5f7a3b29ed1d2f295a315ad54805e61">   17</a></span>&#160;    <a class="code" href="class_probs_sessio.html">ProbsSessio</a> <a class="code" href="class_curs.html#ae5f7a3b29ed1d2f295a315ad54805e61">problemes</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_curs.html#a285972a8437653132561a58e2ff4c9d2">   18</a></span>&#160;    vector &lt;string&gt; <a class="code" href="class_curs.html#a285972a8437653132561a58e2ff4c9d2">sessions</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">//first: usuaris copletat el curs; second: usuaris inscrits actualment</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_curs.html#ab1e2ef1c041ff35680b7416de281910e">   20</a></span>&#160;    pair &lt;int, int&gt; <a class="code" href="class_curs.html#ab1e2ef1c041ff35680b7416de281910e">users</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">//Constructor</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_curs.html#acecd9c67882f6d09fc15fb822420e245">Curs</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//Consultors</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_curs.html#a4269ba5a107f32fc3fcfef9943420cf2">usuaris_inscrits</a> () ;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_curs.html#a0f405f291a64eb1e8fdd25028d39108b">num_sessions</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_curs.html#ae99ad436377d441b543a33d98a629d7a">get_sessio</a>(<span class="keywordtype">int</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_curs.html#a7f454b234464f736b73fd558266c190e">curs_pot_crear</a>(<span class="keyword">const</span> <a class="code" href="class_cjt_sessions.html">CjtSessions</a>&amp; cjtses);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_curs.html#a036d33b6fca73638b197eef9abb32ffd">retorna_sessio</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; p) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">//Modificadors</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="class_curs.html#ab278b85d4668d83b9f817aa6c5232c62">actualitzar_completat</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_curs.html#ab256af7896eb803bbf4af25b00c4799c">act_inscrits</a> (<span class="keywordtype">int</span> x);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">//Llegir i escriure</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_curs.html#a54b500f472e5ae51395bca6fe1e0bd09">escriure_curs</a> () <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_curs.html#a55be35736f029e6248b89527e6525e1f">lletgir_sessions</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_curs_html"><div class="ttname"><a href="class_curs.html">Curs</a></div><div class="ttdoc">Representa un Curs.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8hh_source.html#l00013">Curs.hh:13</a></div></div>
+<div class="ttc" id="a_cjt_sessions_8hh_html"><div class="ttname"><a href="_cjt_sessions_8hh.html">CjtSessions.hh</a></div><div class="ttdoc">Especificació de la classe CjtSessions.</div></div>
+<div class="ttc" id="aclass_curs_html_a7f454b234464f736b73fd558266c190e"><div class="ttname"><a href="class_curs.html#a7f454b234464f736b73fd558266c190e">Curs::curs_pot_crear</a></div><div class="ttdeci">bool curs_pot_crear(const CjtSessions &amp;cjtses)</div><div class="ttdoc">Comprova si el curs es pot crear.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00036">Curs.cc:36</a></div></div>
+<div class="ttc" id="aclass_curs_html_ae5f7a3b29ed1d2f295a315ad54805e61"><div class="ttname"><a href="class_curs.html#ae5f7a3b29ed1d2f295a315ad54805e61">Curs::problemes</a></div><div class="ttdeci">ProbsSessio problemes</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8hh_source.html#l00017">Curs.hh:17</a></div></div>
+<div class="ttc" id="aclass_curs_html_a285972a8437653132561a58e2ff4c9d2"><div class="ttname"><a href="class_curs.html#a285972a8437653132561a58e2ff4c9d2">Curs::sessions</a></div><div class="ttdeci">vector&lt; string &gt; sessions</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8hh_source.html#l00018">Curs.hh:18</a></div></div>
+<div class="ttc" id="aclass_curs_html_ab278b85d4668d83b9f817aa6c5232c62"><div class="ttname"><a href="class_curs.html#ab278b85d4668d83b9f817aa6c5232c62">Curs::actualitzar_completat</a></div><div class="ttdeci">void actualitzar_completat()</div><div class="ttdoc">Actualitza el curs després de ser completat per un usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00052">Curs.cc:52</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html"><div class="ttname"><a href="class_cjt_sessions.html">CjtSessions</a></div><div class="ttdoc">Representa un Conjunt de sessions (Sessio).</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8hh_source.html#l00018">CjtSessions.hh:18</a></div></div>
+<div class="ttc" id="aclass_curs_html_ae99ad436377d441b543a33d98a629d7a"><div class="ttname"><a href="class_curs.html#ae99ad436377d441b543a33d98a629d7a">Curs::get_sessio</a></div><div class="ttdeci">string get_sessio(int i) const</div><div class="ttdoc">Retorna la sessio numero i del curs.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00032">Curs.cc:32</a></div></div>
+<div class="ttc" id="aclass_curs_html_ab256af7896eb803bbf4af25b00c4799c"><div class="ttname"><a href="class_curs.html#ab256af7896eb803bbf4af25b00c4799c">Curs::act_inscrits</a></div><div class="ttdeci">void act_inscrits(int x)</div><div class="ttdoc">Actualitza el nombre d'usuaris inscrits a un curs.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00019">Curs.cc:19</a></div></div>
+<div class="ttc" id="aclass_curs_html_acecd9c67882f6d09fc15fb822420e245"><div class="ttname"><a href="class_curs.html#acecd9c67882f6d09fc15fb822420e245">Curs::Curs</a></div><div class="ttdeci">Curs()</div><div class="ttdoc">Creadora per defecte.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00003">Curs.cc:3</a></div></div>
+<div class="ttc" id="aclass_curs_html_a036d33b6fca73638b197eef9abb32ffd"><div class="ttname"><a href="class_curs.html#a036d33b6fca73638b197eef9abb32ffd">Curs::retorna_sessio</a></div><div class="ttdeci">string retorna_sessio(const string &amp;p) const</div><div class="ttdoc">Retorna una string amb la sessio a la qual pertany el problema p</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00023">Curs.cc:23</a></div></div>
+<div class="ttc" id="aclass_curs_html_ab1e2ef1c041ff35680b7416de281910e"><div class="ttname"><a href="class_curs.html#ab1e2ef1c041ff35680b7416de281910e">Curs::users</a></div><div class="ttdeci">pair&lt; int, int &gt; users</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8hh_source.html#l00020">Curs.hh:20</a></div></div>
+<div class="ttc" id="aclass_probs_sessio_html"><div class="ttname"><a href="class_probs_sessio.html">ProbsSessio</a></div><div class="ttdoc">Representa un Grup de problemes que pertanyen a un curs i la Sessió a la qual pertanyen.</div><div class="ttdef"><b>Definition:</b> <a href="_probs_sessio_8hh_source.html#l00021">ProbsSessio.hh:21</a></div></div>
+<div class="ttc" id="aclass_curs_html_a55be35736f029e6248b89527e6525e1f"><div class="ttname"><a href="class_curs.html#a55be35736f029e6248b89527e6525e1f">Curs::lletgir_sessions</a></div><div class="ttdeci">void lletgir_sessions()</div><div class="ttdoc">Lletgeix les sessions del p.i quan el curs s'incialitza al principi del programa.</div></div>
+<div class="ttc" id="aclass_curs_html_a4269ba5a107f32fc3fcfef9943420cf2"><div class="ttname"><a href="class_curs.html#a4269ba5a107f32fc3fcfef9943420cf2">Curs::usuaris_inscrits</a></div><div class="ttdeci">int usuaris_inscrits()</div><div class="ttdoc">Retorna el nombre d'usuaris inscrits.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00015">Curs.cc:15</a></div></div>
+<div class="ttc" id="aclass_curs_html_a0f405f291a64eb1e8fdd25028d39108b"><div class="ttname"><a href="class_curs.html#a0f405f291a64eb1e8fdd25028d39108b">Curs::num_sessions</a></div><div class="ttdeci">int num_sessions() const</div><div class="ttdoc">Retorna el nombre de sesions que te el curs.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00028">Curs.cc:28</a></div></div>
+<div class="ttc" id="aclass_curs_html_a54b500f472e5ae51395bca6fe1e0bd09"><div class="ttname"><a href="class_curs.html#a54b500f472e5ae51395bca6fe1e0bd09">Curs::escriure_curs</a></div><div class="ttdeci">void escriure_curs() const</div><div class="ttdoc">Retorna les estadístiques d'un curs.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00006">Curs.cc:6</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

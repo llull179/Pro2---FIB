@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EVALUATOR. Plataforma de gestión de problemas y cursos de programación.: Fichero Fuente Usuari.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EVALUATOR. Plataforma de gestión de problemas y cursos de programación.
+   &#160;<span id="projectnumber">Pràctica PRO2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Usuari.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_usuari_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_usuari_8hh.html">Usuari.hh</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_usuari.html#ac6a1fbc3d6967c6de677580c60dfaaf4">    4</a></span>&#160;<a class="code" href="class_usuari.html#ac6a1fbc3d6967c6de677580c60dfaaf4">Usuari::Usuari</a>() {}</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_usuari.html#a0eca3eccc4961632cb2be807f864d7f9">    6</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_usuari.html#a0eca3eccc4961632cb2be807f864d7f9">Usuari::curs_inscrit</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_usuari.html#afe9cd27492f278165566c740cc005e0a">stats</a>.curs_in;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_usuari.html#a84e0532f6b7ae4c4022e4739ca7abade">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_usuari.html#a84e0532f6b7ae4c4022e4739ca7abade">Usuari::problemes_enviables</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_usuari.html#a3cbbbca7afbc77a9b652661a0ea277b9">problemes_env</a>.<a class="code" href="class_grup_prob.html#af6cde21c8a09ae65b2ccb5134c2a6dfd">mostrar_problemes</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_usuari.html#a3ef9f5ec04fe13ecfaf6d2f02bcd30bd">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_usuari.html#a3ef9f5ec04fe13ecfaf6d2f02bcd30bd">Usuari::problemes_resolts</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_usuari.html#a144e0955d3d974fdef1b32045e3fe0de">problemes_exit</a>.<a class="code" href="class_grup_prob.html#af6cde21c8a09ae65b2ccb5134c2a6dfd">mostrar_problemes</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_usuari.html#a5dd52c7dca6f7cb5ba4eb872f8cafe5c">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_usuari.html#a5dd52c7dca6f7cb5ba4eb872f8cafe5c">Usuari::inscribir_curso</a>(<span class="keywordtype">int</span> c, <span class="keyword">const</span> <a class="code" href="class_cjt_sessions.html">CjtSessions</a>&amp; cjtses,  <span class="keyword">const</span> <a class="code" href="class_curs.html">Curs</a>&amp; curs) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_usuari.html#afe9cd27492f278165566c740cc005e0a">stats</a>.curs_in = c;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; curs.<a class="code" href="class_curs.html#a0f405f291a64eb1e8fdd25028d39108b">num_sessions</a>(); ++i ) {       </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;         cjtses.<a class="code" href="class_cjt_sessions.html#acd571b77f121308bfcb01124fd713aa5">accedir_sessio</a>(curs.<a class="code" href="class_curs.html#ae99ad436377d441b543a33d98a629d7a">get_sessio</a>(i)).<a class="code" href="class_sessio.html#a67ac5733369ebe1415442c25a42c05c1">iniciar_enviables</a>(<a class="code" href="class_usuari.html#a144e0955d3d974fdef1b32045e3fe0de">problemes_exit</a>, <a class="code" href="class_usuari.html#a3cbbbca7afbc77a9b652661a0ea277b9">problemes_env</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;   </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_usuari.html#a037628345ca3cfd7ea8c093738a8887b">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_usuari.html#a037628345ca3cfd7ea8c093738a8887b">Usuari::actualitzar_stats</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; p, <span class="keywordtype">int</span> r, <span class="keywordtype">bool</span>&amp; cur_completat,  <span class="keyword">const</span> <a class="code" href="class_cjt_sessions.html">CjtSessions</a>&amp; cjtses,  <span class="keyword">const</span> <a class="code" href="class_curs.html">Curs</a>&amp; curs) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    ++<a class="code" href="class_usuari.html#afe9cd27492f278165566c740cc005e0a">stats</a>.env_tot;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="class_usuari.html#a3cbbbca7afbc77a9b652661a0ea277b9">problemes_env</a>.<a class="code" href="class_grup_prob.html#ab944443458f693ed354c2cf4448c54c9">get_intents</a>(p) == 0) ++<a class="code" href="class_usuari.html#afe9cd27492f278165566c740cc005e0a">stats</a>.probs_intents;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_usuari.html#a3cbbbca7afbc77a9b652661a0ea277b9">problemes_env</a>.<a class="code" href="class_grup_prob.html#a795700af835108f984dd6f7aac8fa9a0">suma_int</a>(p);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span>( r == 1 ) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="class_usuari.html#a144e0955d3d974fdef1b32045e3fe0de">problemes_exit</a>.<a class="code" href="class_grup_prob.html#abd71628b23dcce60d6da79a52c62487d">afegeix</a>(p,<a class="code" href="class_usuari.html#a3cbbbca7afbc77a9b652661a0ea277b9">problemes_env</a>.<a class="code" href="class_grup_prob.html#ab944443458f693ed354c2cf4448c54c9">get_intents</a>(p));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="class_usuari.html#a3cbbbca7afbc77a9b652661a0ea277b9">problemes_env</a>.<a class="code" href="class_grup_prob.html#ae8f107772440abfb3d0163e4ce30c6a9">elimina</a>(p);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            cjtses.<a class="code" href="class_cjt_sessions.html#acd571b77f121308bfcb01124fd713aa5">accedir_sessio</a>(curs.<a class="code" href="class_curs.html#a036d33b6fca73638b197eef9abb32ffd">retorna_sessio</a>(p)).<a class="code" href="class_sessio.html#a7fbf8b4c23d0861f04b2a90e8f9012d4">actualitza_env</a>(<a class="code" href="class_usuari.html#a144e0955d3d974fdef1b32045e3fe0de">problemes_exit</a>, <a class="code" href="class_usuari.html#a3cbbbca7afbc77a9b652661a0ea277b9">problemes_env</a>,p);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="class_usuari.html#a3cbbbca7afbc77a9b652661a0ea277b9">problemes_env</a>.<a class="code" href="class_grup_prob.html#a90edf905703674b139b7a235f94199e3">get_size</a>()==0){</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                cur_completat = <a class="code" href="class_usuari.html#afe9cd27492f278165566c740cc005e0a">stats</a>.curs_in;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <a class="code" href="class_usuari.html#afe9cd27492f278165566c740cc005e0a">stats</a>.curs_in = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }  </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }      </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_usuari.html#a19ce3acaf6693208eed30686bd79c30e">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_usuari.html#a19ce3acaf6693208eed30686bd79c30e">Usuari::escriure_usuari</a>( ) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    cout &lt;&lt; <span class="charliteral">&#39;(&#39;</span> &lt;&lt; <a class="code" href="class_usuari.html#afe9cd27492f278165566c740cc005e0a">stats</a>.env_tot &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; <a class="code" href="class_usuari.html#a144e0955d3d974fdef1b32045e3fe0de">problemes_exit</a>.<a class="code" href="class_grup_prob.html#a90edf905703674b139b7a235f94199e3">get_size</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    cout &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; <a class="code" href="class_usuari.html#afe9cd27492f278165566c740cc005e0a">stats</a>.probs_intents &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; <a class="code" href="class_usuari.html#afe9cd27492f278165566c740cc005e0a">stats</a>.curs_in &lt;&lt; <span class="charliteral">&#39;)&#39;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_cjt_sessions_html_acd571b77f121308bfcb01124fd713aa5"><div class="ttname"><a href="class_cjt_sessions.html#acd571b77f121308bfcb01124fd713aa5">CjtSessions::accedir_sessio</a></div><div class="ttdeci">Sessio accedir_sessio(const string &amp;s) const</div><div class="ttdoc">Accedeix a la Sessió s.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8cc_source.html#l00010">CjtSessions.cc:10</a></div></div>
+<div class="ttc" id="aclass_usuari_html_a3ef9f5ec04fe13ecfaf6d2f02bcd30bd"><div class="ttname"><a href="class_usuari.html#a3ef9f5ec04fe13ecfaf6d2f02bcd30bd">Usuari::problemes_resolts</a></div><div class="ttdeci">void problemes_resolts() const</div><div class="ttdoc">Llista tots els problemes resolts per l'usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00014">Usuari.cc:14</a></div></div>
+<div class="ttc" id="aclass_curs_html"><div class="ttname"><a href="class_curs.html">Curs</a></div><div class="ttdoc">Representa un Curs.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8hh_source.html#l00013">Curs.hh:13</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a7fbf8b4c23d0861f04b2a90e8f9012d4"><div class="ttname"><a href="class_sessio.html#a7fbf8b4c23d0861f04b2a90e8f9012d4">Sessio::actualitza_env</a></div><div class="ttdeci">void actualitza_env(const GrupProb &amp;resolts, GrupProb &amp;env, const string &amp;p)</div><div class="ttdoc">Actualitza tots els problemes enviables.</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00076">Sessio.cc:76</a></div></div>
+<div class="ttc" id="aclass_usuari_html_a144e0955d3d974fdef1b32045e3fe0de"><div class="ttname"><a href="class_usuari.html#a144e0955d3d974fdef1b32045e3fe0de">Usuari::problemes_exit</a></div><div class="ttdeci">GrupProb problemes_exit</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8hh_source.html#l00034">Usuari.hh:34</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_af6cde21c8a09ae65b2ccb5134c2a6dfd"><div class="ttname"><a href="class_grup_prob.html#af6cde21c8a09ae65b2ccb5134c2a6dfd">GrupProb::mostrar_problemes</a></div><div class="ttdeci">void mostrar_problemes() const</div><div class="ttdoc">Escriu tots els problemes que pertanyen al grup de problemes i el nombre d'enviaments realitzats al p...</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00005">GrupProb.cc:5</a></div></div>
+<div class="ttc" id="aclass_usuari_html_a5dd52c7dca6f7cb5ba4eb872f8cafe5c"><div class="ttname"><a href="class_usuari.html#a5dd52c7dca6f7cb5ba4eb872f8cafe5c">Usuari::inscribir_curso</a></div><div class="ttdeci">void inscribir_curso(int c, const CjtSessions &amp;ses, const Curs &amp;curs)</div><div class="ttdoc">Inscriu l'usuari al curs amb identificador c.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00018">Usuari.cc:18</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_a795700af835108f984dd6f7aac8fa9a0"><div class="ttname"><a href="class_grup_prob.html#a795700af835108f984dd6f7aac8fa9a0">GrupProb::suma_int</a></div><div class="ttdeci">void suma_int(const string &amp;p)</div><div class="ttdoc">Suma 1 intent al problema.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00033">GrupProb.cc:33</a></div></div>
+<div class="ttc" id="aclass_usuari_html_a0eca3eccc4961632cb2be807f864d7f9"><div class="ttname"><a href="class_usuari.html#a0eca3eccc4961632cb2be807f864d7f9">Usuari::curs_inscrit</a></div><div class="ttdeci">int curs_inscrit() const</div><div class="ttdoc">Consulta si l'estudiante està inscrit a algun curso.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00006">Usuari.cc:6</a></div></div>
+<div class="ttc" id="aclass_sessio_html_a67ac5733369ebe1415442c25a42c05c1"><div class="ttname"><a href="class_sessio.html#a67ac5733369ebe1415442c25a42c05c1">Sessio::iniciar_enviables</a></div><div class="ttdeci">void iniciar_enviables(const GrupProb &amp;resolts, GrupProb &amp;env)</div><div class="ttdoc">Inicialitza els problemes enviables quan un usuari s'inscriu a un curs.</div><div class="ttdef"><b>Definition:</b> <a href="_sessio_8cc_source.html#l00058">Sessio.cc:58</a></div></div>
+<div class="ttc" id="aclass_cjt_sessions_html"><div class="ttname"><a href="class_cjt_sessions.html">CjtSessions</a></div><div class="ttdoc">Representa un Conjunt de sessions (Sessio).</div><div class="ttdef"><b>Definition:</b> <a href="_cjt_sessions_8hh_source.html#l00018">CjtSessions.hh:18</a></div></div>
+<div class="ttc" id="aclass_curs_html_ae99ad436377d441b543a33d98a629d7a"><div class="ttname"><a href="class_curs.html#ae99ad436377d441b543a33d98a629d7a">Curs::get_sessio</a></div><div class="ttdeci">string get_sessio(int i) const</div><div class="ttdoc">Retorna la sessio numero i del curs.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00032">Curs.cc:32</a></div></div>
+<div class="ttc" id="aclass_usuari_html_a037628345ca3cfd7ea8c093738a8887b"><div class="ttname"><a href="class_usuari.html#a037628345ca3cfd7ea8c093738a8887b">Usuari::actualitzar_stats</a></div><div class="ttdeci">void actualitzar_stats(const string &amp;p, int r, bool &amp;cur_completat, const CjtSessions &amp;cjtses, const Curs &amp;cjtcurs)</div><div class="ttdoc">Actualitza les estadístiques de l'Usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00026">Usuari.cc:26</a></div></div>
+<div class="ttc" id="aclass_usuari_html_afe9cd27492f278165566c740cc005e0a"><div class="ttname"><a href="class_usuari.html#afe9cd27492f278165566c740cc005e0a">Usuari::stats</a></div><div class="ttdeci">struct Usuari::@1 stats</div></div>
+<div class="ttc" id="aclass_grup_prob_html_ab944443458f693ed354c2cf4448c54c9"><div class="ttname"><a href="class_grup_prob.html#ab944443458f693ed354c2cf4448c54c9">GrupProb::get_intents</a></div><div class="ttdeci">int get_intents(const string &amp;p)</div><div class="ttdoc">Retorna el numero d'intents que s'han realitzat a aquest problema.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00028">GrupProb.cc:28</a></div></div>
+<div class="ttc" id="aclass_usuari_html_ac6a1fbc3d6967c6de677580c60dfaaf4"><div class="ttname"><a href="class_usuari.html#ac6a1fbc3d6967c6de677580c60dfaaf4">Usuari::Usuari</a></div><div class="ttdeci">Usuari()</div><div class="ttdoc">Creadora por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00004">Usuari.cc:4</a></div></div>
+<div class="ttc" id="aclass_curs_html_a036d33b6fca73638b197eef9abb32ffd"><div class="ttname"><a href="class_curs.html#a036d33b6fca73638b197eef9abb32ffd">Curs::retorna_sessio</a></div><div class="ttdeci">string retorna_sessio(const string &amp;p) const</div><div class="ttdoc">Retorna una string amb la sessio a la qual pertany el problema p</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00023">Curs.cc:23</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_ae8f107772440abfb3d0163e4ce30c6a9"><div class="ttname"><a href="class_grup_prob.html#ae8f107772440abfb3d0163e4ce30c6a9">GrupProb::elimina</a></div><div class="ttdeci">void elimina(const string &amp;p)</div><div class="ttdoc">Elimina l'elemetn p del grup de problemes.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00024">GrupProb.cc:24</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_a90edf905703674b139b7a235f94199e3"><div class="ttname"><a href="class_grup_prob.html#a90edf905703674b139b7a235f94199e3">GrupProb::get_size</a></div><div class="ttdeci">int get_size()</div><div class="ttdoc">Retorna quants d'elements pertanyen al grup.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00011">GrupProb.cc:11</a></div></div>
+<div class="ttc" id="aclass_usuari_html_a19ce3acaf6693208eed30686bd79c30e"><div class="ttname"><a href="class_usuari.html#a19ce3acaf6693208eed30686bd79c30e">Usuari::escriure_usuari</a></div><div class="ttdeci">void escriure_usuari()</div><div class="ttdoc">Retorna les estadístiques d'un usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00045">Usuari.cc:45</a></div></div>
+<div class="ttc" id="aclass_grup_prob_html_abd71628b23dcce60d6da79a52c62487d"><div class="ttname"><a href="class_grup_prob.html#abd71628b23dcce60d6da79a52c62487d">GrupProb::afegeix</a></div><div class="ttdeci">void afegeix(const string &amp;p, int x)</div><div class="ttdoc">Afegeix l'elemetn p al grup de problemes.</div><div class="ttdef"><b>Definition:</b> <a href="_grup_prob_8cc_source.html#l00020">GrupProb.cc:20</a></div></div>
+<div class="ttc" id="aclass_curs_html_a0f405f291a64eb1e8fdd25028d39108b"><div class="ttname"><a href="class_curs.html#a0f405f291a64eb1e8fdd25028d39108b">Curs::num_sessions</a></div><div class="ttdeci">int num_sessions() const</div><div class="ttdoc">Retorna el nombre de sesions que te el curs.</div><div class="ttdef"><b>Definition:</b> <a href="_curs_8cc_source.html#l00028">Curs.cc:28</a></div></div>
+<div class="ttc" id="aclass_usuari_html_a3cbbbca7afbc77a9b652661a0ea277b9"><div class="ttname"><a href="class_usuari.html#a3cbbbca7afbc77a9b652661a0ea277b9">Usuari::problemes_env</a></div><div class="ttdeci">GrupProb problemes_env</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8hh_source.html#l00033">Usuari.hh:33</a></div></div>
+<div class="ttc" id="a_usuari_8hh_html"><div class="ttname"><a href="_usuari_8hh.html">Usuari.hh</a></div><div class="ttdoc">Especificació de la classe Usuari.</div></div>
+<div class="ttc" id="aclass_usuari_html_a84e0532f6b7ae4c4022e4739ca7abade"><div class="ttname"><a href="class_usuari.html#a84e0532f6b7ae4c4022e4739ca7abade">Usuari::problemes_enviables</a></div><div class="ttdeci">void problemes_enviables() const</div><div class="ttdoc">Llista tots els problemes enviats i resolts per l'usuari.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8cc_source.html#l00010">Usuari.cc:10</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

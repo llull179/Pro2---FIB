@@ -1,0 +1,257 @@
+\hypertarget{class_cjt_usuaris}{}\doxysection{Referencia de la Clase Cjt\+Usuaris}
+\label{class_cjt_usuaris}\index{CjtUsuaris@{CjtUsuaris}}
+
+
+Representa el conjunt de tots els usuaris (\mbox{\hyperlink{class_usuari}{Usuari}}). 
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cjt_usuaris_a66bec1ef851247d1729414abcfcba4a6}{Cjt\+Usuaris}} ()
+\begin{DoxyCompactList}\small\item\em Creadora per defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt_usuaris_a28020e6e834b3c483198285fb35436fc}{llistat\+\_\+usuaris}} ()
+\begin{DoxyCompactList}\small\item\em Llistat d\textquotesingle{}usuaris. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_usuari}{Usuari}} \& \mbox{\hyperlink{class_cjt_usuaris_a0f819716b29d35d7e8d5a52ea4f3347d}{accedir\+\_\+usuari}} (const string \&s, bool \&found)
+\begin{DoxyCompactList}\small\item\em Accedeix a l\textquotesingle{}\mbox{\hyperlink{class_usuari}{Usuari}} {\itshape u} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cjt_usuaris_a64292f06aebc73b47ecc57d815c6e4e4}{alta\+\_\+usuari}} (const string \&u)
+\begin{DoxyCompactList}\small\item\em Dona d\textquotesingle{}alta un nou usuari. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cjt_usuaris_a3984165521bf0eddf7c80c4354dd4ad0}{baixa\+\_\+usuari}} (const string \&u, int \&inscrit)
+\begin{DoxyCompactList}\small\item\em Dona de baixa un usuari. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt_usuaris_acb8d525b500b034d277c48197d16a682}{llegir\+\_\+usuaris\+\_\+inicials}} ()
+\begin{DoxyCompactList}\small\item\em Llegeix els usuaris inicials. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \mbox{\hyperlink{class_usuari}{Usuari}} $>$ \mbox{\hyperlink{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}{llist\+Users}}
+\item 
+\mbox{\hyperlink{class_usuari}{Usuari}} \mbox{\hyperlink{class_cjt_usuaris_a9f37d627fde59008f6c44a66ab662382}{nulo}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa el conjunt de tots els usuaris (\mbox{\hyperlink{class_usuari}{Usuari}}).
+
+Conté Usuaris. 
+
+Definición en la línea 16 del archivo Cjt\+Usuaris.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_cjt_usuaris_a66bec1ef851247d1729414abcfcba4a6}\label{class_cjt_usuaris_a66bec1ef851247d1729414abcfcba4a6}} 
+\index{CjtUsuaris@{CjtUsuaris}!CjtUsuaris@{CjtUsuaris}}
+\index{CjtUsuaris@{CjtUsuaris}!CjtUsuaris@{CjtUsuaris}}
+\doxysubsubsection{\texorpdfstring{CjtUsuaris()}{CjtUsuaris()}}
+{\footnotesize\ttfamily Cjt\+Usuaris\+::\+Cjt\+Usuaris (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora per defecto. 
+
+S\textquotesingle{}executa automàticament al declarar el conjunto d\textquotesingle{}usuarios. \begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultat és un conjunt d\textquotesingle{}usuaris ( \mbox{\hyperlink{class_cjt_usuaris}{Cjt\+Usuaris}}). 
+\end{DoxyPostcond}
+
+
+Definición en la línea 4 del archivo Cjt\+Usuaris.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_cjt_usuaris_a28020e6e834b3c483198285fb35436fc}\label{class_cjt_usuaris_a28020e6e834b3c483198285fb35436fc}} 
+\index{CjtUsuaris@{CjtUsuaris}!llistat\_usuaris@{llistat\_usuaris}}
+\index{llistat\_usuaris@{llistat\_usuaris}!CjtUsuaris@{CjtUsuaris}}
+\doxysubsubsection{\texorpdfstring{llistat\_usuaris()}{llistat\_usuaris()}}
+{\footnotesize\ttfamily void Cjt\+Usuaris\+::llistat\+\_\+usuaris (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Llistat d\textquotesingle{}usuaris. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Es llisten tots els usuaris en ordre creixent pel nom, mostrant quants enviamnets ha realitzat en total, quants satisfactoriament, quants ha intentat almenys un cop i l\textquotesingle{}identificador de quin curs está inscrit o un 0 si no està inscrit a cap, per cada usuari. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 6 del archivo Cjt\+Usuaris.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6                                  \{}
+\DoxyCodeLine{7     \textcolor{keywordflow}{for}(map<string,Usuari>::iterator it = \mbox{\hyperlink{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}{llistUsers}}.begin(); it != \mbox{\hyperlink{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}{llistUsers}}.end(); ++it) \{}
+\DoxyCodeLine{8         cout << (*it).first;}
+\DoxyCodeLine{9         (*it).second.escriure\_usuari();}
+\DoxyCodeLine{10     \}}
+\DoxyCodeLine{11 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt_usuaris_a0f819716b29d35d7e8d5a52ea4f3347d}\label{class_cjt_usuaris_a0f819716b29d35d7e8d5a52ea4f3347d}} 
+\index{CjtUsuaris@{CjtUsuaris}!accedir\_usuari@{accedir\_usuari}}
+\index{accedir\_usuari@{accedir\_usuari}!CjtUsuaris@{CjtUsuaris}}
+\doxysubsubsection{\texorpdfstring{accedir\_usuari()}{accedir\_usuari()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_usuari}{Usuari}} \& Cjt\+Usuaris\+::accedir\+\_\+usuari (\begin{DoxyParamCaption}\item[{const string \&}]{s,  }\item[{bool \&}]{found }\end{DoxyParamCaption})}
+
+
+
+Accedeix a l\textquotesingle{}\mbox{\hyperlink{class_usuari}{Usuari}} {\itshape u} 
+
+\begin{DoxyPrecond}{Precondición}
+cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Comprova si l\textquotesingle{}usuari u existeix, si és així copia l\textquotesingle{}usuari al p.\+i i retorna true en cas contrari retorna false 
+\end{DoxyPostcond}
+
+
+Definición en la línea 13 del archivo Cjt\+Usuaris.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                                                                \{}
+\DoxyCodeLine{14     map<string,Usuari>::iterator it = \mbox{\hyperlink{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}{llistUsers}}.find(s);}
+\DoxyCodeLine{15    \textcolor{keywordflow}{if}(it != \mbox{\hyperlink{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}{llistUsers}}.end()) \{}
+\DoxyCodeLine{16        found = \textcolor{keyword}{true}; }
+\DoxyCodeLine{17        \textcolor{keywordflow}{return} (*it).second;}
+\DoxyCodeLine{18    \}}
+\DoxyCodeLine{19    found = \textcolor{keyword}{false}; }
+\DoxyCodeLine{20    \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt_usuaris_a9f37d627fde59008f6c44a66ab662382}{nulo}};}
+\DoxyCodeLine{21 \} }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt_usuaris_a64292f06aebc73b47ecc57d815c6e4e4}\label{class_cjt_usuaris_a64292f06aebc73b47ecc57d815c6e4e4}} 
+\index{CjtUsuaris@{CjtUsuaris}!alta\_usuari@{alta\_usuari}}
+\index{alta\_usuari@{alta\_usuari}!CjtUsuaris@{CjtUsuaris}}
+\doxysubsubsection{\texorpdfstring{alta\_usuari()}{alta\_usuari()}}
+{\footnotesize\ttfamily bool Cjt\+Usuaris\+::alta\+\_\+usuari (\begin{DoxyParamCaption}\item[{const string \&}]{u }\end{DoxyParamCaption})}
+
+
+
+Dona d\textquotesingle{}alta un nou usuari. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cert}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si ja existia l\textquotesingle{}usuari {\itshape u} imprimeix un error, sinó imprimeix el número d\textquotesingle{}usuaris després d\textquotesingle{}afegir-\/lo. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 24 del archivo Cjt\+Usuaris.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                             \{}
+\DoxyCodeLine{25     pair<map<string,Usuari>::iterator, \textcolor{keywordtype}{bool}> r= \mbox{\hyperlink{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}{llistUsers}}.insert(make\_pair(u, \mbox{\hyperlink{class_usuari}{Usuari}}()));}
+\DoxyCodeLine{26     \textcolor{keywordflow}{if} (r.second) cout << \mbox{\hyperlink{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}{llistUsers}}.size() <<endl;}
+\DoxyCodeLine{27     \textcolor{keywordflow}{return} r.second; }
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt_usuaris_a3984165521bf0eddf7c80c4354dd4ad0}\label{class_cjt_usuaris_a3984165521bf0eddf7c80c4354dd4ad0}} 
+\index{CjtUsuaris@{CjtUsuaris}!baixa\_usuari@{baixa\_usuari}}
+\index{baixa\_usuari@{baixa\_usuari}!CjtUsuaris@{CjtUsuaris}}
+\doxysubsubsection{\texorpdfstring{baixa\_usuari()}{baixa\_usuari()}}
+{\footnotesize\ttfamily bool Cjt\+Usuaris\+::baixa\+\_\+usuari (\begin{DoxyParamCaption}\item[{const string \&}]{u,  }\item[{int \&}]{inscrit }\end{DoxyParamCaption})}
+
+
+
+Dona de baixa un usuari. 
+
+\begin{DoxyPrecond}{Precondición}
+L\textquotesingle{}\mbox{\hyperlink{class_usuari}{Usuari}} existeix. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprimeix el número d\textquotesingle{}usuaris després de donar-\/lo de baixa després d\textquotesingle{}eliminar u. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 30 del archivo Cjt\+Usuaris.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                                         \{}
+\DoxyCodeLine{31     map <string,Usuari>::iterator it = \mbox{\hyperlink{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}{llistUsers}}.find(u);}
+\DoxyCodeLine{32     \textcolor{keywordflow}{if}(it != \mbox{\hyperlink{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}{llistUsers}}.end()) \{  }
+\DoxyCodeLine{33         curs = (*it).second.curs\_inscrit();}
+\DoxyCodeLine{34         \mbox{\hyperlink{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}{llistUsers}}.erase(it);}
+\DoxyCodeLine{35         cout << \mbox{\hyperlink{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}{llistUsers}}.size() <<endl;}
+\DoxyCodeLine{36         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt_usuaris_acb8d525b500b034d277c48197d16a682}\label{class_cjt_usuaris_acb8d525b500b034d277c48197d16a682}} 
+\index{CjtUsuaris@{CjtUsuaris}!llegir\_usuaris\_inicials@{llegir\_usuaris\_inicials}}
+\index{llegir\_usuaris\_inicials@{llegir\_usuaris\_inicials}!CjtUsuaris@{CjtUsuaris}}
+\doxysubsubsection{\texorpdfstring{llegir\_usuaris\_inicials()}{llegir\_usuaris\_inicials()}}
+{\footnotesize\ttfamily void Cjt\+Usuaris\+::llegir\+\_\+usuaris\+\_\+inicials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Llegeix els usuaris inicials. 
+
+\begin{DoxyPrecond}{Precondición}
+cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Guarda el conjunt d\textquotesingle{}usuaris inicials. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 41 del archivo Cjt\+Usuaris.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                                          \{}
+\DoxyCodeLine{42     \textcolor{keywordtype}{int} M;}
+\DoxyCodeLine{43     cin >> M;}
+\DoxyCodeLine{44     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i < M; ++i) \{}
+\DoxyCodeLine{45         \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{46         cin >> s;}
+\DoxyCodeLine{47         \mbox{\hyperlink{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}{llistUsers}}.insert(make\_pair(s,\mbox{\hyperlink{class_usuari}{Usuari}}()));}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}\label{class_cjt_usuaris_ab8fac5260aa9106662ddcaf7c5fde86b}} 
+\index{CjtUsuaris@{CjtUsuaris}!llistUsers@{llistUsers}}
+\index{llistUsers@{llistUsers}!CjtUsuaris@{CjtUsuaris}}
+\doxysubsubsection{\texorpdfstring{llistUsers}{llistUsers}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{class_usuari}{Usuari}}$>$ Cjt\+Usuaris\+::llist\+Users\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 21 del archivo Cjt\+Usuaris.\+hh.
+
+\mbox{\Hypertarget{class_cjt_usuaris_a9f37d627fde59008f6c44a66ab662382}\label{class_cjt_usuaris_a9f37d627fde59008f6c44a66ab662382}} 
+\index{CjtUsuaris@{CjtUsuaris}!nulo@{nulo}}
+\index{nulo@{nulo}!CjtUsuaris@{CjtUsuaris}}
+\doxysubsubsection{\texorpdfstring{nulo}{nulo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_usuari}{Usuari}} Cjt\+Usuaris\+::nulo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 22 del archivo Cjt\+Usuaris.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cjt_usuaris_8hh}{Cjt\+Usuaris.\+hh}}\item 
+\mbox{\hyperlink{_cjt_usuaris_8cc}{Cjt\+Usuaris.\+cc}}\end{DoxyCompactItemize}
